@@ -3,156 +3,234 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>Aesha Shah - Professional Experience</title>
+    <title>Aesha Shah - coder, researcher, student</title>
+    <!-- <description>I'm a Georgia Tech CS major concentrating in Cybersecurity and Artificial Intelligence.</description> -->
     <link href="style.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+    <script src="script.js"></script>
   </head>
 
-  <body class="padded" style="padding-top: 5vmin; background-color: black; color: white;">
+  <body class="padded" style="padding-top: 5vmin">
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+    <body class="flex flex-col items-center pt-[5vmin]">
+      <div id="orb"></div>
+      
+      <div class="w-full flex flex-col items-center justify-center pb-[3vmin]">
+        <div class="flex items-center space-x-2">
+          <label id="theme" onclick="theme()" class="cursor-pointer inline-block">
+            <input type="checkbox" value="" class="sr-only peer">
+            <div class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
+          </label>
+          <p class="inline-block" id="themeLabel">Prefer dark mode?</p>
+        </div>
+      </div>
+    
+    <!-- Introduction Section -->
     <div class="w-full">
       <p class="mb-0 mt-[1.5em]">Hey 👋 my name is</p>
-      <h1 class="mt-0 text-[10vmin] mb-[0.5em] opacity-70" style="line-height: 1em; color: white;">
-        Aesha Shah
+      <div class="flex items-center space-x-10">
+      <h1 class="mt-0 text-[10vmin] mb-[0.5em] opacity-70" style="line-height: 1em">
+        Aesha Shah 
       </h1>
       <p class="button bg-blue-800 inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-white animate-bounce hover:cursor-pointer">
-        <a href="https://www.linkedin.com/in/aeshashah/" style="font-weight: normal">Let's&nbsp;connect&nbsp→</a>
+        <a href="https://www.linkedin.com/in/aeshashah7/" style="font-weight: normal">Let's&nbsp;connect&nbsp→</a>
       </p>
-
+    </div>
+  
       <p class="mt-0 mb-6">
-        I'm a Computer Science major at the Georgia Institute of Technology, concentrating in Cybersecurity and Artificial Intelligence. Below you'll find my professional and research experiences.
+        I'm a Georgia Tech Computer Science major concentrating in Cybersecurity
+        and People. As the daughter of first-generation immigrants, I'm passionate
+        about STEM equality and opportunity access. I also love matcha, hiking,
+        good sushi, and the New York Times mini crossword! <br> <br> Outside of
+        internships and school, here's what I've been working on:
       </p>
     </div>
 
+    <!-- Experiences Section -->
     <div class="grid xl:grid-cols-2 gap-8 w-full">
       <!-- Amazon Web Services -->
-      <div class="wishbox">
-        <h2>(Incoming) Associate Solutions Architect Intern</h2>
-        <h3>Amazon Web Services</h3>
-        <p>Seattle, Washington, USA</p>
-        <p>January 2025 - Present</p>
-        <p>
-          Amazon Web Services (AWS) provides key infrastructure services to businesses in the form of web services, now widely known as cloud computing. Interns will receive AWS technical training, be immersed in cloud computing concepts, and have the opportunity to develop business acumen.
+      style="background-position-y: 65%;">
+          <div class="overlay" style="height:100%">
+            <div class="text-left">
+              <p class="bg-green-900 inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-white">
+            🏆 (Incoming) Associate Solutions Architect Intern
+          </p>
+        </div>
+        <h2 class="mb-1" style="font-size: 1.5em">Amazon Web Services</h2>
+        <p class="mt-1 mb-1 text-white">
+          Amazon Web Services (AWS) provides key infrastructure services to businesses in the form of web services, now widely known as cloud computing. 
+
+          Interns will receive AWS technical training, be immersed in cloud computing concepts, and have the opportunity to develop business acumen.
         </p>
-        <button class="button bg-blue-800 text-white px-3 py-1 rounded">
-          <a href="https://aws.amazon.com/" target="_blank">Learn More</a>
-        </button>
+        <div class="text-right text-lightgray">
+          <a href="https://github.com/Zackydout101/htn/tree/main"><p class="button bg-[#fffaf0] inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-black">Technical specs →</p></a>
+          <a href="https://devpost.com/software/apicasso"><p class="button bg-[#fffaf0] inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-black">See the demo →</p></a>
+        </div>
       </div>
+    </div>
 
       <!-- FinTech Lab -->
-      <div class="wishbox">
-        <h2>Undergraduate Researcher</h2>
-        <h3>Natural Language Processing for Financial Markets, Georgia Tech FinTech Lab</h3>
-        <p>Atlanta, Georgia, USA</p>
-        <p>January 2025 - Present</p>
-        <p>
-          [In progress] Utilizing natural language processing (NLP) for analyzing credit card agreements.
-        </p>
-        <button class="button bg-blue-800 text-white px-3 py-1 rounded">
-          <a href="https://www.vip.gatech.edu/" target="_blank">Learn More</a>
-        </button>
-      </div>
+      <div class="hackathon-box bg-[#222] p-4 transition ease-in-out hover:-translate-y-1 hover:scale-105 hover: duration-180 hover:cursor-default" style="padding: 2em; padding-top: 0.5em">
+        <div class="text-left">
+          <p class="bg-green-900 inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-white">
+            🏆 Undergraduate Researcher
+          </p>
+        </div>
+        <h2 class="mb-1" style="font-size: 1.5em">Georgia Tech FinTech Lab</h2>
+        <p class="mt-1 mb-1 text-white">
+          Conducting research on natural language processing (NLP) for analyzing credit card agreements. 
 
-      <!-- RAIL Lab (Aug-Dec 2024) -->
-      <div class="wishbox">
-        <h2>Undergraduate Research Assistant</h2>
-        <h3>Georgia Tech Robot Autonomy & Interactive Learning (RAIL) Lab</h3>
-        <p>Atlanta, Georgia, USA</p>
-        <p>August 2024 - December 2024</p>
-        <p>
-          Leveraged LLaMA 3.2 large language model (LLM) and advanced NLP techniques to develop contrastive analyses and explanations of heterogeneous multi-agent systems (e.g., search and rescue, software-dispatch transportation). Validated LLM-produced explanations to justify system decisions or guide users in correcting suboptimal solutions.
+          This research focuses on improving financial literacy and accessibility for consumers.
+          <a href="https://www.linkedin.com/in/aeshashah7/" class="underline">here.</a>
         </p>
-        <button class="button bg-blue-800 text-white px-3 py-1 rounded">
-          <a href="https://rail.gatech.edu/" target="_blank">Learn More</a>
-        </button>
+        <div class="text-right">
+          <a href="https://www.linkedin.com/in/aeshashah7/"><p class="button bg-[#fffaf0] inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-black">Technical specs →</p></a>
+          <a href="https://www.linkedin.com/in/aeshashah7/"><p class="button bg-[#fffaf0] inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-black animate-pulse">See the demo →</p></a>
+        </div>
       </div>
+    </div>
+  </body>
 
       <!-- UPS -->
-      <div class="wishbox">
-        <h2>Software Engineering Intern (Generative Artificial Intelligence/Machine Learning)</h2>
-        <h3>United Parcel Service</h3>
-        <p>Atlanta, Georgia, USA</p>
-        <p>June 2024 - August 2024</p>
-        <p>
-          Implemented Microsoft Azure OpenAI’s GPT-4o model with prompt engineering in Python scripts to classify 100 customer service and non-service message categories. Restructured customer service messaging response application using LangGraph to handle an average of 50,000 daily cases globally, reducing operating costs by \$1.5 million. Engineered a Generative AI-based system to reduce human contact time by 30%.
-        </p>
-        <button class="button bg-blue-800 text-white px-3 py-1 rounded">
-          <a href="https://www.ups.com/" target="_blank">Learn More</a>
-        </button>
-      </div>
+      <div class="hackathon-box bg-[#222] p-4 transition ease-in-out hover:-translate-y-1 hover:scale-105 hover: duration-180 hover:cursor-default" style="padding: 2em; padding-top: 0.5em">
+        <div class="text-left">
+          <p class="bg-green-900 inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-white">
+            🏆 Software Engineering Intern
+          </p>
+        </div>
+        <h2 class="mb-1" style="font-size: 1.5em">United Parcel Service (UPS)</h2>
+        <p class="mt-1 mb-1 text-white">
+          Implemented Microsoft Azure OpenAI’s GPT-4o model to classify 100 customer service and non-service message categories. 
 
-      <!-- RAIL Lab (Jan-May 2024) -->
-      <div class="wishbox">
-        <h2>Undergraduate Research Assistant</h2>
-        <h3>Georgia Tech Robot Autonomy & Interactive Learning (RAIL) Lab</h3>
-        <p>Atlanta, Georgia, USA</p>
-        <p>January 2024 - May 2024</p>
-        <p>
-          Programmed HelloRobot’s Stretch model (using Robot Operating System (ROS) and Python) to replicate human movements with precision for assisting daily routine activities (e.g., household chores).
+          Restructured customer service messaging application using LangGraph multi-agent framework, reducing operating costs by \$1.5 million.
+          <a href="https://www.linkedin.com/in/aeshashah7/" class="underline">here.</a>
         </p>
-        <button class="button bg-blue-800 text-white px-3 py-1 rounded">
-          <a href="https://rail.gatech.edu/" target="_blank">Learn More</a>
-        </button>
+        <div class="text-right">
+          <a href="https://www.linkedin.com/in/aeshashah7/"><p class="button bg-[#fffaf0] inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-black">Technical specs →</p></a>
+          <a href="https://www.linkedin.com/in/aeshashah7/"><p class="button bg-[#fffaf0] inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-black animate-pulse">See the demo →</p></a>
+        </div>
       </div>
-
-      <!-- RAIL Lab (High School) -->
-      <div class="wishbox">
-        <h2>High School Research Assistant</h2>
-        <h3>Georgia Tech Robot Autonomy & Interactive Learning (RAIL) Lab</h3>
-        <p>Atlanta, Georgia, USA</p>
-        <p>June 2023 - August 2023</p>
-        <p>
-          Utilized zero-shot prompt engineering in GPT-3.5 Turbo and Python scripts to automate inferences from motion and device-activated sensor records. Analyzed behavioral changes indicating cognitive or physical health decline.
-        </p>
-        <button class="button bg-blue-800 text-white px-3 py-1 rounded">
-          <a href="https://rail.gatech.edu/" target="_blank">Learn More</a>
-        </button>
-      </div>
+    </div>
+  </body>
 
       <!-- NASA -->
-      <div class="wishbox">
-        <h2>Engineering Research Intern</h2>
-        <h3>National Aeronautics and Space Administration (NASA)</h3>
-        <p>Remote</p>
-        <p>May 2022 - August 2022</p>
-        <p>
-          Developed a machine learning model leveraging NASA satellite data to analyze land cover changes and evaluate public health risks associated with vector-borne diseases. Utilized tools like GLOBE Advanced Data Access Tool, Collect Earth Online, and Google Earth Engine.
+      <div class="hackathon-box bg-[#222] p-4 transition ease-in-out hover:-translate-y-1 hover:scale-105 hover: duration-180 hover:cursor-default" style="padding: 2em; padding-top: 0.5em">
+        <div class="text-left">
+          <p class="bg-green-900 inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-white">
+            🏆 Engineering Research Intern
+          </p>
+        </div>
+        <h2 class="mb-1" style="font-size: 1.5em">National Aeronautics and Space Administration (NASA)</h2>
+        <p class="mt-1 mb-1 text-white">
+          Developed a machine learning model leveraging NASA satellite data to analyze land cover changes and evaluate public health risks associated with vector-borne diseases. 
+
+          Tools used: GLOBE Advanced Data Access Tool, Collect Earth Online, Google Earth Engine.
+          <a href="https://www.linkedin.com/in/aeshashah7/" class="underline">here.</a>
         </p>
-        <button class="button bg-blue-800 text-white px-3 py-1 rounded">
-          <a href="https://www.nasa.gov/" target="_blank">Learn More</a>
-        </button>
+        <div class="text-right">
+          <a href="https://www.linkedin.com/in/aeshashah7/"><p class="button bg-[#fffaf0] inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-black">Technical specs →</p></a>
+          <a href="https://www.linkedin.com/in/aeshashah7/"><p class="button bg-[#fffaf0] inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-black animate-pulse">See the demo →</p></a>
+        </div>
       </div>
+    </div>
+  </body>
+
+      <!-- RAIL Lab -->
+      <div class="hackathon-box bg-[#222] p-4 transition ease-in-out hover:-translate-y-1 hover:scale-105 hover: duration-180 hover:cursor-default" style="padding: 2em; padding-top: 0.5em">
+        <div class="text-left">
+          <p class="bg-green-900 inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-white">
+            🏆 Undergraduate Research Assistant
+          </p>
+        </div>
+        <h2 class="mb-1" style="font-size: 1.5em">Georgia Tech Robot Autonomy & Interactive Learning (RAIL) Lab</h2>
+        <p class="mt-1 mb-1 text-white">
+          Leveraged LLaMA 3.2 large language model (LLM) and advanced NLP techniques to develop contrastive analyses and explanations of heterogeneous multi-agent systems (e.g., search and rescue, transportation). <br>
+          Validated LLM-produced explanations to justify system decisions or guide users in correcting suboptimal solutions.
+          <a href="https://www.linkedin.com/in/aeshashah7/" class="underline">here.</a>
+        </p>
+        <div class="text-right">
+          <a href="https://www.linkedin.com/in/aeshashah7/"><p class="button bg-[#fffaf0] inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-black">Technical specs →</p></a>
+          <a href="https://www.linkedin.com/in/aeshashah7/"><p class="button bg-[#fffaf0] inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-black animate-pulse">See the demo →</p></a>
+        </div>
+      </div>
+    </div>
+  </body>
+
+      <!-- High School Research Assistant -->
+      <div class="hackathon-box bg-[#222] p-4 transition ease-in-out hover:-translate-y-1 hover:scale-105 hover: duration-180 hover:cursor-default" style="padding: 2em; padding-top: 0.5em">
+        <div class="text-left">
+          <p class="bg-green-900 inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-white">
+            🏆 High School Research Assistant
+          </p>
+        </div>
+        <h2 class="mb-1" style="font-size: 1.5em">Georgia Tech Robot Autonomy & Interactive Learning (RAIL) Lab</h2>
+        <p class="mt-1 mb-1 text-white">
+          Utilized zero-shot prompt engineering in GPT-3.5 Turbo and Python scripts to automate inferences from motion and device-activated sensor records. <br>
+          Analyzed behavioral changes indicating cognitive or physical health decline.
+          <a href="https://www.linkedin.com/in/aeshashah7/" class="underline">here.</a>
+        </p>
+        <div class="text-right">
+          <a href="https://www.linkedin.com/in/aeshashah7/"><p class="button bg-[#fffaf0] inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-black">Technical specs →</p></a>
+          <a href="https://www.linkedin.com/in/aeshashah7/"><p class="button bg-[#fffaf0] inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-black animate-pulse">See the demo →</p></a>
+        </div>
+      </div>
+    </div>
+  </body>
 
       <!-- Atlanta Athletic Club -->
-      <div class="wishbox">
-        <h2>Front Desk Attendant, Aquatics Center</h2>
-        <h3>Atlanta Athletic Club</h3>
-        <p>Johns Creek, Georgia, USA</p>
-        <p>May 2022 - August 2022</p>
-        <p>
-          Collaborated with the front desk team to provide exceptional customer service. Used a POS system to charge program fees, guest fees, and merchandise sales to members' accounts.
+      <div class="hackathon-box bg-[#222] p-4 transition ease-in-out hover:-translate-y-1 hover:scale-105 hover: duration-180 hover:cursor-default" style="padding: 2em; padding-top: 0.5em">
+        <div class="text-left">
+          <p class="bg-green-900 inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-white">
+            🏆 Front Desk Attendant
+          </p>
+        </div>
+        <h2 class="mb-1" style="font-size: 1.5em">Atlanta Athletic Club</h2>
+        <p class="mt-1 mb-1 text-white">
+          Collaborated with the front desk team to provide exceptional customer service. Used a POS system to charge program fees, guest fees, and merchandise sales to members' accounts. <br>
+          Answered and routed incoming calls to corresponding departments; checked-in members and guests; assisted lifeguards with pacing members using waterslides.
+          <a href="https://www.linkedin.com/in/aeshashah7/" class="underline">here.</a>
         </p>
-        <!-- No button provided for this role -->
+        <div class="text-right">
+          <a href="https://www.linkedin.com/in/aeshashah7/"><p class="button bg-[#fffaf0] inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-black">Technical specs →</p></a>
+          <a href="https://www.linkedin.com/in/aeshashah7//"><p class="button bg-[#fffaf0] inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-black animate-pulse">See the demo →</p></a>
+        </div>
       </div>
+    </div>
+  </body>
 
       <!-- Aerospace Systems Design Laboratory -->
-      <div class="wishbox">
-        <h2>High School STEM Intern</h2>
-        <h3>Aerospace Systems Design Laboratory, Georgia Tech</h3>
-        <p>Atlanta, Georgia, USA</p>
-        <p>July 2022</p>
-        <p>
-          Developed small-scale moon rovers: designed structure, machined parts, and programmed the implementation of LiDAR, GPS, imaging, and sensing. Presented to a panel of NASA and Lockheed Martin representatives.
+      <div class="hackathon-box bg-[#222] p-4 transition ease-in-out hover:-translate-y-1 hover:scale-105 hover: duration-180 hover:cursor-default" style="padding: 2em; padding-top: 0.5em">
+        <div class="text-left">
+          <p class="bg-green-900 inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-white">
+            🏆 High School STEM Intern
+          </p>
+        </div>
+        <h2 class="mb-1" style="font-size: 1.5em">Aerospace Systems Design Laboratory</h2>
+        <p class="mt-1 mb-1 text-white">
+          Developed small-scale moon rovers: designed structure, machined parts, and programmed (using C++) the implementation of LiDAR, GPS, imaging, sensing, and driving through simulated terrain. <br>
+          Presented to a panel of academia and industry representatives from Lockheed Martin, NASA, Georgia Space Grant Consortium, Georgia Tech Aerospace Systems Design Laboratory, and the Daniel Guggenheim School of Aerospace Engineering.
+          <a href="https://www.linkedin.com/in/aeshashah7/" class="underline">here.</a>
         </p>
-        <!-- No button provided for this role -->
+        <div class="text-right">
+          <a href="https://www.linkedin.com/in/aeshashah7/"><p class="button bg-[#fffaf0] inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-black">Technical specs →</p></a>
+          <a href="https://www.linkedin.com/in/aeshashah7//"><p class="button bg-[#fffaf0] inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-black animate-pulse">See the demo →</p></a>
+        </div>
       </div>
+    </div>
+  </body>
 
-      <!-- Education -->
-      <div class="wishbox">
-        <h2>Education</h2>
-        <h3>Georgia Institute of Technology</h3>
-        <p>Bachelor's, Computer Science</p>
-        <p>
-          Concentration in Cybersecurity and Artificial Intelligence.
-        </p>
-        <button class="button bg-blue-800 text-white px-3 py-1 rounded">
-          <a href="https://www.gatech.edu/" target="_blank">
+    <!-- Footer Section -->
+    <div class="col-span-1 mb-[2em] mt-[2em] text-center">
+      <hr>
+      <p>Made with ❤️ by Aesha Shah using HTML5, Tailwind CSS, and JavaScript. This site is open source on <a href="https://github.com/aeshashah">my Github.</a></p>
+    </div>
+  </body>
+</html>
