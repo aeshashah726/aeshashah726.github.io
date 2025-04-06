@@ -1,6 +1,5 @@
-# aeshashah726.github.io
+Hi there 👋
+I'm Aesha (EY-shuh) -- a Computer Science major at Georgia Tech (concentrations in Cybersecurity and Artificial Intelligence) with a minor in Law, Science, & Technology.
 
-Hi 👋 my name is Aesha Shah
-
-I'm a Georgia Tech Computer Science major concentrating in Cybersecurity 🔐 and Artificial Intelligence 🤖, with a minor in Law, Science, & Technology ⚖️. I also love to read mystery novels 🕵️‍♀️📚, bike along new trails 🚴‍♀️, eat tacos 🌮, and solve cool puzzles 🧩🧠!
+I mostly build with Python, Java, and HTML/CSS/JS, but I also love learning new languages/stacks (currently working on C/C++!). More details about my experience & projects can be found on my portfolio, https://aeshashah726.github.io/. 🚀✨
 
