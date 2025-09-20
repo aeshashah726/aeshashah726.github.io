@@ -1,12 +1,18 @@
+<!-- this is the main html file for the personal website -->
+<!-- it uses html, css, and javascript to create a single page application (spa) experience -->
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- meta tags for character set and responsive design -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>👩🏻‍💻 Aesha Shah - cybersecurity & law @ georgia tech</title>
-    <!-- <description>I'm a Georgia Tech CS major.</description> -->
+    <!-- page title and description for browser and search engines -->
+    <!-- link to main stylesheet for custom styles -->
     <link href="style.css" rel="stylesheet" type="text/css" />
+    <!-- tailwindcss for utility-first styling -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- icons and manifest for mobile and browser tabs -->
     <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -14,7 +20,9 @@
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
+    <!-- flowbite for extra ui components -->
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+    <!-- custom style for nav links to remove underline -->
     <style>
       nav a.no-underline,
       nav a.no-underline:hover,
@@ -23,48 +31,46 @@
         text-decoration: none !important;
       }
     </style>
+    <!-- main javascript file for interactivity and theme -->
     <script src="script.js"></script>
   </head>
 
     <body class="padded flex flex-col items-center pt-[5vmin]">
+    <!-- load flowbite js for extra ui components -->
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
 
-    <!-- Stationary Header -->
+    <!-- stationary header: stays at the top of the page on all navigation -->
     <div id="site-header" class="w-full flex flex-row items-center justify-between mb-2">
+      <!-- shows the user's local time, updates every second -->
       <span id="local-time" style="font-family: var(--p-font); color: var(--p-color); font-size: 1em; padding-left: 2px;"></span>
+      <!-- navigation bar for switching between pages -->
       <nav class="flex-1 flex justify-center space-x-4">
         <a href="index.html" class="text-gray-500 dark:text-gray-400 font-semibold no-underline" data-nav>Home</a>
         <a href="internships.html" class="text-gray-500 dark:text-gray-400 font-semibold no-underline" data-nav>Internships</a>
         <a href="research.html" class="text-gray-500 dark:text-gray-400 font-semibold no-underline" data-nav>Research</a>
         <a href="projects.html" class="text-gray-500 dark:text-gray-400 font-semibold no-underline" data-nav>Projects</a>
       </nav>
+      <!-- theme toggle switch and label -->
       <div class="flex items-center space-x-2 pr-2">
         <label id="theme" onclick="theme()" class="cursor-pointer inline-block">
           <input type="checkbox" value="" class="sr-only peer">
+          <!-- this is the visual toggle for dark/light mode -->
           <div class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
         </label>
+        <!-- this span shows the current theme text, updated by javascript -->
         <span id="themeText" class="ml-2 text-sm font-medium"></span>
       </div>
-    <script>
-      // Update theme text based on current mode
-      function updateThemeText() {
-        const themeText = document.getElementById('themeText');
-        if (!themeText) return;
-        const isDark = document.documentElement.classList.contains('dark');
-        themeText.textContent = isDark ? 'Dark mode' : 'Light mode';
-      }
-      // Initial update
-      document.addEventListener('DOMContentLoaded', updateThemeText);
-      // Also update when theme is toggled
-      window.updateThemeText = updateThemeText;
-    </script>
     </div>
-    <div id="orb"></div>
-    <!-- Main Content Container -->
-    <div id="main-content" class="w-full flex flex-col items-center">
-      <div class="w-full">
-        <p class="mb-0 mt-[1.5em]">Hi 👋 my name is</p>
-        <div class="flex items-center space-x-10">
+  <!-- decorative orb element for visual effect -->
+  <div id="orb"></div>
+  <!-- main content container: this is where page content is loaded dynamically -->
+  <div id="main-content" class="w-full flex flex-col items-center">
+  <!-- introduction section with name and greeting -->
+  <div class="w-full">
+  <!-- short greeting -->
+  <p class="mb-0 mt-[1.5em]">Hi 👋 my name is</p>
+  <!-- name and linkedin button -->
+  <div class="flex items-center space-x-10">
           <h1 class="mt-0 text-[10vmin] mb-[0.5em] opacity-70" style="line-height: 1em">
             Aesha Shah
           </h1>
@@ -72,144 +78,29 @@
             <a href="https://www.linkedin.com/in/aeshashah7/" style="font-weight: normal">Let's&nbsp;connect&nbsp→</a>
           </p>
         </div>
-        <p class="mt-0 mb-6">
+  <!-- short bio -->
+  <p class="mt-0 mb-6">
           I'm a Georgia Tech Computer Science major concentrating in Cybersecurity 🔐 and Artificial Intelligence 🤖, with a minor in Law, Science, & Technology ⚖️. I also love to read mystery novels 🕵️‍♀️📚, bike along new trails 🚴‍♀️, eat tacos 🌮, and solve cool puzzles 🧩🧠!
         </p>
       </div>
-      <div class="w-full pt-6 pb-6">
-        <div class="flex items-center">
-          <h1 class="text-[6vmin] opacity-70 leading-none">
-            Internships
-          </h1>
-        </div>
-      </div>
-      <div class="grid xl:grid-cols-2 gap-8 w-full">
-        <div class="hackathon-box bg-[#222] p-4 transition ease-in-out hover:-translate-y-1 hover:scale-105 hover: duration-180 hover:cursor-default" style="padding: 2em; padding-top: 0.5em">
-          <div class="text-left">
-            <p class="bg-green-900 inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-white">
-              Summer 2025
-            </p>
-          </div>
-          <h2 class="mb-1" style="font-size: 1.5em">Solutions Architect Intern</h2>
-          <h2 class="mb-1" style="font-size: 1em">Amazon Web Services (AWS)</h2>
-          <p class="mt-1 mb-1 text-white font-light">
-            Incoming in the AWS Global Cloud Sales team!
-          </p>
-          <div class="text-right text-lightgray">
-            <a href="https://www.linkedin.com/in/aeshashah7/n"><p class="button bg-[#fffaf0] inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-black">Technical specs →</p></a>
-            <a href="https://www.linkedin.com/in/aeshashah7/"><p class="button bg-[#fffaf0] inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-black">See the demo →</p></a>
-          </div>
-        </div>
-        <div class="hackathon-box bg-[#222] p-4 transition ease-in-out hover:-translate-y-1 hover:scale-105 hover: duration-180 hover:cursor-default" style="padding: 2em; padding-top: 0.5em">
-          <div class="text-left">
-            <p class="bg-green-900 inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-white">
-              Summer 2024
-            </p>
-          </div>
-          <h2 class="mb-1" style="font-size: 1.5em">Information Systems Management / Software Engineering Intern</h2>
-          <h2 class="mb-1" style="font-size: 1em">United Parcel Service (UPS)</h2>
-          <p class="mt-1 mb-1 text-white font-light">[]add text here</p>
-          <div class="text-right text-lightgray">
-            <a href="https://www.linkedin.com/in/aeshashah7"><p class="button bg-[#fffaf0] inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-black">Technical specs →</p></a>
-            <a href="https://www.linkedin.com/in/aeshashah7"><p class="button bg-[#fffaf0] inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-black">See the demo →</p></a>
-          </div>
-        </div>
-      </div>
-      <div class="w-full pt-12 pb-6">
-        <div class="flex items-center">
-          <h1 class="text-[6vmin] opacity-70 leading-none">
-            Research
-          </h1>
-        </div>
-      </div>
-      <div class="grid xl:grid-cols-2 gap-8 w-full">
-        <div class="hackathon-box bg-[#222] p-4 transition ease-in-out hover:-translate-y-1 hover:scale-105 hover: duration-180 hover:cursor-default" style="padding: 2em; padding-top: 0.5em">
-          <div class="text-left">
-            <p class="bg-green-900 inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-white">
-              Spring 2025
-            </p>
-          </div>
-          <h2 class="mb-1" style="font-size: 1.5em">Undergraduate Researcher</h2>
-          <h2 class="mb-1" style="font-size: 1em">NLP / ML for Financial Markets, Vertically Integrated Project @ Georgia Tech</h2>
-          <p class="mt-1 mb-1 text-white font-light">[]add text here</p>
-          <div class="text-right text-lightgray">
-            <a href="https://www.linkedin.com/in/aeshashah7"><p class="button bg-[#fffaf0] inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-black">Technical specs →</p></a>
-            <a href="https://www.linkedin.com/in/aeshashah7"><p class="button bg-[#fffaf0] inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-black">See the demo →</p></a>
-          </div>
-        </div>
-        <div class="hackathon-box bg-[#222] p-4 transition ease-in-out hover:-translate-y-1 hover:scale-105 hover: duration-180 hover:cursor-default" style="padding: 2em; padding-top: 0.5em">
-          <div class="text-left">
-            <p class="bg-green-900 inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-white">
-              Fall 2024
-            </p>
-            <p class="bg-green-900 inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-white">
-              Spring 2024
-            </p>
-            <p class="bg-green-900 inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-white">
-              Summer 2023
-            </p>
-          </div>
-          <h2 class="mb-1" style="font-size: 1.5em">Undergraduate Research Assistant</h2>
-          <h2 class="mb-1" style="font-size: 1em">Robot Autonomy & Interactive Learning (RAIL) Lab @ Georgia Tech</h2>
-          <p class="mt-1 mb-1 text-white font-light">[]add text here</p>
-          <div class="text-right text-lightgray">
-            <a href="https://www.linkedin.com/in/aeshashah7"><p class="button bg-[#fffaf0] inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-black">Technical specs →</p></a>
-            <a href="https://www.linkedin.com/in/aeshashah7"><p class="button bg-[#fffaf0] inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-black">See the demo →</p></a>
-          </div>
-        </div>
-      </div>
-      <div class="w-full pt-12 pb-6">
-        <div class="flex items-center">
-          <h1 class="text-[6vmin] opacity-70 leading-none">
-            Projects
-          </h1>
-        </div>
-      </div>
-      <div class="grid xl:grid-cols-2 gap-8 w-full">
-        <div class="hackathon-box bg-[#222] p-4 transition ease-in-out hover:-translate-y-1 hover:scale-105 hover: duration-180 hover:cursor-default" style="padding: 2em; padding-top: 0.5em">
-          <div class="text-left">
-            <p class="bg-green-900 inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-white">
-              []add text here
-            </p>
-          </div>
-          <h2 class="mb-1" style="font-size: 1.5em">[]add text here</h2>
-          <p class="mt-1 mb-1 text-white font-light">[]add text here</p>
-          <div class="text-right text-lightgray">
-            <a href="https://www.linkedin.com/in/aeshashah7"><p class="button bg-[#fffaf0] inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-black">Technical specs →</p></a>
-            <a href="https://www.linkedin.com/in/aeshashah7"><p class="button bg-[#fffaf0] inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-black">See the demo →</p></a>
-          </div>
-        </div>
-        <div class="hackathon-box bg-[#222] p-4 transition ease-in-out hover:-translate-y-1 hover:scale-105 hover: duration-180 hover:cursor-default" style="padding: 2em; padding-top: 0.5em">
-          <div class="text-left">
-            <p class="bg-green-900 inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-white">
-              []add text here
-            </p>
-          </div>
-          <h2 class="mb-1" style="font-size: 1.5em">[]add text here</h2>
-          <p class="mt-1 mb-1 text-white font-light">[]add text here</p>
-          <div class="text-right text-lightgray">
-            <a href="https://www.linkedin.com/in/aeshashah7"><p class="button bg-[#fffaf0] inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-black">Technical specs →</p></a>
-            <a href="https://www.linkedin.com/in/aeshashah7"><p class="button bg-[#fffaf0] inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-black">See the demo →</p></a>
-          </div>
-        </div>
-      </div>
     </div>
     <script>
-      // SPA-like navigation: load content dynamically
+      // this script enables spa-like navigation by loading content dynamically
       async function loadContent(page) {
         let url = page;
+        // if on home, use the current path
         if (page === 'index.html') url = window.location.pathname.split('/').pop() || 'index.html';
         const response = await fetch(url);
         const text = await response.text();
-        // Extract only the main content (between <body> and </body>)
+        // extract only the main content (between <body> and </body>)
         const bodyMatch = text.match(/<body[\s\S]*?>([\s\S]*?)<\/body>/i);
         let content = bodyMatch ? bodyMatch[1] : text;
-        // Remove header and orb if present
+        // remove header and orb if present (so they don't duplicate)
         content = content.replace(/<div id="site-header"[\s\S]*?<\/div>/, '');
         content = content.replace(/<div id="orb"[\s\S]*?<\/div>/, '');
         document.getElementById('main-content').innerHTML = content;
       }
-      // Intercept nav clicks
+      // intercept nav link clicks to load content without full reload
       document.querySelectorAll('a[data-nav]').forEach(link => {
         link.addEventListener('click', function(e) {
           e.preventDefault();
@@ -218,24 +109,25 @@
           loadContent(page);
         });
       });
-      // Handle browser navigation
+      // handle browser back/forward navigation
       window.addEventListener('popstate', () => {
         const page = window.location.pathname.split('/').pop() || 'index.html';
         loadContent(page);
       });
-      // Initial load
+      // initial load: load the right content for the current url
       document.addEventListener('DOMContentLoaded', () => {
         const page = window.location.pathname.split('/').pop() || 'index.html';
         loadContent(page);
       });
     </script>
     
+    <!-- footer with credits and github link -->
     <div class="w-full mt-[3em] mb-0">
       <div class="w-full text-center py-4 border-t">
         <p>
-          Made with 💌 by Aesha Shah using HTML5, Tailwind CSS, and JavaScript.
-          This site is open source on 
-          <a href="https://github.com/aeshashah726" class="text-blue-600 underline">my Github.</a>
+          made with 💌 by aesha shah using html5, tailwind css, and javascript.
+          this site is open source on 
+          <a href="https://github.com/aeshashah726" class="text-blue-600 underline">my github.</a>
         </p>
       </div>
     </div>    
