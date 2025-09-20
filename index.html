@@ -43,8 +43,21 @@
           <input type="checkbox" value="" class="sr-only peer">
           <div class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
         </label>
-  <!-- <p class="inline-block" id="themeLabel">Prefer dark mode?</p> -->
+        <span id="themeText" class="ml-2 text-sm font-medium"></span>
       </div>
+    <script>
+      // Update theme text based on current mode
+      function updateThemeText() {
+        const themeText = document.getElementById('themeText');
+        if (!themeText) return;
+        const isDark = document.documentElement.classList.contains('dark');
+        themeText.textContent = isDark ? 'Dark mode' : 'Light mode';
+      }
+      // Initial update
+      document.addEventListener('DOMContentLoaded', updateThemeText);
+      // Also update when theme is toggled
+      window.updateThemeText = updateThemeText;
+    </script>
     </div>
     <div id="orb"></div>
     <!-- Main Content Container -->

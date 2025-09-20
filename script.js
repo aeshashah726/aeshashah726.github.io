@@ -14,13 +14,24 @@ window.addEventListener('DOMContentLoaded', updateLocalTime);
 function theme() {
     var element = document.documentElement; 
     var checkbox = document.querySelector('input[type="checkbox"]'); 
-  
     if (checkbox.checked) {
       element.setAttribute('data-theme', 'dark'); // Switch to dark mode
-      document.getElementById("themeLabel").innerHTML = "Dark mode (toggle to switch)";
+      element.classList.add('dark');
+      element.classList.remove('light');
     } else {  
       element.setAttribute('data-theme', 'one'); // Switch to light mode
-      document.getElementById("themeLabel").innerHTML = "Light mode (toggle to switch)";
+      element.classList.remove('dark');
+      element.classList.add('light');
+    }
+    if (window.updateThemeText) window.updateThemeText();
+    // Also update themeText color for contrast
+    var themeText = document.getElementById('themeText');
+    if (themeText) {
+      if (checkbox.checked) {
+        themeText.style.color = 'whitesmoke';
+      } else {
+        themeText.style.color = '#222';
+      }
     }
   }
   
