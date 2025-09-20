@@ -45,10 +45,10 @@
       <span id="local-time" style="font-family: var(--p-font); color: var(--p-color); font-size: 1em; padding-left: 2px;"></span>
       <!-- navigation bar for switching between pages -->
       <nav class="flex-1 flex justify-center space-x-4">
-        <a href="index.html" class="text-gray-500 dark:text-gray-400 font-semibold no-underline" data-nav>Home</a>
-        <a href="internships.html" class="text-gray-500 dark:text-gray-400 font-semibold no-underline" data-nav>Internships</a>
-        <a href="research.html" class="text-gray-500 dark:text-gray-400 font-semibold no-underline" data-nav>Research</a>
-        <a href="projects.html" class="text-gray-500 dark:text-gray-400 font-semibold no-underline" data-nav>Projects</a>
+  <a href="/home/" class="text-gray-500 dark:text-gray-400 font-semibold no-underline" data-nav>Home</a>
+  <a href="/internships/" class="text-gray-500 dark:text-gray-400 font-semibold no-underline" data-nav>Internships</a>
+  <a href="/research/" class="text-gray-500 dark:text-gray-400 font-semibold no-underline" data-nav>Research</a>
+  <a href="/projects/" class="text-gray-500 dark:text-gray-400 font-semibold no-underline" data-nav>Projects</a>
       </nav>
       <!-- theme toggle switch and label -->
       <div class="flex items-center space-x-2 pr-2">
@@ -89,7 +89,20 @@
       async function loadContent(page) {
         let url = page;
         // if on home, use the current path
-        if (page === 'index.html') url = window.location.pathname.split('/').pop() || 'index.html';
+        // support /home/, /home/index.html, and root index.html as home
+        if (page === '/home/' || page === '/home/index.html' || page === 'index.html' || page === '/index.html') {
+          // if the path ends with /home/ or /home/index.html, load /home/index.html
+          if (window.location.pathname.endsWith('/home/') || window.location.pathname.endsWith('/home/index.html')) {
+            url = 'index.html'; // relative to /home/
+          } else {
+            // fallback: if at root or unknown, load /home/index.html
+            if (window.location.pathname === '/' || window.location.pathname === '') {
+              url = '/home/index.html';
+            } else {
+              url = window.location.pathname.split('/').pop() || 'index.html';
+            }
+          }
+        }
         const response = await fetch(url);
         const text = await response.text();
         // extract only the main content (between <body> and </body>)
@@ -111,12 +124,24 @@
       });
       // handle browser back/forward navigation
       window.addEventListener('popstate', () => {
-        const page = window.location.pathname.split('/').pop() || 'index.html';
+        // handle /home/, /home/index.html, and root as home
+        let page;
+        if (window.location.pathname === '/home/' || window.location.pathname === '/home/index.html' || window.location.pathname === '/' || window.location.pathname === '') {
+          page = '/home/index.html';
+        } else {
+          page = window.location.pathname.split('/').pop() || 'index.html';
+        }
         loadContent(page);
       });
       // initial load: load the right content for the current url
       document.addEventListener('DOMContentLoaded', () => {
-        const page = window.location.pathname.split('/').pop() || 'index.html';
+        // handle /home/, /home/index.html, and root as home
+        let page;
+        if (window.location.pathname === '/home/' || window.location.pathname === '/home/index.html' || window.location.pathname === '/' || window.location.pathname === '') {
+          page = '/home/index.html';
+        } else {
+          page = window.location.pathname.split('/').pop() || 'index.html';
+        }
         loadContent(page);
       });
     </script>
