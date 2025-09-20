@@ -15,42 +15,54 @@
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
-    
+    <style>
+      nav a.no-underline,
+      nav a.no-underline:hover,
+      nav a.no-underline:focus,
+      nav a.no-underline:active {
+        text-decoration: none !important;
+      }
+    </style>
     <script src="script.js"></script>
   </head>
 
-  <body class="padded" style="padding-top: 5vmin">
+    <body class="padded flex flex-col items-center pt-[5vmin]">
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
 
-    <body class="flex flex-col items-center pt-[5vmin]">
-      <div id="orb"></div>
-      
-      <div class="w-full flex flex-col items-center justify-center pb-[3vmin]">
-        <div class="flex items-center space-x-2">
-          <label id="theme" onclick="theme()" class="cursor-pointer inline-block">
-            <input type="checkbox" value="" class="sr-only peer">
-            <div class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
-          </label> 
-          <p class="inline-block" id="themeLabel">Prefer dark mode?</p>
-        </div>
+    <!-- Stationary Header -->
+    <div id="site-header" class="w-full flex flex-row items-center justify-between mb-2">
+      <span id="local-time" style="font-family: var(--p-font); color: var(--p-color); font-size: 1em; padding-left: 2px;"></span>
+      <nav class="flex-1 flex justify-center space-x-4">
+        <a href="index.html" class="text-gray-500 dark:text-gray-400 font-semibold no-underline" data-nav>Home</a>
+        <a href="internships.html" class="text-gray-500 dark:text-gray-400 font-semibold no-underline" data-nav>Internships</a>
+        <a href="research.html" class="text-gray-500 dark:text-gray-400 font-semibold no-underline" data-nav>Research</a>
+        <a href="projects.html" class="text-gray-500 dark:text-gray-400 font-semibold no-underline" data-nav>Projects</a>
+      </nav>
+      <div class="flex items-center space-x-2 pr-2">
+        <label id="theme" onclick="theme()" class="cursor-pointer inline-block">
+          <input type="checkbox" value="" class="sr-only peer">
+          <div class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
+        </label> 
+        <p class="inline-block" id="themeLabel">Prefer dark mode?</p>
       </div>
-    
+    </div>
+    <div id="orb"></div>
+    <!-- Main Content Container -->
+    <div id="main-content" class="w-full flex flex-col items-center">
       <div class="w-full">
         <p class="mb-0 mt-[1.5em]">Hi 👋 my name is</p>
         <div class="flex items-center space-x-10">
-        <h1 class="mt-0 text-[10vmin] mb-[0.5em] opacity-70" style="line-height: 1em">
-          Aesha Shah
-        </h1>
-        <p class="button bg-blue-800 inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-white animate-bounce hover:cursor-pointer">
-          <a href="https://www.linkedin.com/in/aeshashah7/" style="font-weight: normal">Let's&nbsp;connect&nbsp→</a>
-        </p>
-      </div>
-    
+          <h1 class="mt-0 text-[10vmin] mb-[0.5em] opacity-70" style="line-height: 1em">
+            Aesha Shah
+          </h1>
+          <p class="button bg-blue-800 inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-white animate-bounce hover:cursor-pointer">
+            <a href="https://www.linkedin.com/in/aeshashah7/" style="font-weight: normal">Let's&nbsp;connect&nbsp→</a>
+          </p>
+        </div>
         <p class="mt-0 mb-6">
           I'm a Georgia Tech Computer Science major concentrating in Cybersecurity 🔐 and Artificial Intelligence 🤖, with a minor in Law, Science, & Technology ⚖️. I also love to read mystery novels 🕵️‍♀️📚, bike along new trails 🚴‍♀️, eat tacos 🌮, and solve cool puzzles 🧩🧠!
         </p>
       </div>
-
       <div class="w-full pt-6 pb-6">
         <div class="flex items-center">
           <h1 class="text-[6vmin] opacity-70 leading-none">
@@ -58,87 +70,81 @@
           </h1>
         </div>
       </div>
-    
       <div class="grid xl:grid-cols-2 gap-8 w-full">
         <div class="hackathon-box bg-[#222] p-4 transition ease-in-out hover:-translate-y-1 hover:scale-105 hover: duration-180 hover:cursor-default" style="padding: 2em; padding-top: 0.5em">
-            <div class="text-left">
-              <p class="bg-green-900 inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-white">
-                Summer 2025
-              </p>
-            </div>
-            <h2 class="mb-1" style="font-size: 1.5em">Solutions Architect Intern</h2>
-            <h2 class="mb-1" style="font-size: 1em">Amazon Web Services (AWS)</h2>
-            <p class="mt-1 mb-1 text-white font-light">
-              Incoming in the AWS Global Cloud Sales team!
+          <div class="text-left">
+            <p class="bg-green-900 inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-white">
+              Summer 2025
             </p>
-            <div class="text-right text-lightgray">
-              <a href="https://www.linkedin.com/in/aeshashah7/n"><p class="button bg-[#fffaf0] inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-black">Technical specs →</p></a>
-              <a href="https://www.linkedin.com/in/aeshashah7/"><p class="button bg-[#fffaf0] inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-black">See the demo →</p></a>
-            </div>
+          </div>
+          <h2 class="mb-1" style="font-size: 1.5em">Solutions Architect Intern</h2>
+          <h2 class="mb-1" style="font-size: 1em">Amazon Web Services (AWS)</h2>
+          <p class="mt-1 mb-1 text-white font-light">
+            Incoming in the AWS Global Cloud Sales team!
+          </p>
+          <div class="text-right text-lightgray">
+            <a href="https://www.linkedin.com/in/aeshashah7/n"><p class="button bg-[#fffaf0] inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-black">Technical specs →</p></a>
+            <a href="https://www.linkedin.com/in/aeshashah7/"><p class="button bg-[#fffaf0] inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-black">See the demo →</p></a>
+          </div>
         </div>
-    
         <div class="hackathon-box bg-[#222] p-4 transition ease-in-out hover:-translate-y-1 hover:scale-105 hover: duration-180 hover:cursor-default" style="padding: 2em; padding-top: 0.5em">
-            <div class="text-left">
-              <p class="bg-green-900 inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-white">
-                Summer 2024
-              </p>
-            </div>
-            <h2 class="mb-1" style="font-size: 1.5em">Information Systems Management / Software Engineering Intern</h2>
-            <h2 class="mb-1" style="font-size: 1em">United Parcel Service (UPS)</h2>
-            <p class="mt-1 mb-1 text-white font-light">[]add text here</p>
-            <div class="text-right text-lightgray">
-              <a href="https://www.linkedin.com/in/aeshashah7"><p class="button bg-[#fffaf0] inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-black">Technical specs →</p></a>
-              <a href="https://www.linkedin.com/in/aeshashah7"><p class="button bg-[#fffaf0] inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-black">See the demo →</p></a>
-            </div>
+          <div class="text-left">
+            <p class="bg-green-900 inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-white">
+              Summer 2024
+            </p>
+          </div>
+          <h2 class="mb-1" style="font-size: 1.5em">Information Systems Management / Software Engineering Intern</h2>
+          <h2 class="mb-1" style="font-size: 1em">United Parcel Service (UPS)</h2>
+          <p class="mt-1 mb-1 text-white font-light">[]add text here</p>
+          <div class="text-right text-lightgray">
+            <a href="https://www.linkedin.com/in/aeshashah7"><p class="button bg-[#fffaf0] inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-black">Technical specs →</p></a>
+            <a href="https://www.linkedin.com/in/aeshashah7"><p class="button bg-[#fffaf0] inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-black">See the demo →</p></a>
+          </div>
         </div>
       </div>
-      
       <div class="w-full pt-12 pb-6">
         <div class="flex items-center">
           <h1 class="text-[6vmin] opacity-70 leading-none">
             Research
           </h1>
         </div>
-      </div>      
-
-    <div class="grid xl:grid-cols-2 gap-8 w-full">
-      <div class="hackathon-box bg-[#222] p-4 transition ease-in-out hover:-translate-y-1 hover:scale-105 hover: duration-180 hover:cursor-default" style="padding: 2em; padding-top: 0.5em">
-          <div class="text-left">
-              <p class="bg-green-900 inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-white">
-                Spring 2025
-              </p>
-            </div>
-            <h2 class="mb-1" style="font-size: 1.5em">Undergraduate Researcher</h2>
-            <h2 class="mb-1" style="font-size: 1em">NLP / ML for Financial Markets, Vertically Integrated Project @ Georgia Tech</h2>
-            <p class="mt-1 mb-1 text-white font-light">[]add text here</p>
-            <div class="text-right text-lightgray">
-              <a href="https://www.linkedin.com/in/aeshashah7"><p class="button bg-[#fffaf0] inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-black">Technical specs →</p></a>
-              <a href="https://www.linkedin.com/in/aeshashah7"><p class="button bg-[#fffaf0] inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-black">See the demo →</p></a>
-            </div>
-        </div>
-    
+      </div>
+      <div class="grid xl:grid-cols-2 gap-8 w-full">
         <div class="hackathon-box bg-[#222] p-4 transition ease-in-out hover:-translate-y-1 hover:scale-105 hover: duration-180 hover:cursor-default" style="padding: 2em; padding-top: 0.5em">
           <div class="text-left">
-              <p class="bg-green-900 inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-white">
-                Fall 2024
-              </p>
-              <p class="bg-green-900 inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-white">
-                Spring 2024
-              </p>
-              <p class="bg-green-900 inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-white">
-                Summer 2023
-              </p>
-            </div>
-            <h2 class="mb-1" style="font-size: 1.5em">Undergraduate Research Assistant</h2>
-            <h2 class="mb-1" style="font-size: 1em">Robot Autonomy & Interactive Learning (RAIL) Lab @ Georgia Tech</h2>
-            <p class="mt-1 mb-1 text-white font-light">[]add text here</p>
-            <div class="text-right text-lightgray">
-              <a href="https://www.linkedin.com/in/aeshashah7"><p class="button bg-[#fffaf0] inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-black">Technical specs →</p></a>
-              <a href="https://www.linkedin.com/in/aeshashah7"><p class="button bg-[#fffaf0] inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-black">See the demo →</p></a>
-            </div>
+            <p class="bg-green-900 inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-white">
+              Spring 2025
+            </p>
+          </div>
+          <h2 class="mb-1" style="font-size: 1.5em">Undergraduate Researcher</h2>
+          <h2 class="mb-1" style="font-size: 1em">NLP / ML for Financial Markets, Vertically Integrated Project @ Georgia Tech</h2>
+          <p class="mt-1 mb-1 text-white font-light">[]add text here</p>
+          <div class="text-right text-lightgray">
+            <a href="https://www.linkedin.com/in/aeshashah7"><p class="button bg-[#fffaf0] inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-black">Technical specs →</p></a>
+            <a href="https://www.linkedin.com/in/aeshashah7"><p class="button bg-[#fffaf0] inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-black">See the demo →</p></a>
           </div>
         </div>
-
+        <div class="hackathon-box bg-[#222] p-4 transition ease-in-out hover:-translate-y-1 hover:scale-105 hover: duration-180 hover:cursor-default" style="padding: 2em; padding-top: 0.5em">
+          <div class="text-left">
+            <p class="bg-green-900 inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-white">
+              Fall 2024
+            </p>
+            <p class="bg-green-900 inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-white">
+              Spring 2024
+            </p>
+            <p class="bg-green-900 inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-white">
+              Summer 2023
+            </p>
+          </div>
+          <h2 class="mb-1" style="font-size: 1.5em">Undergraduate Research Assistant</h2>
+          <h2 class="mb-1" style="font-size: 1em">Robot Autonomy & Interactive Learning (RAIL) Lab @ Georgia Tech</h2>
+          <p class="mt-1 mb-1 text-white font-light">[]add text here</p>
+          <div class="text-right text-lightgray">
+            <a href="https://www.linkedin.com/in/aeshashah7"><p class="button bg-[#fffaf0] inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-black">Technical specs →</p></a>
+            <a href="https://www.linkedin.com/in/aeshashah7"><p class="button bg-[#fffaf0] inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-black">See the demo →</p></a>
+          </div>
+        </div>
+      </div>
       <div class="w-full pt-12 pb-6">
         <div class="flex items-center">
           <h1 class="text-[6vmin] opacity-70 leading-none">
@@ -146,38 +152,70 @@
           </h1>
         </div>
       </div>
-      
-
       <div class="grid xl:grid-cols-2 gap-8 w-full">
         <div class="hackathon-box bg-[#222] p-4 transition ease-in-out hover:-translate-y-1 hover:scale-105 hover: duration-180 hover:cursor-default" style="padding: 2em; padding-top: 0.5em">
           <div class="text-left">
-              <p class="bg-green-900 inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-white">
-                []add text here
-              </p>
-            </div>
-            <h2 class="mb-1" style="font-size: 1.5em">[]add text here</h2>
-            <p class="mt-1 mb-1 text-white font-light">[]add text here</p>
-            <div class="text-right text-lightgray">
-              <a href="https://www.linkedin.com/in/aeshashah7"><p class="button bg-[#fffaf0] inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-black">Technical specs →</p></a>
-              <a href="https://www.linkedin.com/in/aeshashah7"><p class="button bg-[#fffaf0] inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-black">See the demo →</p></a>
-            </div>
+            <p class="bg-green-900 inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-white">
+              []add text here
+            </p>
           </div>
-    
-          <div class="hackathon-box bg-[#222] p-4 transition ease-in-out hover:-translate-y-1 hover:scale-105 hover: duration-180 hover:cursor-default" style="padding: 2em; padding-top: 0.5em">
-            <div class="text-left">
-              <p class="bg-green-900 inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-white">
-                []add text here
-              </p>
-            </div>
-            <h2 class="mb-1" style="font-size: 1.5em">[]add text here</h2>
-            <p class="mt-1 mb-1 text-white font-light">[]add text here</p>
-            <div class="text-right text-lightgray">
-              <a href="https://www.linkedin.com/in/aeshashah7"><p class="button bg-[#fffaf0] inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-black">Technical specs →</p></a>
-              <a href="https://www.linkedin.com/in/aeshashah7"><p class="button bg-[#fffaf0] inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-black">See the demo →</p></a>
-            </div>
+          <h2 class="mb-1" style="font-size: 1.5em">[]add text here</h2>
+          <p class="mt-1 mb-1 text-white font-light">[]add text here</p>
+          <div class="text-right text-lightgray">
+            <a href="https://www.linkedin.com/in/aeshashah7"><p class="button bg-[#fffaf0] inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-black">Technical specs →</p></a>
+            <a href="https://www.linkedin.com/in/aeshashah7"><p class="button bg-[#fffaf0] inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-black">See the demo →</p></a>
+          </div>
+        </div>
+        <div class="hackathon-box bg-[#222] p-4 transition ease-in-out hover:-translate-y-1 hover:scale-105 hover: duration-180 hover:cursor-default" style="padding: 2em; padding-top: 0.5em">
+          <div class="text-left">
+            <p class="bg-green-900 inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-white">
+              []add text here
+            </p>
+          </div>
+          <h2 class="mb-1" style="font-size: 1.5em">[]add text here</h2>
+          <p class="mt-1 mb-1 text-white font-light">[]add text here</p>
+          <div class="text-right text-lightgray">
+            <a href="https://www.linkedin.com/in/aeshashah7"><p class="button bg-[#fffaf0] inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-black">Technical specs →</p></a>
+            <a href="https://www.linkedin.com/in/aeshashah7"><p class="button bg-[#fffaf0] inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-black">See the demo →</p></a>
+          </div>
         </div>
       </div>
-    </body>
+    </div>
+    <script>
+      // SPA-like navigation: load content dynamically
+      async function loadContent(page) {
+        let url = page;
+        if (page === 'index.html') url = window.location.pathname.split('/').pop() || 'index.html';
+        const response = await fetch(url);
+        const text = await response.text();
+        // Extract only the main content (between <body> and </body>)
+        const bodyMatch = text.match(/<body[\s\S]*?>([\s\S]*?)<\/body>/i);
+        let content = bodyMatch ? bodyMatch[1] : text;
+        // Remove header and orb if present
+        content = content.replace(/<div id="site-header"[\s\S]*?<\/div>/, '');
+        content = content.replace(/<div id="orb"[\s\S]*?<\/div>/, '');
+        document.getElementById('main-content').innerHTML = content;
+      }
+      // Intercept nav clicks
+      document.querySelectorAll('a[data-nav]').forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          const page = this.getAttribute('href');
+          window.history.pushState({}, '', page);
+          loadContent(page);
+        });
+      });
+      // Handle browser navigation
+      window.addEventListener('popstate', () => {
+        const page = window.location.pathname.split('/').pop() || 'index.html';
+        loadContent(page);
+      });
+      // Initial load
+      document.addEventListener('DOMContentLoaded', () => {
+        const page = window.location.pathname.split('/').pop() || 'index.html';
+        loadContent(page);
+      });
+    </script>
     
     <div class="w-full mt-[3em] mb-0">
       <div class="w-full text-center py-4 border-t">
