@@ -67,13 +67,7 @@
         color: #fff;
       }
     </style>
-    <!-- Modal overlay for internship details -->
-    <div id="modal-overlay" class="modal-overlay">
-      <div class="modal-content" id="modal-content">
-        <span class="modal-close" id="modal-close">&times;</span>
-        <div id="modal-body"></div>
-      </div>
-    </div>
+    <!-- Modal overlay for internship details is now in <body> -->
     <script>
       // Only redirect if this is a top-level navigation (not loaded via AJAX or from within the SPA)
       if (window.top === window && (!document.referrer || !document.referrer.startsWith(window.location.origin))) {
@@ -126,6 +120,13 @@
       <script src="script.js"></script>
       </head>
       <body class="padded flex flex-col items-center pt-[5vmin]">
+        <!-- modal overlay for internship details (moved from <head>) -->
+        <div id="modal-overlay" class="modal-overlay">
+          <div class="modal-content" id="modal-content">
+            <span class="modal-close" id="modal-close">&times;</span>
+            <div id="modal-body"></div>
+          </div>
+        </div>
         <!-- load flowbite js for extra ui components -->
         <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
         <!-- main content container for internships -->
@@ -186,8 +187,9 @@
           box.addEventListener('click', function() {
             modalBody.innerHTML = this.getAttribute('data-modal-content');
             modal.classList.add('active');
+            // prevent background scroll when modal is open
+            document.body.style.overflow = 'hidden';
           });
-          // Optional: show a preview on hover (e.g., highlight)
           box.addEventListener('mouseenter', function() {
             box.style.boxShadow = '0 0 0 4px #60a5fa';
           });
@@ -197,9 +199,20 @@
         });
         modalClose.addEventListener('click', function() {
           modal.classList.remove('active');
+          document.body.style.overflow = '';
         });
         modal.addEventListener('click', function(e) {
-          if (e.target === modal) modal.classList.remove('active');
+          if (e.target === modal) {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+          }
+        });
+        // also close modal on Escape key
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape' && modal.classList.contains('active')) {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+          }
         });
       });
     </script>
