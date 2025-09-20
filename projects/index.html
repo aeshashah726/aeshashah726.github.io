@@ -3,6 +3,71 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <style>
+      /* Modal overlay styles matching site theme */
+      .modal-overlay {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(20,20,20,0.85);
+        justify-content: center;
+        align-items: center;
+        font-family: var(--p-font, 'Inter', 'sans-serif');
+      }
+      .modal-overlay.active {
+        display: flex;
+      }
+      .modal-content {
+        background: #18181b;
+        color: #fff;
+        border-radius: 1rem;
+        padding: 2.5em 2em 2em 2em;
+        max-width: 95vw;
+        max-height: 80vh;
+        overflow-y: auto;
+        box-shadow: 0 4px 32px rgba(0,0,0,0.4);
+        position: relative;
+        font-family: var(--p-font, 'Inter', 'sans-serif');
+      }
+      .modal-content h2, .modal-content h3 {
+        font-family: var(--h-font, 'Inter', 'sans-serif');
+        font-weight: 700;
+        margin-bottom: 0.5em;
+        color: #fff;
+      }
+      .modal-content h3 {
+        font-size: 1.1em;
+        font-weight: 500;
+        color: #cbd5e1;
+      }
+      .modal-content p {
+        color: #e5e7eb;
+        font-size: 1em;
+        margin-bottom: 1em;
+      }
+      .modal-content a {
+        color: #60a5fa;
+        text-decoration: underline;
+        font-weight: 500;
+      }
+      .modal-close {
+        position: absolute;
+        top: 0.5em;
+        right: 1em;
+        font-size: 2em;
+        color: #888;
+        cursor: pointer;
+        transition: color 0.2s;
+      }
+      .modal-close:hover {
+        color: #fff;
+      }
+    </style>
+    <!-- Modal overlay for project details is now in <body> -->
     <script>
       // Only redirect if this is a top-level navigation (not loaded via AJAX or from within the SPA)
       if (window.top === window && (!document.referrer || !document.referrer.startsWith(window.location.origin))) {
@@ -55,6 +120,13 @@
       <script src="script.js"></script>
       </head>
       <body class="padded flex flex-col items-center pt-[5vmin]">
+        <!-- modal overlay for project details (moved from <head>) -->
+        <div id="modal-overlay" class="modal-overlay">
+          <div class="modal-content" id="modal-content">
+            <span class="modal-close" id="modal-close">&times;</span>
+            <div id="modal-body"></div>
+          </div>
+        </div>
         <!-- load flowbite js for extra ui components -->
         <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
         <!-- main content container for projects -->
@@ -70,7 +142,7 @@
           <!-- grid of project cards -->
           <div class="grid xl:grid-cols-2 gap-8 w-full">
             <!-- first project card -->
-            <div class="hackathon-box bg-[#222] p-4 transition ease-in-out hover:-translate-y-1 hover:scale-105 hover: duration-180 hover:cursor-default" style="padding: 2em; padding-top: 0.5em">
+            <div class="hackathon-box bg-[#222] p-4 transition ease-in-out hover:-translate-y-1 hover:scale-105 hover: duration-180 hover:cursor-pointer" style="padding: 2em; padding-top: 0.5em" data-modal-content="<h2>[]add text here</h2><p>[]add text here</p><a href='https://www.linkedin.com/in/aeshashah7/n' target='_blank'>Technical specs →</a> | <a href='https://www.linkedin.com/in/aeshashah7/' target='_blank'>See the demo →</a>">
               <div class="text-left">
                 <p class="bg-green-900 inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-white">
                   []add text here
@@ -86,7 +158,7 @@
               </div>
             </div>
             <!-- second project card -->
-            <div class="hackathon-box bg-[#222] p-4 transition ease-in-out hover:-translate-y-1 hover:scale-105 hover: duration-180 hover:cursor-default" style="padding: 2em; padding-top: 0.5em">
+            <div class="hackathon-box bg-[#222] p-4 transition ease-in-out hover:-translate-y-1 hover:scale-105 hover: duration-180 hover:cursor-pointer" style="padding: 2em; padding-top: 0.5em" data-modal-content="<h2>[]add text here</h2><p>[]add text here</p><a href='https://www.linkedin.com/in/aeshashah7' target='_blank'>Technical specs →</a> | <a href='https://www.linkedin.com/in/aeshashah7' target='_blank'>See the demo →</a>">
               <div class="text-left">
                 <p class="bg-green-900 inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-white">
                   []add text here
@@ -101,6 +173,43 @@
                 <a href="https://www.linkedin.com/in/aeshashah7"><p class="button bg-[#fffaf0] inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-black">See the demo →</p></a>
               </div>
             </div>
+    <script>
+      // Modal popup logic for project cards
+      document.addEventListener('DOMContentLoaded', function() {
+        const modal = document.getElementById('modal-overlay');
+        const modalBody = document.getElementById('modal-body');
+        const modalClose = document.getElementById('modal-close');
+        document.querySelectorAll('.hackathon-box[data-modal-content]').forEach(box => {
+          box.addEventListener('click', function() {
+            modalBody.innerHTML = this.getAttribute('data-modal-content');
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+          });
+          box.addEventListener('mouseenter', function() {
+            box.style.boxShadow = '0 0 0 4px #60a5fa';
+          });
+          box.addEventListener('mouseleave', function() {
+            box.style.boxShadow = '';
+          });
+        });
+        modalClose.addEventListener('click', function() {
+          modal.classList.remove('active');
+          document.body.style.overflow = '';
+        });
+        modal.addEventListener('click', function(e) {
+          if (e.target === modal) {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+          }
+        });
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape' && modal.classList.contains('active')) {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+          }
+        });
+      });
+    </script>
           </div>
         </div>
       </body>
