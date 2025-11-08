@@ -30,25 +30,42 @@
       nav a.no-underline:active {
         text-decoration: none !important;
       }
-  /* header positioning: keep header fixed at top so navigation feels persistent between views */
-      #site-header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 50;
-  /* subtle backdrop: apply a slight blur so header text remains legible over page content */
-        backdrop-filter: blur(6px);
-      }
-      /* spacer: an invisible block that pushes page content below the fixed header */
-      #header-spacer {
-        height: 4.25rem; /* change this value if you change header padding or size */
-      }
-      /* active link visual: bold and darker color to indicate current page in the header */
-      nav a.active-nav {
-        font-weight: 800; /* heavier weight indicates active page */
-        color: var(--p-color, #111) !important; /* ensure contrast with theme */
-      }
+    /* header positioning: fixed, but offset lower so nav sits visually centered on the page */
+        #site-header {
+          position: fixed;
+          /* move header lower so it is visually centered in the page */
+          top: 2rem;
+          left: 0;
+          right: 0;
+          z-index: 50;
+          /* subtle backdrop blur for legibility over page content */
+          backdrop-filter: blur(6px);
+          /* add vertical padding so nav items sit vertically centered in the header bar */
+          padding-top: 0.6rem;
+          padding-bottom: 0.6rem;
+        }
+        /* spacer: invisible block to match the fixed header height and avoid overlap */
+        #header-spacer {
+          height: 6.25rem; /* match header top offset + padding to avoid overlap */
+        }
+        /* active link visual: highlight only the currently active page link */
+        nav a.active-nav {
+          font-weight: 800; /* heavier weight for active link */
+          color: var(--p-color, #111) !important; /* ensure contrast with theme */
+        }
+        /* center navigation horizontally and keep balanced spacing */
+        nav {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 0.6rem; /* tighter spacing between nav items */
+        }
+        /* style for nav links (home, internships, research, projects) */
+        nav a {
+          font-size: 1.35rem; /* larger label text for nav titles */
+          font-weight: 500; /* medium weight for non-active links */
+          letter-spacing: 0.2px;
+        }
     </style>
   <!-- main javascript file: controls theme toggle, clock, and other small ui behaviors -->
     <script src="script.js"></script>
@@ -61,16 +78,16 @@
   <!-- site header: persistent top bar with nav, clock, and theme toggle -->
   <div id="site-header" class="w-full flex flex-row items-center justify-between mb-2">
     <!-- small live clock element, updated every second by script.js -->
-      <span id="local-time" style="font-family: var(--p-font); color: var(--p-color); font-size: 1em; padding-left: 2px;"></span>
+  <span id="local-time" style="color: var(--p-color); font-size: 1.05rem; padding-left: 2px; margin-left: 2rem;"></span>
     <!-- navigation bar: links use data-nav so spa logic can intercept clicks and load content -->
-      <nav class="flex-1 flex justify-center space-x-4">
-  <a href="/" class="text-gray-500 dark:text-gray-400 font-semibold no-underline" data-nav>Home</a>
-  <a href="/internships/" class="text-gray-500 dark:text-gray-400 font-semibold no-underline" data-nav>Internships</a>
-  <a href="/research/" class="text-gray-500 dark:text-gray-400 font-semibold no-underline" data-nav>Research</a>
-  <a href="/projects/" class="text-gray-500 dark:text-gray-400 font-semibold no-underline" data-nav>Projects</a>
-      </nav>
+    <nav class="flex justify-center space-x-4">
+  <a href="/" class="text-gray-500 dark:text-gray-400 no-underline" data-nav>Home</a>
+  <a href="/internships/" class="text-gray-500 dark:text-gray-400 no-underline" data-nav>Internships</a>
+  <a href="/research/" class="text-gray-500 dark:text-gray-400 no-underline" data-nav>Research</a>
+  <a href="/projects/" class="text-gray-500 dark:text-gray-400 no-underline" data-nav>Projects</a>
+    </nav>
       <!-- theme toggle: clickable switch plus a small label showing current theme -->
-      <div class="flex items-center space-x-2 pr-2">
+  <div class="flex items-center space-x-2 pr-2" style="margin-right: 2rem;">
         <label id="theme" onclick="theme()" class="cursor-pointer inline-block">
           <input type="checkbox" value="" class="sr-only peer">
           <!-- decorative toggle control that visually represents dark/light mode -->
@@ -92,7 +109,7 @@
   <p class="mb-0 mt-[1.5em]">Hi 👋 my name is</p>
   <!-- name heading and primary call-to-action button linking to linkedin -->
   <div class="flex items-center space-x-10">
-          <h1 class="mt-0 text-[10vmin] mb-[0.5em] opacity-70" style="line-height: 1em">
+          <h1 class="mt-0 text-[12vmin] mb-[0.5em] opacity-70" style="line-height: 1em">
             Aesha Shah
           </h1>
           <p class="button bg-blue-800 inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-white animate-bounce hover:cursor-pointer">
@@ -106,46 +123,77 @@
       </div>
     </div>
     <script>
-      // spa navigation script: load section pages via fetch and inject into main-content
+      // spa navigation script
+      // fetch only the #main-content of the target page and inject it here
       async function loadContent(page) {
         let url = page;
-        // normalize requested page to the actual file url that should be fetched
+        // map common index targets to the actual file we need to fetch
         if (page === '/' || page === 'index.html' || page === '/index.html') {
           url = 'index.html';
         } else if (page.endsWith('/')) {
-          // for folder-style urls (e.g. /internships/), append index.html for fetching
+          // folder-style url (example: /internships/) -> fetch /internships/index.html
           url = page + 'index.html';
         }
         const response = await fetch(url);
         const text = await response.text();
-        // extract the <body> inner html from the fetched page so we can inject it
-        const bodyMatch = text.match(/<body[\s\S]*?>([\s\S]*?)<\/body>/i);
-        let content = bodyMatch ? bodyMatch[1] : text;
-        // strip header and orb markup from injected content to avoid duplicate header elements
-        content = content.replace(/<div id="site-header"[\s\S]*?<\/div>/, '');
-        content = content.replace(/<div id="orb"[\s\S]*?<\/div>/, '');
-        document.getElementById('main-content').innerHTML = content;
+        // parse the fetched html and extract the inner #main-content to avoid duplicate header/footer
+        try {
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(text, 'text/html');
+            const newMain = doc.getElementById('main-content');
+            // when we have a fetched main-content, remove any duplicated footer blocks
+            if (newMain) {
+              // remove nodes that contain the footer-like 'made with' text to avoid duplication
+              const possibleFooters = Array.from(newMain.querySelectorAll('div'));
+              possibleFooters.forEach(n => {
+                try {
+                  if (n.textContent && n.textContent.toLowerCase().includes('made with')) n.remove();
+                } catch (e) {}
+              });
+              document.getElementById('main-content').innerHTML = newMain.innerHTML;
+            } else {
+              const content = (text.match(/<body[\s\S]*?>([\s\S]*?)<\/body>/i) || [null, text])[1];
+              document.getElementById('main-content').innerHTML = content;
+            }
+        } catch (err) {
+          // fallback: naive body extraction when parser isn't available or fails
+          const bodyMatch = text.match(/<body[\s\S]*?>([\s\S]*?)<\/body>/i);
+          let content = bodyMatch ? bodyMatch[1] : text;
+          content = content.replace(/<div id="site-header"[\s\S]*?<\/div>/, '');
+          content = content.replace(/<div id="orb"[\s\S]*?<\/div>/, '');
+          document.getElementById('main-content').innerHTML = content;
+        }
       }
-      // intercept header nav clicks so we can perform an ajax-like content swap instead of full reload
+      // updateActiveNav
+      // normalize and compare paths so only the exact matching nav link is marked active
       function updateActiveNav() {
-        const path = window.location.pathname.replace(/index.html$/, '');
+        // helper: normalize a path so folder links consistently end with '/'
+        function normalizePath(p) {
+          if (!p) return '/';
+          // treat index.html as root
+          p = p.replace(/index.html$/, '');
+          // ensure a trailing slash for folder-style paths (except for the root)
+          if (p !== '/' && !p.endsWith('/')) p = p + '/';
+          return p;
+        }
+        const path = normalizePath(window.location.pathname.replace(/index.html$/, ''));
         document.querySelectorAll('a[data-nav]').forEach(a => {
-          // normalize hrefs for comparison: treat folder links and root consistently
-          let href = a.getAttribute('href');
-          if (!href.endsWith('/') && href !== '/') href = href.replace(/index.html$/, '') ;
+          // normalize hrefs for comparison
+          let href = a.getAttribute('href') || '/';
+          href = normalizePath(href);
           // clear active class
           a.classList.remove('active-nav');
-          // add active-nav class when the current path matches the link href
-          if (path === href || (path === '/' && href === '/')) {
+          // add active-nav class only when the normalized path exactly matches the link href
+          if (path === href) {
             a.classList.add('active-nav');
           }
         });
       }
 
+      // wire up header links to perform history.pushState + content swap
       document.querySelectorAll('a[data-nav]').forEach(link => {
         link.addEventListener('click', function(e) {
           e.preventDefault();
-          // always use the absolute path from the href
           const page = this.getAttribute('href');
           window.history.pushState({}, '', page);
           loadContent(page).then(() => {
@@ -153,7 +201,7 @@
           }).catch(() => updateActiveNav());
         });
       });
-      // handle browser back/forward buttons by loading the appropriate content and updating nav
+      // handle back/forward navigation by loading the corresponding content
       window.addEventListener('popstate', () => {
         let page = window.location.pathname;
         if (page === '/' || page === '/index.html') {
@@ -162,14 +210,13 @@
         loadContent(page);
         updateActiveNav();
       });
-      // initial load on page open: load the section for the current url and set active nav
+      // initial page load: populate main-content for the current url and set active nav
       document.addEventListener('DOMContentLoaded', () => {
         let page = window.location.pathname;
         if (page === '/' || page === '/index.html') {
           page = '/';
         }
         loadContent(page);
-        // mark the active link on first load
         updateActiveNav();
       });
     </script>
