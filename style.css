@@ -154,7 +154,7 @@ button {
   }
 }
 
-/* MEDIA RULES */
+/* responsive rules: adjust spacing, font sizes, and visibility for smaller screens */
 
 @media all and (max-width: 1280px) {
 	.no-mobile {
@@ -168,7 +168,7 @@ button {
   }
 
   h1 {
-    font-size: 25vw;
+    font-size: 25vw; /* headline scales dramatically on small screens for emphasis */
   }
 
   li,
@@ -211,19 +211,22 @@ button {
 
 }
 
+
 .hackathon-box {
-    /* background: linear-gradient(rgb(9, 19, 16), rgb(0, 0, 0));  */
-    border-radius: 1em; 
+  /* card container used for internships/research/projects entries */
+  /* background can be swapped to a gradient if desired */
+  border-radius: 1em; 
 }
 
 
 .overlay {
-    position: cover;
-    padding: 2em; 
-    padding-top: 0.5em;
-    border-radius: 1em; 
-    background: radial-gradient(black, rgba(0, 0, 0, 0.2)); /* 50% black overlay */
-    z-index: 0; /* Make sure it sits above the background */
+  /* legacy overlay helper class (currently unused after removing modals) */
+  position: cover;
+  padding: 2em; 
+  padding-top: 0.5em;
+  border-radius: 1em; 
+  background: radial-gradient(black, rgba(0, 0, 0, 0.2)); /* dark radial fade to dim content beneath */
+  z-index: 0; /* z-index kept low so it doesn't cover header; change when using as modal backdrop */
 }
 
 

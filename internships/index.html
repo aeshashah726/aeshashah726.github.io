@@ -1,10 +1,10 @@
-<!-- this page shows aesha's internships -->
-<!-- comments explain each section for beginners -->
+<!-- section file for internships: contains markup that spa injects into the main page -->
 <!DOCTYPE html>
 <html>
   <head>
     <script>
-      // Only redirect if this is a top-level navigation (not loaded via AJAX or from within the SPA)
+      // redirect guard: when page is opened directly, send user back to the spa root /
+      // keep this so direct folder visits do not show a duplicate header or partial layout
       if (window.top === window && (!document.referrer || !document.referrer.startsWith(window.location.origin))) {
         window.location.replace('/');
       }
@@ -25,7 +25,7 @@
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
   <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
-  <!-- flowbite for extra ui components -->
+  <!-- flowbite css loaded for optional ui helpers used by some components -->
     <!DOCTYPE html>
     <html>
       <head>
@@ -43,7 +43,7 @@
         <meta name="theme-color" content="#ffffff" />
         <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
         <style>
-          /* remove underline from nav links */
+          /* small head-level tweak: remove underline from nav anchors when injected into header */
           nav a.no-underline,
           nav a.no-underline:hover,
           nav a.no-underline:focus,
@@ -55,11 +55,11 @@
       <script src="script.js"></script>
       </head>
       <body class="padded flex flex-col items-center pt-[5vmin]">
-        <!-- load flowbite js for extra ui components -->
+  <!-- flowbite js included in case this section uses interactive flowbite components -->
         <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
-        <!-- main content container for internships -->
+        <!-- main-content wrapper: the spa expects this id when injecting into the root page -->
         <div id="main-content" class="w-full flex flex-col items-center">
-          <!-- internships section header -->
+          <!-- internships section header shown when this section is active -->
           <div class="w-full pt-6 pb-6">
             <div class="flex items-center">
               <h1 class="text-[6vmin] opacity-70 leading-none">
@@ -67,9 +67,9 @@
               </h1>
             </div>
           </div>
-          <!-- grid of internship cards -->
+          <!-- grid container holding internship cards; add or remove cards here -->
           <div class="grid xl:grid-cols-2 gap-8 w-full">
-            <!-- first internship card -->
+            <!-- card: aws solutions architect internship -->
             <div class="hackathon-box bg-[#222] p-4 transition ease-in-out hover:-translate-y-1 hover:scale-105 hover: duration-180 hover:cursor-default" style="padding: 2em; padding-top: 0.5em">
               <div class="text-left">
                 <p class="bg-green-900 inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-white">
@@ -82,13 +82,13 @@
                 Incoming in the AWS Global Cloud Sales team!
               </p>
               <div class="text-right text-lightgray">
-                <!-- link to technical specs -->
+                <!-- external link: technical specs or resume link for this role -->
                 <a href="https://www.linkedin.com/in/aeshashah7/n"><p class="button bg-[#fffaf0] inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-black">Technical specs →</p></a>
-                <!-- link to demo -->
+                <!-- external demo or profile link -->
                 <a href="https://www.linkedin.com/in/aeshashah7/"><p class="button bg-[#fffaf0] inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-black">See the demo →</p></a>
               </div>
             </div>
-            <!-- second internship card -->
+            <!-- card: ups information systems / software engineering internship -->
             <div class="hackathon-box bg-[#222] p-4 transition ease-in-out hover:-translate-y-1 hover:scale-105 hover: duration-180 hover:cursor-default" style="padding: 2em; padding-top: 0.5em">
               <div class="text-left">
                 <p class="bg-green-900 inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-white">
@@ -99,9 +99,9 @@
               <h2 class="mb-1" style="font-size: 1em">United Parcel Service (UPS)</h2>
               <p class="mt-1 mb-1 text-white font-light">[]add text here</p>
               <div class="text-right text-lightgray">
-                <!-- link to technical specs -->
+                <!-- external link: technical specs or more info for this internship -->
                 <a href="https://www.linkedin.com/in/aeshashah7"><p class="button bg-[#fffaf0] inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-black">Technical specs →</p></a>
-                <!-- link to demo -->
+                <!-- external demo/profile link -->
                 <a href="https://www.linkedin.com/in/aeshashah7"><p class="button bg-[#fffaf0] inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-black">See the demo →</p></a>
               </div>
             </div>
