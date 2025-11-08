@@ -1,18 +1,18 @@
-<!-- this is the main html file for the personal website -->
-<!-- it uses html, css, and javascript to create a single page application (spa) experience -->
+<!-- main site entry html, spa root that loads section pages into the main content area -->
+<!-- uses plain html, css, and javascript to provide a single-page-app like experience for easier editing -->
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta tags for character set and responsive design -->
+  <!-- meta tags: charset and responsive viewport for correct rendering on devices -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>👩🏻‍💻 Aesha Shah - cybersecurity & law @ georgia tech</title>
-    <!-- page title and description for browser and search engines -->
-    <!-- link to main stylesheet for custom styles -->
-    <link href="style.css" rel="stylesheet" type="text/css" />
-    <!-- tailwindcss for utility-first styling -->
+  <!-- page title and meta information used by browsers and search engines -->
+  <!-- link to the shared stylesheet that defines site colors, fonts, and layout variables -->
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <!-- tailwindcdn: utility classes for quick styling (kept minimal, mainly used in templates) -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- icons and manifest for mobile and browser tabs -->
+  <!-- browser and mobile icons plus web manifest for proper tab and home-screen appearance -->
     <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -20,9 +20,9 @@
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
-    <!-- flowbite for extra ui components -->
+  <!-- flowbite css: optional ui utilities used by some components (kept as external asset) -->
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
-    <!-- custom style for nav links to remove underline -->
+  <!-- small head-level css tweaks: remove default underline on nav anchors for a cleaner header -->
     <style>
       nav a.no-underline,
       nav a.no-underline:hover,
@@ -30,46 +30,67 @@
       nav a.no-underline:active {
         text-decoration: none !important;
       }
+  /* header positioning: keep header fixed at top so navigation feels persistent between views */
+      #site-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 50;
+  /* subtle backdrop: apply a slight blur so header text remains legible over page content */
+        backdrop-filter: blur(6px);
+      }
+      /* spacer: an invisible block that pushes page content below the fixed header */
+      #header-spacer {
+        height: 4.25rem; /* change this value if you change header padding or size */
+      }
+      /* active link visual: bold and darker color to indicate current page in the header */
+      nav a.active-nav {
+        font-weight: 800; /* heavier weight indicates active page */
+        color: var(--p-color, #111) !important; /* ensure contrast with theme */
+      }
     </style>
-    <!-- main javascript file for interactivity and theme -->
+  <!-- main javascript file: controls theme toggle, clock, and other small ui behaviors -->
     <script src="script.js"></script>
   </head>
 
     <body class="padded flex flex-col items-center pt-[5vmin]">
-    <!-- load flowbite js for extra ui components -->
+  <!-- flowbite js: optional interactive helpers for some components (no required dependencies) -->
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
 
-    <!-- stationary header: stays at the top of the page on all navigation -->
-    <div id="site-header" class="w-full flex flex-row items-center justify-between mb-2">
-      <!-- shows the user's local time, updates every second -->
+  <!-- site header: persistent top bar with nav, clock, and theme toggle -->
+  <div id="site-header" class="w-full flex flex-row items-center justify-between mb-2">
+    <!-- small live clock element, updated every second by script.js -->
       <span id="local-time" style="font-family: var(--p-font); color: var(--p-color); font-size: 1em; padding-left: 2px;"></span>
-      <!-- navigation bar for switching between pages -->
+    <!-- navigation bar: links use data-nav so spa logic can intercept clicks and load content -->
       <nav class="flex-1 flex justify-center space-x-4">
   <a href="/" class="text-gray-500 dark:text-gray-400 font-semibold no-underline" data-nav>Home</a>
   <a href="/internships/" class="text-gray-500 dark:text-gray-400 font-semibold no-underline" data-nav>Internships</a>
   <a href="/research/" class="text-gray-500 dark:text-gray-400 font-semibold no-underline" data-nav>Research</a>
   <a href="/projects/" class="text-gray-500 dark:text-gray-400 font-semibold no-underline" data-nav>Projects</a>
       </nav>
-      <!-- theme toggle switch and label -->
+      <!-- theme toggle: clickable switch plus a small label showing current theme -->
       <div class="flex items-center space-x-2 pr-2">
         <label id="theme" onclick="theme()" class="cursor-pointer inline-block">
           <input type="checkbox" value="" class="sr-only peer">
-          <!-- this is the visual toggle for dark/light mode -->
+          <!-- decorative toggle control that visually represents dark/light mode -->
           <div class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
         </label>
-        <!-- this span shows the current theme text, updated by javascript -->
+        <!-- small label that reads 'light mode' or 'dark mode', updated by script.js -->
         <span id="themeText" class="ml-2 text-sm font-medium"></span>
       </div>
     </div>
-  <!-- decorative orb element for visual effect -->
+  <!-- header spacer: invisible block that prevents content from appearing behind the fixed header -->
+  <div id="header-spacer"></div>
+  <!-- decorative orb: purely visual element, safe to remove if not needed -->
   <div id="orb"></div>
-  <!-- main content container: this is where page content is loaded dynamically -->
+  <!-- main content container: spa injects section body content here to avoid full page reloads -->
   <div id="main-content" class="w-full flex flex-col items-center">
-  <!-- introduction section with name and greeting -->
+  <!-- home introduction block: name, greeting, and quick links -->
   <div class="w-full">
-  <!-- short greeting -->
+  <!-- short greeting line shown above the name -->
   <p class="mb-0 mt-[1.5em]">Hi 👋 my name is</p>
-  <!-- name and linkedin button -->
+  <!-- name heading and primary call-to-action button linking to linkedin -->
   <div class="flex items-center space-x-10">
           <h1 class="mt-0 text-[10vmin] mb-[0.5em] opacity-70" style="line-height: 1em">
             Aesha Shah
@@ -78,58 +99,78 @@
             <a href="https://www.linkedin.com/in/aeshashah7/" style="font-weight: normal">Let's&nbsp;connect&nbsp→</a>
           </p>
         </div>
-  <!-- short bio -->
+  <!-- short bio paragraph: single-line summary and fun personal details -->
   <p class="mt-0 mb-6">
           I'm a Georgia Tech Computer Science major concentrating in Cybersecurity 🔐 and Artificial Intelligence 🤖, with a minor in Law, Science, & Technology ⚖️. I also love to read mystery novels 🕵️‍♀️📚, bike along new trails 🚴‍♀️, eat tacos 🌮, and solve cool puzzles 🧩🧠!
         </p>
       </div>
     </div>
     <script>
-      // this script enables spa-like navigation by loading content dynamically
+      // spa navigation script: load section pages via fetch and inject into main-content
       async function loadContent(page) {
         let url = page;
-        // always use absolute paths for navigation
+        // normalize requested page to the actual file url that should be fetched
         if (page === '/' || page === 'index.html' || page === '/index.html') {
           url = 'index.html';
         } else if (page.endsWith('/')) {
-          // for folder URLs, load index.html inside the folder
+          // for folder-style urls (e.g. /internships/), append index.html for fetching
           url = page + 'index.html';
         }
         const response = await fetch(url);
         const text = await response.text();
-        // extract only the main content (between <body> and </body>)
+        // extract the <body> inner html from the fetched page so we can inject it
         const bodyMatch = text.match(/<body[\s\S]*?>([\s\S]*?)<\/body>/i);
         let content = bodyMatch ? bodyMatch[1] : text;
-        // remove header and orb if present (so they don't duplicate)
+        // strip header and orb markup from injected content to avoid duplicate header elements
         content = content.replace(/<div id="site-header"[\s\S]*?<\/div>/, '');
         content = content.replace(/<div id="orb"[\s\S]*?<\/div>/, '');
         document.getElementById('main-content').innerHTML = content;
       }
-      // intercept nav link clicks to load content without full reload
+      // intercept header nav clicks so we can perform an ajax-like content swap instead of full reload
+      function updateActiveNav() {
+        const path = window.location.pathname.replace(/index.html$/, '');
+        document.querySelectorAll('a[data-nav]').forEach(a => {
+          // normalize hrefs for comparison: treat folder links and root consistently
+          let href = a.getAttribute('href');
+          if (!href.endsWith('/') && href !== '/') href = href.replace(/index.html$/, '') ;
+          // clear active class
+          a.classList.remove('active-nav');
+          // add active-nav class when the current path matches the link href
+          if (path === href || (path === '/' && href === '/')) {
+            a.classList.add('active-nav');
+          }
+        });
+      }
+
       document.querySelectorAll('a[data-nav]').forEach(link => {
         link.addEventListener('click', function(e) {
           e.preventDefault();
           // always use the absolute path from the href
           const page = this.getAttribute('href');
           window.history.pushState({}, '', page);
-          loadContent(page);
+          loadContent(page).then(() => {
+            updateActiveNav();
+          }).catch(() => updateActiveNav());
         });
       });
-      // handle browser back/forward navigation
+      // handle browser back/forward buttons by loading the appropriate content and updating nav
       window.addEventListener('popstate', () => {
         let page = window.location.pathname;
         if (page === '/' || page === '/index.html') {
           page = '/';
         }
         loadContent(page);
+        updateActiveNav();
       });
-      // initial load: load the right content for the current url
+      // initial load on page open: load the section for the current url and set active nav
       document.addEventListener('DOMContentLoaded', () => {
         let page = window.location.pathname;
         if (page === '/' || page === '/index.html') {
           page = '/';
         }
         loadContent(page);
+        // mark the active link on first load
+        updateActiveNav();
       });
     </script>
     
