@@ -1,10 +1,10 @@
-<!-- this page shows aesha's projects -->
-<!-- comments explain each section for beginners -->
+<!-- section file for projects: content intended to be injected into the spa main area -->
+<!-- contains project cards; header and nav are managed by the spa root -->
 <!DOCTYPE html>
 <html>
   <head>
     <script>
-      // Only redirect if this is a top-level navigation (not loaded via AJAX or from within the SPA)
+      // redirect guard: forward direct visits back to spa root so header/nav remain consistent
       if (window.top === window && (!document.referrer || !document.referrer.startsWith(window.location.origin))) {
         window.location.replace('/');
       }
@@ -25,7 +25,7 @@
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
   <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
-  <!-- flowbite for extra ui components -->
+  <!-- flowbite css included for optional components; safe to remove if unused -->
     <!DOCTYPE html>
     <html>
       <head>
@@ -43,7 +43,7 @@
         <meta name="theme-color" content="#ffffff" />
         <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
         <style>
-          /* remove underline from nav links */
+          /* small head-level style: suppress underlines on nav anchors when injected */
           nav a.no-underline,
           nav a.no-underline:hover,
           nav a.no-underline:focus,
@@ -51,15 +51,15 @@
             text-decoration: none !important;
           }
         </style>
-      <!-- main javascript file for interactivity and theme -->
+      <!-- include shared script handling theme and header ui behaviors -->
       <script src="script.js"></script>
       </head>
       <body class="padded flex flex-col items-center pt-[5vmin]">
-        <!-- load flowbite js for extra ui components -->
+  <!-- flowbite js: optionally used by interactive components inside the section -->
         <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
-        <!-- main content container for projects -->
+        <!-- main-content wrapper: this id is expected by the spa when injecting this file -->
         <div id="main-content" class="w-full flex flex-col items-center">
-          <!-- projects section header -->
+          <!-- projects section header: page title for this section -->
           <div class="w-full pt-6 pb-6">
             <div class="flex items-center">
               <h1 class="text-[6vmin] opacity-70 leading-none">
@@ -67,9 +67,9 @@
               </h1>
             </div>
           </div>
-          <!-- grid of project cards -->
+          <!-- grid container: add one card per project inside this grid -->
           <div class="grid xl:grid-cols-2 gap-8 w-full">
-            <!-- first project card -->
+            <!-- project card 1: replace placeholder text with project details -->
             <div class="hackathon-box bg-[#222] p-4 transition ease-in-out hover:-translate-y-1 hover:scale-105 hover: duration-180 hover:cursor-default" style="padding: 2em; padding-top: 0.5em">
               <div class="text-left">
                 <p class="bg-green-900 inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-white">
@@ -79,13 +79,13 @@
               <h2 class="mb-1" style="font-size: 1.5em">[]add text here</h2>
               <p class="mt-1 mb-1 text-white font-light">[]add text here</p>
               <div class="text-right text-lightgray">
-                <!-- link to technical specs -->
+                <!-- external resources for project: specs, demo, or repo links -->
                 <a href="https://www.linkedin.com/in/aeshashah7/n"><p class="button bg-[#fffaf0] inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-black">Technical specs →</p></a>
-                <!-- link to demo -->
+                <!-- demo link or live preview for this project -->
                 <a href="https://www.linkedin.com/in/aeshashah7/"><p class="button bg-[#fffaf0] inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-black">See the demo →</p></a>
               </div>
             </div>
-            <!-- second project card -->
+            <!-- project card 2: duplicate this block to add more projects -->
             <div class="hackathon-box bg-[#222] p-4 transition ease-in-out hover:-translate-y-1 hover:scale-105 hover: duration-180 hover:cursor-default" style="padding: 2em; padding-top: 0.5em">
               <div class="text-left">
                 <p class="bg-green-900 inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-white">
@@ -95,9 +95,9 @@
               <h2 class="mb-1" style="font-size: 1.5em">[]add text here</h2>
               <p class="mt-1 mb-1 text-white font-light">[]add text here</p>
               <div class="text-right text-lightgray">
-                <!-- link to technical specs -->
+                <!-- second project's external resources: link to writeups or demos -->
                 <a href="https://www.linkedin.com/in/aeshashah7"><p class="button bg-[#fffaf0] inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-black">Technical specs →</p></a>
-                <!-- link to demo -->
+                <!-- demo or repo link for the second project -->
                 <a href="https://www.linkedin.com/in/aeshashah7"><p class="button bg-[#fffaf0] inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-black">See the demo →</p></a>
               </div>
             </div>

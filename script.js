@@ -1,61 +1,57 @@
-// this script controls the local time display and theme toggle for the website
+// small ui script: clock display and theme toggle helpers for the site header
 
-// function to update the local time every second
-// shows time in 24-hour (military) format in the #local-time span
+// updateLocalTime: refresh the header clock every second in hh:mm:ss 24-hour form
 function updateLocalTime() {
-  const now = new Date(); // get current date and time
-  const hours = String(now.getHours()).padStart(2, '0'); // get hours, pad with zero
-  const minutes = String(now.getMinutes()).padStart(2, '0'); // get minutes, pad with zero
-  const seconds = String(now.getSeconds()).padStart(2, '0'); // get seconds, pad with zero
-  const timeString = `${hours}:${minutes}:${seconds}`; // format as hh:mm:ss
-  const el = document.getElementById('local-time'); // find the element to update
-  if (el) el.textContent = timeString; // set the text if element exists
+  const now = new Date(); // read current time from the browser clock
+  const hours = String(now.getHours()).padStart(2, '0'); // format hours to two digits
+  const minutes = String(now.getMinutes()).padStart(2, '0'); // format minutes to two digits
+  const seconds = String(now.getSeconds()).padStart(2, '0'); // format seconds to two digits
+  const timeString = `${hours}:${minutes}:${seconds}`; // build display string hh:mm:ss
+  const el = document.getElementById('local-time'); // locate the small header time element
+  if (el) el.textContent = timeString; // update the element only if present
 }
 
-// call updateLocalTime every 1000ms (1 second) to keep time updated
+// schedule the clock to tick every 1 second and seed it once on initial load
 setInterval(updateLocalTime, 1000);
-// also update time as soon as the page loads
 window.addEventListener('DOMContentLoaded', () => {
-  updateLocalTime();
-  updateThemeText();
+  updateLocalTime(); // immediate seed so time shows without waiting 1s
+  updateThemeText(); // ensure the theme label reflects initial theme state
 });
 
-// function to update the theme label text ("light mode" or "dark mode")
+// updateThemeText: change the small label next to the toggle to reflect current theme
 function updateThemeText() {
   const themeText = document.getElementById('themeText');
-  if (!themeText) return;
+  if (!themeText) return; // nothing to do when the label is missing
   const isDark = document.documentElement.classList.contains('dark');
-  themeText.textContent = isDark ? 'Dark mode' : 'Light mode';
+  themeText.textContent = isDark ? 'dark mode' : 'light mode';
 }
-// make updateThemeText available globally for theme toggle
+// expose updateThemeText globally so other scripts can refresh the label after changing classes
 window.updateThemeText = updateThemeText;
 
-// function to toggle between light and dark theme
+// theme: toggle classes and data attributes on <html> to switch site colors
 function theme() {
-    var element = document.documentElement; // get the root html element
-    var checkbox = document.querySelector('input[type="checkbox"]'); // get the theme toggle checkbox
+    var element = document.documentElement; // root element controls theme classes and css vars
+    var checkbox = document.querySelector('input[type="checkbox"]'); // the hidden checkbox used as control
     if (checkbox.checked) {
-      // if checked, switch to dark mode
+      // checkbox checked means enable dark theme variables and classes
       element.setAttribute('data-theme', 'dark');
       element.classList.add('dark');
       element.classList.remove('light');
-    } else {  
-      // if not checked, switch to light mode
+    } else {
+      // checkbox unchecked means fall back to the light theme
       element.setAttribute('data-theme', 'one');
       element.classList.remove('dark');
       element.classList.add('light');
     }
-    // update the theme label text ("light mode" or "dark mode")
+    // refresh the small label text so it matches the new state
     if (window.updateThemeText) window.updateThemeText();
-    // also update themeText color for contrast with background
+    // tweak the label color for contrast depending on the selected theme
     var themeText = document.getElementById('themeText');
     if (themeText) {
       if (checkbox.checked) {
-        // use light text for dark background
-        themeText.style.color = 'whitesmoke';
+        themeText.style.color = 'whitesmoke'; // light label on dark background
       } else {
-        // use dark text for light background
-        themeText.style.color = '#222';
+        themeText.style.color = '#222'; // dark label on light background
       }
     }
 }
