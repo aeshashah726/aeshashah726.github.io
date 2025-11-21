@@ -4,8 +4,9 @@
 <html>
   <head>
     <script>
-      // redirect guard: forward direct visits back to spa root so header/nav remain consistent
-      if (window.top === window && (!document.referrer || !document.referrer.startsWith(window.location.origin))) {
+      // redirect guard: when this file is loaded as a top-level page, always send user back to the SPA root '/'.
+      // This ensures a browser reload or direct navigation doesn't show the raw section fragment with duplicated header/nav.
+      if (window.top === window) {
         window.location.replace('/');
       }
     </script>
