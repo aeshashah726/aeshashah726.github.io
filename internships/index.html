@@ -3,9 +3,11 @@
 <html>
   <head>
     <script>
-      // redirect guard: when page is opened directly, send user back to the spa root /
-      // keep this so direct folder visits do not show a duplicate header or partial layout
-      if (window.top === window && (!document.referrer || !document.referrer.startsWith(window.location.origin))) {
+      // redirect guard: when this file is loaded as a top-level page, always send user back to the SPA root '/'.
+      // This prevents showing a duplicate header or a partial layout when the browser does a full navigation
+      // (including a reload). The SPA injects this file via fetch and DOMParser, so this script only runs
+      // when the browser actually navigates to /internships/, which is the scenario we want to redirect.
+      if (window.top === window) {
         window.location.replace('/');
       }
     </script>
