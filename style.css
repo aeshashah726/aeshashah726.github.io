@@ -229,6 +229,16 @@ button {
   z-index: 0; /* z-index kept low so it doesn't cover header; change when using as modal backdrop */
 }
 
+/* Ensure list text and markers inside the dark internship/project cards are white
+   (explicit rule to override global `li` color in style.css and any other rules) */
+.hackathon-box ul,
+.hackathon-box ul li {
+  color: white !important;
+}
+.hackathon-box ul li::marker {
+  color: white !important;
+}
+
 
 
 
