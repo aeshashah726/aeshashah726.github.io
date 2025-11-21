@@ -23,7 +23,7 @@ function updateThemeText() {
   const themeText = document.getElementById('themeText');
   if (!themeText) return; // nothing to do when the label is missing
   const isDark = document.documentElement.classList.contains('dark');
-  themeText.textContent = isDark ? 'dark mode' : 'light mode';
+  themeText.textContent = isDark ? 'toggle to light mode' : 'toggle to dark mode';
 }
 // expose updateThemeText globally so other scripts can refresh the label after changing classes
 window.updateThemeText = updateThemeText;
