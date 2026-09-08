@@ -65,3 +65,13 @@ function switchLayout(n) {
   });
 }
 window.switchLayout = switchLayout;
+
+// cleanup stale service workers if any exist
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.getRegistrations().then(registrations => {
+    for (const registration of registrations) {
+      registration.unregister();
+    }
+  });
+}
+

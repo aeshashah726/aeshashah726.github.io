@@ -25,11 +25,13 @@
           <span id="local-time" class="text-xs font-mono tracking-wider text-neutral-400"></span>
         </div>
         <nav class="flex items-center gap-1">
-          <a href="/" class="nav-link" data-nav>Home</a>
-          <a href="/resume/" class="nav-link" data-nav>Resume</a>
-          <a href="/internships/" class="nav-link" data-nav>Internships</a>
-          <a href="/research/" class="nav-link active-nav" data-nav>Research</a>
-          <a href="/projects/" class="nav-link" data-nav>Projects</a>
+          <a href="/" class="nav-link">Home</a>
+          <a href="/internships/" class="nav-link">Internships</a>
+          <!-- hidden until fully updated: resume, research, projects
+          <a href="/resume/" class="nav-link">Resume</a>
+          <a href="/research/" class="nav-link active-nav">Research</a>
+          <a href="/projects/" class="nav-link">Projects</a>
+          -->
         </nav>
         <div class="flex items-center pl-1">
           <label class="theme-switch" title="Toggle theme">
@@ -44,98 +46,49 @@
 
     <!-- main content container -->
     <div id="main-content" class="w-full flex flex-col items-center font-jakarta">
-      <div class="w-full pt-4 sm:pt-6 pb-8 font-jakarta">
+      <div class="w-full max-w-3xl pt-4 sm:pt-8 pb-6 font-jakarta text-center">
         <p class="text-sm font-mono text-neutral-500 dark:text-neutral-400 mb-2 tracking-wider">04 / RESEARCH</p>
-        <h1 class="font-jakarta text-5xl sm:text-6xl lg:text-7xl font-extrabold text-neutral-900 dark:text-white tracking-tight leading-none">
+        <h1 class="font-jakarta text-5xl sm:text-6xl lg:text-7xl font-extrabold text-neutral-900 dark:text-white tracking-tight leading-none mb-3">
           Research
         </h1>
       </div>
 
-      <div class="grid xl:grid-cols-2 gap-8 w-full">
-
-        <!-- financial services innovation lab vip -->
-        <div class="hackathon-box bg-[#161619] border border-white/[0.08] p-6 sm:p-7 rounded-2xl transition-all duration-300 ease-out hover:-translate-y-1 hover:border-white/[0.22] hover:shadow-[0_16px_36px_-12px_rgba(0,0,0,0.5)] cursor-default">
-          <div class="flex items-center justify-between gap-3 mb-4">
-            <div class="flex flex-wrap gap-2">
-              <span class="px-3 py-1 rounded-full text-xs font-medium tracking-wide bg-white/[0.06] text-neutral-300 border border-white/[0.08]">
-                Fall 2025
-              </span>
-              <span class="px-3 py-1 rounded-full text-xs font-medium tracking-wide bg-white/[0.06] text-neutral-300 border border-white/[0.08]">
-                Spring 2025
-              </span>
-            </div>
-            <span class="text-xs font-medium tracking-wider uppercase text-neutral-400">Atlanta, GA</span>
+      <!-- under construction card -->
+      <div class="w-full max-w-2xl mb-12 px-4">
+        <div class="hackathon-box bg-[#161619] border border-white/[0.08] p-8 sm:p-12 rounded-3xl text-center flex flex-col items-center shadow-[0_20px_40px_-15px_rgba(0,0,0,0.5)]">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-mono font-medium tracking-wider uppercase bg-amber-500/10 text-amber-700 dark:text-amber-300 border border-amber-500/20 mb-5">
+            <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+            <span>under construction</span>
           </div>
-
-          <div class="mb-4">
-            <h2 class="text-xl font-bold tracking-tight text-white mb-0.5" style="font-size: 1.35rem">Undergraduate Researcher</h2>
-            <div class="text-sm font-medium text-neutral-300">Financial Services Innovation Lab @ Georgia Tech</div>
-            <div class="text-xs text-neutral-400 mt-0.5">NLP / ML for Financial Markets, Vertically Integrated Project (VIP)</div>
-          </div>
-
-          <ul class="space-y-3 text-[0.875rem] text-neutral-300 font-normal leading-relaxed border-t border-white/[0.06] pt-4 list-none pl-0 mb-5">
-            <li class="flex items-start gap-2.5">
-              <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">—</span>
-              <span class="text-neutral-200">Developing natural language processing and machine learning workflows for financial intelligence and markets analysis.</span>
-            </li>
-            <li class="flex items-start gap-2.5">
-              <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">—</span>
-              <span class="text-neutral-200">Building text-to-SQL query generation systems and specialized retrieval models for domain-specific tabular and unstructured financial datasets.</span>
-            </li>
-          </ul>
-
-          <div class="flex flex-wrap gap-2.5 pt-2 border-t border-white/[0.06]">
-            <a href="https://github.com/aeshashah726/nlpforfinancialmarketsvip" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-medium bg-white/[0.08] text-neutral-200 border border-white/[0.1] hover:bg-white/[0.14] hover:text-white transition-all">
-              Independent Work →
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-neutral-900 dark:text-white tracking-tight mb-3">
+            Research is being updated
+          </h2>
+          <p class="text-sm sm:text-base text-neutral-600 dark:text-neutral-400 max-w-md leading-relaxed mb-8">
+            I'm currently updating this section with recent publications and ongoing work from the Financial Services Innovation Lab and machine learning projects. Check back soon!
+          </p>
+          <div class="flex flex-wrap items-center justify-center gap-3">
+            <a href="/internships/"
+              class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-semibold tracking-wide bg-neutral-900 text-white hover:bg-neutral-800 dark:bg-white dark:text-neutral-900 dark:hover:bg-neutral-200 transition-all duration-200 shadow-sm">
+              Explore Internships →
             </a>
-            <a href="https://github.com/aeshashah726/vip-project-text2sql" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-medium bg-white/[0.08] text-neutral-200 border border-white/[0.1] hover:bg-white/[0.14] hover:text-white transition-all">
-              Team Project →
+            <a href="/"
+              class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-semibold tracking-wide bg-black/[0.04] text-neutral-700 border border-black/[0.08] hover:bg-black/[0.08] hover:text-black dark:bg-white/[0.06] dark:text-neutral-200 dark:border-white/[0.1] dark:hover:bg-white/[0.12] dark:hover:text-white transition-all duration-200">
+              ← Back to Home
             </a>
           </div>
         </div>
-
-        <!-- rail lab -->
-        <div class="hackathon-box bg-[#161619] border border-white/[0.08] p-6 sm:p-7 rounded-2xl transition-all duration-300 ease-out hover:-translate-y-1 hover:border-white/[0.22] hover:shadow-[0_16px_36px_-12px_rgba(0,0,0,0.5)] cursor-default">
-          <div class="flex items-center justify-between gap-3 mb-4">
-            <div class="flex flex-wrap gap-2">
-              <span class="px-3 py-1 rounded-full text-xs font-medium tracking-wide bg-white/[0.06] text-neutral-300 border border-white/[0.08]">
-                Fall 2024
-              </span>
-              <span class="px-3 py-1 rounded-full text-xs font-medium tracking-wide bg-white/[0.06] text-neutral-300 border border-white/[0.08]">
-                Spring 2024
-              </span>
-              <span class="px-3 py-1 rounded-full text-xs font-medium tracking-wide bg-white/[0.06] text-neutral-300 border border-white/[0.08]">
-                Summer 2023
-              </span>
-            </div>
-            <span class="text-xs font-medium tracking-wider uppercase text-neutral-400">Atlanta, GA</span>
-          </div>
-
-          <div class="mb-4">
-            <h2 class="text-xl font-bold tracking-tight text-white mb-0.5" style="font-size: 1.35rem">Undergraduate Research Assistant</h2>
-            <div class="text-sm font-medium text-neutral-300">Robot Autonomy & Interactive Learning (RAIL) Lab @ Georgia Tech</div>
-            <div class="text-xs text-neutral-400 mt-0.5">Autonomous Systems & Human-Robot Interaction</div>
-          </div>
-
-          <ul class="space-y-3 text-[0.875rem] text-neutral-300 font-normal leading-relaxed border-t border-white/[0.06] pt-4 list-none pl-0 mb-5">
-            <li class="flex items-start gap-2.5">
-              <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">—</span>
-              <span class="text-neutral-200">Conducted research on autonomous robotic systems, trajectory tracking, and interactive learning frameworks under faculty guidance.</span>
-            </li>
-            <li class="flex items-start gap-2.5">
-              <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">—</span>
-              <span class="text-neutral-200">Collaborated on experimental testing pipelines and software evaluation for robotic manipulation and navigation.</span>
-            </li>
-          </ul>
-
-          <div class="flex flex-wrap gap-2.5 pt-2 border-t border-white/[0.06]">
-            <a href="https://rail-website.vercel.app/" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-medium bg-white/[0.08] text-neutral-200 border border-white/[0.1] hover:bg-white/[0.14] hover:text-white transition-all">
-              Lab website →
-            </a>
-          </div>
-        </div>
-
       </div>
+
+      <!-- existing research cards preserved below for future update
+      <div class="grid xl:grid-cols-2 gap-8 w-full">
+        <div class="hackathon-box bg-[#161619] border border-white/[0.08] p-6 sm:p-7 rounded-2xl">
+          <div class="mb-4">
+            <h2 class="text-xl font-bold tracking-tight text-white mb-0.5">Undergraduate Researcher</h2>
+            <div class="text-sm font-medium text-neutral-300">Financial Services Innovation Lab @ Georgia Tech</div>
+          </div>
+        </div>
+      </div>
+      -->
     </div>
 
     <!-- footer -->
