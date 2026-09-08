@@ -1,218 +1,221 @@
 <!DOCTYPE html>
 <html lang="en" class="dark" data-theme="dark">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>👩🏻‍💻 Aesha Shah</title>
-    <link href="/style.css?v=12" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = { darkMode: 'class' };
-    </script>
-    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
-    <meta name="msapplication-TileColor" content="#da532c" />
-    <meta name="theme-color" content="#ffffff" />
-    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
-    <script src="script.js"></script>
-  </head>
 
-  <body class="padded flex flex-col items-center pt-[5vmin]">
-    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Aesha Shah</title>
+  <link href="/style.css?v=12" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { darkMode: 'class' };
+  </script>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="apple-touch-icon" href="/favicon.svg" />
+  <meta name="theme-color" content="#ffffff" />
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+  <script src="script.js"></script>
+</head>
 
-    <!-- site header island -->
-    <header id="site-header">
-      <div class="nav-island">
-        <div class="hidden md:flex items-center pl-1 pr-1">
-          <span id="local-time" class="text-xs font-mono tracking-wider text-neutral-400"></span>
-        </div>
-        <nav class="flex items-center gap-1">
-          <a href="/" class="nav-link active-nav" data-nav>Home</a>
-          <a href="/resume/" class="nav-link" data-nav>Resume</a>
-          <a href="/internships/" class="nav-link" data-nav>Internships</a>
-          <a href="/research/" class="nav-link" data-nav>Research</a>
-          <a href="/projects/" class="nav-link" data-nav>Projects</a>
-        </nav>
-        <div class="flex items-center pl-1">
-          <label class="theme-switch" title="Toggle theme">
-            <input type="checkbox" checked onchange="theme()">
-            <span class="theme-switch-slider"></span>
-          </label>
-        </div>
+<body class="padded flex flex-col items-center pt-[5vmin]">
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+
+  <!-- site header island -->
+  <header id="site-header">
+    <div class="nav-island">
+      <div class="hidden md:flex items-center pl-1 pr-1">
+        <span id="local-time" class="text-xs font-mono tracking-wider text-neutral-400"></span>
       </div>
-    </header>
+      <nav class="flex items-center gap-1">
+        <a href="/" class="nav-link active-nav" data-nav>Home</a>
+        <a href="/resume/" class="nav-link" data-nav>Resume</a>
+        <a href="/internships/" class="nav-link" data-nav>Internships</a>
+        <a href="/research/" class="nav-link" data-nav>Research</a>
+        <a href="/projects/" class="nav-link" data-nav>Projects</a>
+      </nav>
+      <div class="flex items-center pl-1">
+        <label class="theme-switch" title="Toggle theme">
+          <input type="checkbox" checked onchange="theme()">
+          <span class="theme-switch-slider"></span>
+        </label>
+      </div>
+    </div>
+  </header>
 
-    <div id="header-spacer"></div>
-    <div id="orb"></div>
+  <div id="header-spacer"></div>
+  <div id="orb"></div>
 
-    <!-- main content container -->
-    <div id="main-content" class="w-full flex flex-col items-center">
-      <div class="w-full max-w-5xl pt-4 sm:pt-8 font-jakarta">
-        <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center w-full">
-          <!-- left column: intro and action links -->
-          <div class="lg:col-span-7">
-            <p class="text-sm font-mono text-neutral-500 dark:text-neutral-400 mb-2 tracking-wider">01 / INTRODUCTION</p>
-            <h1 class="font-jakarta text-5xl sm:text-6xl lg:text-7xl font-extrabold text-neutral-900 dark:text-white tracking-tight leading-none mb-8">
-              Aesha Shah
-            </h1>
-            <div class="flex flex-wrap items-center gap-3">
-              <a href="https://www.linkedin.com/in/aeshashah7/" target="_blank" rel="noopener" class="btn-action">
-                Let's connect ↗
-              </a>
-              <!-- view experience with hover dropdown -->
-              <div class="relative group inline-block">
-                <button type="button" class="btn-action">
-                  <span>View Experience</span>
-                  <svg class="w-3.5 h-3.5 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                </button>
-                <!-- dropdown menu on hover -->
-                <div class="action-dropdown">
-                  <div class="action-dropdown-card">
-                    <a href="/resume/" class="action-dropdown-item" data-nav>Resume</a>
-                    <a href="/internships/" class="action-dropdown-item" data-nav>Internships</a>
-                    <a href="/research/" class="action-dropdown-item" data-nav>Research</a>
-                    <a href="/projects/" class="action-dropdown-item" data-nav>Projects</a>
-                  </div>
+  <!-- main content container -->
+  <div id="main-content" class="w-full flex flex-col items-center">
+    <div class="w-full max-w-5xl pt-4 sm:pt-8 font-jakarta">
+      <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center w-full">
+        <!-- left column: intro and action links -->
+        <div class="lg:col-span-7">
+          <p class="text-sm font-mono text-neutral-500 dark:text-neutral-400 mb-2 tracking-wider">01 / INTRODUCTION</p>
+          <h1
+            class="font-jakarta text-5xl sm:text-6xl lg:text-7xl font-extrabold text-neutral-900 dark:text-white tracking-tight leading-none mb-8">
+            Hi, I'm Aesha!
+          </h1>
+          <div class="flex flex-wrap items-center gap-3">
+            <a href="https://www.linkedin.com/in/aeshashah7/" target="_blank" rel="noopener" class="btn-action">
+              Let's connect ↗
+            </a>
+            <!-- view experience with hover dropdown -->
+            <div class="relative group inline-block">
+              <button type="button" class="btn-action">
+                <span>View Experience</span>
+                <svg class="w-3.5 h-3.5 transition-transform duration-200 group-hover:rotate-180" fill="none"
+                  stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <!-- dropdown menu on hover -->
+              <div class="action-dropdown">
+                <div class="action-dropdown-card">
+                  <a href="/resume/" class="action-dropdown-item" data-nav>Resume</a>
+                  <a href="/internships/" class="action-dropdown-item" data-nav>Internships</a>
+                  <a href="/research/" class="action-dropdown-item" data-nav>Research</a>
+                  <a href="/projects/" class="action-dropdown-item" data-nav>Projects</a>
                 </div>
               </div>
             </div>
           </div>
+        </div>
 
-          <!-- right column: system profile box -->
-          <div class="lg:col-span-5">
-            <div class="hackathon-box bg-[#161619] border border-white/[0.08] p-6 rounded-2xl shadow-[0_16px_36px_-12px_rgba(0,0,0,0.5)]">
-              <div class="space-y-3 font-mono text-xs">
-                <div class="flex justify-between py-1.5 border-b border-black/[0.06] dark:border-white/[0.06]">
-                  <span class="text-neutral-500 dark:text-neutral-400">DEGREE</span>
-                  <span class="text-neutral-900 dark:text-white text-right font-medium">BS/MS in Computer Science</span>
-                </div>
-                <div class="flex justify-between py-1.5 border-b border-black/[0.06] dark:border-white/[0.06]">
-                  <span class="text-neutral-500 dark:text-neutral-400">INSTITUTION</span>
-                  <span class="text-neutral-900 dark:text-white text-right font-medium">Georgia Tech</span>
-                </div>
-                <div class="flex justify-between py-1.5 border-b border-black/[0.06] dark:border-white/[0.06]">
-                  <span class="text-neutral-500 dark:text-neutral-400">CONCENTRATIONS</span>
-                  <span class="text-neutral-900 dark:text-white text-right font-medium">Cybersecurity • AI</span>
-                </div>
-                <div class="flex justify-between py-1.5 border-b border-black/[0.06] dark:border-white/[0.06]">
-                  <span class="text-neutral-500 dark:text-neutral-400">MINORS</span>
-                  <span class="text-neutral-900 dark:text-white text-right font-medium">FinTech • Law</span>
-                </div>
-                <div class="flex justify-between py-1.5 border-b border-black/[0.06] dark:border-white/[0.06]">
-                  <span class="text-neutral-500 dark:text-neutral-400">CURRENT</span>
-                  <span class="text-neutral-900 dark:text-white text-right font-medium">SWE Intern @ Google</span>
-                </div>
-                <div class="flex justify-between py-1.5">
-                  <span class="text-neutral-500 dark:text-neutral-400">FOCUS</span>
-                  <span class="text-neutral-900 dark:text-white text-right font-medium">AI/ML Security</span>
-                </div>
+        <!-- right column: system profile box -->
+        <div class="lg:col-span-5">
+          <div
+            class="hackathon-box bg-[#161619] border border-white/[0.08] p-6 rounded-2xl shadow-[0_16px_36px_-12px_rgba(0,0,0,0.5)]">
+            <div class="space-y-3 font-mono text-xs">
+              <div class="flex justify-between py-1.5 border-b border-black/[0.06] dark:border-white/[0.06]">
+                <span class="text-neutral-500 dark:text-neutral-400">DEGREE</span>
+                <span class="text-neutral-900 dark:text-white text-right font-medium">BS/MS in Computer Science</span>
+              </div>
+              <div class="flex justify-between py-1.5 border-b border-black/[0.06] dark:border-white/[0.06]">
+                <span class="text-neutral-500 dark:text-neutral-400">INSTITUTION</span>
+                <span class="text-neutral-900 dark:text-white text-right font-medium">Georgia Tech</span>
+              </div>
+              <div class="flex justify-between py-1.5 border-b border-black/[0.06] dark:border-white/[0.06]">
+                <span class="text-neutral-500 dark:text-neutral-400">CONCENTRATIONS</span>
+                <span class="text-neutral-900 dark:text-white text-right font-medium">Cybersecurity • AI</span>
+              </div>
+              <div class="flex justify-between py-1.5 border-b border-black/[0.06] dark:border-white/[0.06]">
+                <span class="text-neutral-500 dark:text-neutral-400">MINORS</span>
+                <span class="text-neutral-900 dark:text-white text-right font-medium">FinTech • Law</span>
+              </div>
+              <div class="flex justify-between py-1.5 border-b border-black/[0.06] dark:border-white/[0.06]">
+                <span class="text-neutral-500 dark:text-neutral-400">CURRENT</span>
+                <span class="text-neutral-900 dark:text-white text-right font-medium">SWE Intern @ Google</span>
+              </div>
+              <div class="flex justify-between py-1.5">
+                <span class="text-neutral-500 dark:text-neutral-400">FOCUS</span>
+                <span class="text-neutral-900 dark:text-white text-right font-medium">AI/ML Security</span>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <script>
-      // spa navigation script
-      async function loadContent(page) {
-        let url = page;
-        if (page === '/' || page === 'index.html' || page === '/index.html') {
-          url = '/index.html';
-        } else if (page.endsWith('/')) {
-          url = page + 'index.html';
-        }
-        const response = await fetch(url, { cache: 'no-cache' });
-        const text = await response.text();
-        try {
-          const parser = new DOMParser();
-          const doc = parser.parseFromString(text, 'text/html');
-          if (doc.title) document.title = doc.title;
-          const newMain = doc.getElementById('main-content');
-          if (newMain) {
-            const possibleFooters = Array.from(newMain.querySelectorAll('div'));
-            possibleFooters.forEach(n => {
-              try {
-                if (n.textContent && n.textContent.toLowerCase().includes('made with')) n.remove();
-              } catch (e) {}
-            });
-            document.getElementById('main-content').innerHTML = newMain.innerHTML;
-          } else {
-            const content = (text.match(/<body[\s\S]*?>([\s\S]*?)<\/body>/i) || [null, text])[1];
-            document.getElementById('main-content').innerHTML = content;
-          }
-        } catch (err) {
-          const bodyMatch = text.match(/<body[\s\S]*?>([\s\S]*?)<\/body>/i);
-          let content = bodyMatch ? bodyMatch[1] : text;
-          content = content.replace(/<div id="site-header"[\s\S]*?<\/div>/, '');
-          content = content.replace(/<div id="orb"[\s\S]*?<\/div>/, '');
+  <script>
+    // spa navigation script
+    async function loadContent(page) {
+      let url = page;
+      if (page === '/' || page === 'index.html' || page === '/index.html') {
+        url = '/index.html';
+      } else if (page.endsWith('/')) {
+        url = page + 'index.html';
+      }
+      const response = await fetch(url, { cache: 'no-cache' });
+      const text = await response.text();
+      try {
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(text, 'text/html');
+        if (doc.title) document.title = doc.title;
+        const newMain = doc.getElementById('main-content');
+        if (newMain) {
+          const possibleFooters = Array.from(newMain.querySelectorAll('div'));
+          possibleFooters.forEach(n => {
+            try {
+              if (n.textContent && n.textContent.toLowerCase().includes('made with')) n.remove();
+            } catch (e) { }
+          });
+          document.getElementById('main-content').innerHTML = newMain.innerHTML;
+        } else {
+          const content = (text.match(/<body[\s\S]*?>([\s\S]*?)<\/body>/i) || [null, text])[1];
           document.getElementById('main-content').innerHTML = content;
         }
-        window.scrollTo({ top: 0, behavior: 'instant' });
+      } catch (err) {
+        const bodyMatch = text.match(/<body[\s\S]*?>([\s\S]*?)<\/body>/i);
+        let content = bodyMatch ? bodyMatch[1] : text;
+        content = content.replace(/<div id="site-header"[\s\S]*?<\/div>/, '');
+        content = content.replace(/<div id="orb"[\s\S]*?<\/div>/, '');
+        document.getElementById('main-content').innerHTML = content;
       }
+      window.scrollTo({ top: 0, behavior: 'instant' });
+    }
 
-      // update active nav link
-      function updateActiveNav() {
-        function normalizePath(p) {
-          if (!p) return '/';
-          p = p.replace(/index.html$/, '');
-          if (p !== '/' && !p.endsWith('/')) p = p + '/';
-          return p;
-        }
-        const path = normalizePath(window.location.pathname.replace(/index.html$/, ''));
-        document.querySelectorAll('a[data-nav]').forEach(a => {
-          let href = a.getAttribute('href') || '/';
-          href = normalizePath(href);
-          a.classList.remove('active-nav');
-          if (path === href) {
-            a.classList.add('active-nav');
-          }
-        });
+    // update active nav link
+    function updateActiveNav() {
+      function normalizePath(p) {
+        if (!p) return '/';
+        p = p.replace(/index.html$/, '');
+        if (p !== '/' && !p.endsWith('/')) p = p + '/';
+        return p;
       }
-
-      // intercept nav clicks with delegation
-      document.addEventListener('click', function(e) {
-        const link = e.target.closest('a[data-nav]');
-        if (!link) return;
-        const page = link.getAttribute('href');
-        if (!page) return;
-        e.preventDefault();
-        window.history.pushState({}, '', page);
-        loadContent(page).then(() => {
-          updateActiveNav();
-        }).catch(() => updateActiveNav());
-      });
-
-      // handle back/forward history navigation
-      window.addEventListener('popstate', () => {
-        let page = window.location.pathname;
-        if (page === '/' || page === '/index.html') {
-          page = '/';
+      const path = normalizePath(window.location.pathname.replace(/index.html$/, ''));
+      document.querySelectorAll('a[data-nav]').forEach(a => {
+        let href = a.getAttribute('href') || '/';
+        href = normalizePath(href);
+        a.classList.remove('active-nav');
+        if (path === href) {
+          a.classList.add('active-nav');
         }
-        loadContent(page);
-        updateActiveNav();
       });
+    }
 
-      // initial load
-      document.addEventListener('DOMContentLoaded', () => {
+    // intercept nav clicks with delegation
+    document.addEventListener('click', function (e) {
+      const link = e.target.closest('a[data-nav]');
+      if (!link) return;
+      const page = link.getAttribute('href');
+      if (!page) return;
+      e.preventDefault();
+      window.history.pushState({}, '', page);
+      loadContent(page).then(() => {
         updateActiveNav();
-      });
-    </script>
-    
-    <!-- footer -->
-    <div class="w-full mt-[3em] mb-0">
-      <div class="w-full text-center py-6 border-t border-white/[0.08]">
-        <p>
-          Made with 💌 by Aesha Shah
-        </p>
-        <p>
-          code repository on
-          <a href="https://github.com/aeshashah726" class="text-blue-600 underline"> my Github</a>
-        </p>
-      </div>
-    </div>    
-  </body>
+      }).catch(() => updateActiveNav());
+    });
+
+    // handle back/forward history navigation
+    window.addEventListener('popstate', () => {
+      let page = window.location.pathname;
+      if (page === '/' || page === '/index.html') {
+        page = '/';
+      }
+      loadContent(page);
+      updateActiveNav();
+    });
+
+    // initial load
+    document.addEventListener('DOMContentLoaded', () => {
+      updateActiveNav();
+    });
+  </script>
+
+  <!-- footer -->
+  <div class="w-full mt-[3em] mb-0">
+    <div class="w-full text-center py-6 border-t border-white/[0.08]">
+      <p>
+        Made with 💌 by Aesha Shah
+      </p>
+      <p>
+        code repository on
+        <a href="https://github.com/aeshashah726" class="text-blue-600 underline"> my Github</a>
+      </p>
+    </div>
+  </div>
+</body>
+
 </html>

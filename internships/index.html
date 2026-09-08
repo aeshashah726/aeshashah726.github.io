@@ -4,18 +4,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width" />
-  <title>👩🏻‍💻 Aesha Shah - Internships</title>
+  <title>Aesha Shah - Internships</title>
   <link href="/style.css?v=12" rel="stylesheet" type="text/css" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = { darkMode: 'class' };
   </script>
-  <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-  <link rel="manifest" href="/site.webmanifest" />
-  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
-  <meta name="msapplication-TileColor" content="#da532c" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="apple-touch-icon" href="/favicon.svg" />
   <meta name="theme-color" content="#ffffff" />
   <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
   <script src="/script.js"></script>
@@ -56,7 +52,7 @@
         Internships
       </h1>
       <p class="text-xs font-mono text-neutral-400 dark:text-neutral-500">
-        click any role to spotlight details
+        click any card to spotlight details
       </p>
     </div>
 
@@ -80,22 +76,23 @@
           <div
             class="timeline-card-preview hackathon-box bg-[#161619] border border-white/[0.08] p-4 sm:p-5 rounded-2xl cursor-pointer"
             onclick="openSpotlight(this)" tabindex="0" role="button" aria-haspopup="dialog"
-            onkeydown="handleCardKey(event, this)" data-term="Current" data-location="Google"
+            onkeydown="handleCardKey(event, this)" data-term="Current" data-location="Sunnyvale, CA"
             data-role="Software Engineering Intern" data-company="Google"
-            data-dept="Software Engineering • AI/ML Security">
+            data-dept="Cloud Security — Chronicle Detections Platform & Experience">
             <div class="space-y-1">
               <div class="flex flex-wrap items-center gap-2 mb-1">
                 <span
                   class="px-2.5 py-0.5 rounded-full text-xs font-medium tracking-wide bg-white/[0.06] text-neutral-300 border border-white/[0.08]">
                   Current
                 </span>
-                <span class="text-xs font-medium tracking-wider uppercase text-neutral-400">Google</span>
+                <span class="text-xs font-medium tracking-wider uppercase text-neutral-400">Sunnyvale, CA</span>
               </div>
               <h2 class="text-base sm:text-lg font-bold tracking-tight text-white leading-snug">
                 Software Engineering Intern
               </h2>
               <div class="text-xs sm:text-sm font-medium text-neutral-300">Google</div>
-              <div class="text-[0.75rem] text-neutral-400">Software Engineering • AI/ML Security</div>
+              <div class="text-[0.75rem] text-neutral-400">Cloud Security — Chronicle Detections Platform & Experience
+              </div>
             </div>
 
             <!-- hidden description for spotlight modal -->
@@ -103,13 +100,7 @@
               <ul class="space-y-3 text-[0.875rem] text-neutral-300 font-normal leading-relaxed list-none pl-0">
                 <li class="flex items-start gap-2.5">
                   <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">—</span>
-                  <span class="text-neutral-200">Current / Incoming Software Engineering Intern at Google focusing on
-                    AI/ML Security.</span>
-                </li>
-                <li class="flex items-start gap-2.5">
-                  <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">—</span>
-                  <span class="text-neutral-200">Applying systems design and security engineering to core AI
-                    infrastructure.</span>
+                  <span class="text-neutral-200">In-progress</span>
                 </li>
               </ul>
             </div>
@@ -120,7 +111,7 @@
         <div class="hidden md:block md:w-[calc(50%-1.25rem)]"></div>
       </div>
 
-      <!-- 2. aws (summer 2025) - right side -->
+      <!-- 2. microsoft (summer 2026) - right side -->
       <div class="relative flex flex-col md:flex-row items-center justify-between w-full mb-3.5 sm:mb-4 timeline-row">
         <!-- center node -->
         <div class="timeline-center-node">
@@ -138,6 +129,80 @@
           <div
             class="timeline-card-preview hackathon-box bg-[#161619] border border-white/[0.08] p-4 sm:p-5 rounded-2xl cursor-pointer"
             onclick="openSpotlight(this)" tabindex="0" role="button" aria-haspopup="dialog"
+            onkeydown="handleCardKey(event, this)" data-term="Summer 2026" data-location="Redmond, WA"
+            data-role="Software Engineering Intern" data-company="Microsoft"
+            data-dept="Business & Industry Copilot — Copilot Studio & Azure Bot Service">
+            <div class="space-y-1">
+              <div class="flex flex-wrap items-center gap-2 mb-1">
+                <span
+                  class="px-2.5 py-0.5 rounded-full text-xs font-medium tracking-wide bg-white/[0.06] text-neutral-300 border border-white/[0.08]">
+                  Summer 2026
+                </span>
+                <span class="text-xs font-medium tracking-wider uppercase text-neutral-400">Redmond, WA</span>
+              </div>
+              <h2 class="text-base sm:text-lg font-bold tracking-tight text-white leading-snug">
+                Software Engineering Intern
+              </h2>
+              <div class="text-xs sm:text-sm font-medium text-neutral-300">Microsoft</div>
+              <div class="text-[0.75rem] text-neutral-400">Business & Industry Copilot — Copilot Studio & Azure Bot
+                Service</div>
+            </div>
+
+            <!-- hidden description for spotlight modal -->
+            <div class="spotlight-content hidden">
+              <ul class="space-y-3 text-[0.875rem] text-neutral-300 font-normal leading-relaxed list-none pl-0">
+                <li class="flex items-start gap-2.5">
+                  <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">—</span>
+                  <span class="text-neutral-200">Designed and shipped a retry-policy engine for Power Apps Core Services
+                    deployment infrastructure on Azure Service Fabric, adding validation, hierarchical inheritance with
+                    overrides, opt-in toggle, and retry emission at 3 rollout stages — adding fault tolerance that
+                    automatically recovers from transient failures and saves approximately 110–180 engineer-hours of
+                    manual incident recovery over 6 months (55+ failures at 2–3 hours each).</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">—</span>
+                  <span class="text-neutral-200">Delivered the feature end-to-end in Azure DevOps CI/CD with unit tests
+                    and a case integration harness, guaranteed byte-for-byte backward compatibility, and validated
+                    cross-repository integration via a shared NuGet package consumed by a downstream Azure
+                    service.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">—</span>
+                  <span class="text-neutral-200">Built a full-stack intelligence platform to unify artifacts from
+                    Microsoft Graph (Teams, Outlook, OneNote, SharePoint, etc.), Azure DevOps, and GitHub into a
+                    source-backed project knowledge graph using TypeScript, Node.js, Azure OpenAI, and Express; with
+                    relevance filtering, typed entity extraction (decisions, blockers, risks, action items), and
+                    confidence scoring. (Hackathon, 2nd Place)</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">—</span>
+                  <span class="text-neutral-200">Crafted a modular cloud-native architecture using React, Fluent UI,
+                    REST APIs, Server-Sent Events (SSE), and Azure OpenAI to power a live interactive graph
+                    visualization, semantic relationship construction, automated project summaries, actionable
+                    recommendations, source-backed insights, and hallucination-resistant workflows with deterministic
+                    fallback logic. (Hackathon, 2nd Place)</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. aws (summer 2025) - left side -->
+      <div class="relative flex flex-col md:flex-row items-center justify-between w-full mb-3.5 sm:mb-4 timeline-row">
+        <!-- center node -->
+        <div class="timeline-center-node">
+          <div class="timeline-center-node-inner"></div>
+        </div>
+
+        <!-- horizontal rung -->
+        <div class="timeline-rung timeline-rung-left"></div>
+
+        <!-- card on left -->
+        <div class="w-full md:w-[calc(50%-1.25rem)] ml-10 md:ml-0">
+          <div
+            class="timeline-card-preview hackathon-box bg-[#161619] border border-white/[0.08] p-4 sm:p-5 rounded-2xl cursor-pointer"
+            onclick="openSpotlight(this)" tabindex="0" role="button" aria-haspopup="dialog"
             onkeydown="handleCardKey(event, this)" data-term="Summer 2025" data-location="Atlanta, GA"
             data-role="Solutions Architect Intern" data-company="Amazon Web Services (AWS)"
             data-dept="Cloud Sales Center, Enterprise Greenfield">
@@ -147,13 +212,13 @@
                   class="px-2.5 py-0.5 rounded-full text-xs font-medium tracking-wide bg-white/[0.06] text-neutral-300 border border-white/[0.08]">
                   Summer 2025
                 </span>
-                <span class="text-xs font-medium tracking-wider uppercase text-neutral-400">Atlanta, GA</span>
+                <span class="text-xs font-medium tracking-wider uppercase text-neutral-400">Seattle, WA</span>
               </div>
               <h2 class="text-base sm:text-lg font-bold tracking-tight text-white leading-snug">
                 Solutions Architect Intern
               </h2>
               <div class="text-xs sm:text-sm font-medium text-neutral-300">Amazon Web Services (AWS)</div>
-              <div class="text-[0.75rem] text-neutral-400">Cloud Sales Center, Enterprise Greenfield</div>
+              <div class="text-[0.75rem] text-neutral-400">Cloud Sales Center — Enterprise Greenfield</div>
             </div>
 
             <!-- hidden description for spotlight modal -->
@@ -185,9 +250,12 @@
             </div>
           </div>
         </div>
+
+        <!-- desktop right spacer -->
+        <div class="hidden md:block md:w-[calc(50%-1.25rem)]"></div>
       </div>
 
-      <!-- 3. ups (summer 2024) - left side -->
+      <!-- 4. ups (summer 2024) - right side -->
       <div class="relative flex flex-col md:flex-row items-center justify-between w-full mb-3.5 sm:mb-4 timeline-row">
         <!-- center node -->
         <div class="timeline-center-node">
@@ -195,9 +263,12 @@
         </div>
 
         <!-- horizontal rung -->
-        <div class="timeline-rung timeline-rung-left"></div>
+        <div class="timeline-rung timeline-rung-right"></div>
 
-        <!-- card on left -->
+        <!-- desktop left spacer -->
+        <div class="hidden md:block md:w-[calc(50%-1.25rem)]"></div>
+
+        <!-- card on right -->
         <div class="w-full md:w-[calc(50%-1.25rem)] ml-10 md:ml-0">
           <div
             class="timeline-card-preview hackathon-box bg-[#161619] border border-white/[0.08] p-4 sm:p-5 rounded-2xl cursor-pointer"
@@ -217,7 +288,7 @@
                 Software Engineering Intern
               </h2>
               <div class="text-xs sm:text-sm font-medium text-neutral-300">United Parcel Service (UPS)</div>
-              <div class="text-[0.75rem] text-neutral-400">Enterprise Technology, Information Services Management</div>
+              <div class="text-[0.75rem] text-neutral-400">Enterprise Technology — Information Services Management</div>
             </div>
 
             <!-- hidden description for spotlight modal -->
@@ -239,67 +310,6 @@
                   <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">—</span>
                   <span class="text-neutral-200">Implemented Microsoft Azure OpenAI's GPT-4o model with prompt
                     engineering in Python to classify 100 customer service and non-service message categories.</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- desktop right spacer -->
-        <div class="hidden md:block md:w-[calc(50%-1.25rem)]"></div>
-      </div>
-
-      <!-- 4. summer 2023 - right side -->
-      <div class="relative flex flex-col md:flex-row items-center justify-between w-full mb-3.5 sm:mb-4 timeline-row">
-        <!-- center node -->
-        <div class="timeline-center-node">
-          <div class="timeline-center-node-inner"></div>
-        </div>
-
-        <!-- horizontal rung -->
-        <div class="timeline-rung timeline-rung-right"></div>
-
-        <!-- desktop left spacer -->
-        <div class="hidden md:block md:w-[calc(50%-1.25rem)]"></div>
-
-        <!-- card on right -->
-        <div class="w-full md:w-[calc(50%-1.25rem)] ml-10 md:ml-0">
-          <div
-            class="timeline-card-preview hackathon-box bg-[#161619] border border-white/[0.08] p-4 sm:p-5 rounded-2xl cursor-pointer"
-            onclick="openSpotlight(this)" tabindex="0" role="button" aria-haspopup="dialog"
-            onkeydown="handleCardKey(event, this)" data-term="Summer 2023" data-location="[City, State]"
-            data-role="[Role / Position Title]" data-company="[Company / Organization]"
-            data-dept="[Department / Team / Focus Area]">
-            <div class="space-y-1">
-              <div class="flex flex-wrap items-center gap-2 mb-1">
-                <span
-                  class="px-2.5 py-0.5 rounded-full text-xs font-medium tracking-wide bg-white/[0.06] text-neutral-300 border border-white/[0.08]">
-                  Summer 2023
-                </span>
-                <span class="text-xs font-medium tracking-wider uppercase text-neutral-400">[City, State]</span>
-              </div>
-              <h2 class="text-base sm:text-lg font-bold tracking-tight text-white leading-snug">
-                [Role / Position Title]
-              </h2>
-              <div class="text-xs sm:text-sm font-medium text-neutral-300">[Company / Organization]</div>
-              <div class="text-[0.75rem] text-neutral-400">[Department / Team / Focus Area]</div>
-            </div>
-
-            <!-- hidden description for spotlight modal -->
-            <div class="spotlight-content hidden">
-              <ul class="space-y-3 text-[0.875rem] text-neutral-300 font-normal leading-relaxed list-none pl-0">
-                <li class="flex items-start gap-2.5">
-                  <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">—</span>
-                  <span class="text-neutral-200">[Key achievement, project developed, or main technical
-                    responsibility]</span>
-                </li>
-                <li class="flex items-start gap-2.5">
-                  <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">—</span>
-                  <span class="text-neutral-200">[Impact, performance metric, tools, or technologies utilized]</span>
-                </li>
-                <li class="flex items-start gap-2.5">
-                  <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">—</span>
-                  <span class="text-neutral-200">[Collaboration, deployment, or system design contribution]</span>
                 </li>
               </ul>
             </div>
@@ -381,7 +391,7 @@
       </div>
 
       <!-- 6. georgia tech asdl (summer 2022) - right side -->
-      <div class="relative flex flex-col md:flex-row items-center justify-between w-full mb-3.5 sm:mb-4 timeline-row">
+      <div class="relative flex flex-col md:flex-row items-center justify-between w-full mb-4 sm:mb-6 timeline-row">
         <!-- center node -->
         <div class="timeline-center-node">
           <div class="timeline-center-node-inner"></div>
@@ -441,66 +451,6 @@
             </div>
           </div>
         </div>
-      </div>
-
-      <!-- 7. atlanta athletic club (summer 2022) - left side -->
-      <div class="relative flex flex-col md:flex-row items-center justify-between w-full mb-4 sm:mb-6 timeline-row">
-        <!-- center node -->
-        <div class="timeline-center-node">
-          <div class="timeline-center-node-inner"></div>
-        </div>
-
-        <!-- horizontal rung -->
-        <div class="timeline-rung timeline-rung-left"></div>
-
-        <!-- card on left -->
-        <div class="w-full md:w-[calc(50%-1.25rem)] ml-10 md:ml-0">
-          <div
-            class="timeline-card-preview hackathon-box bg-[#161619] border border-white/[0.08] p-4 sm:p-5 rounded-2xl cursor-pointer"
-            onclick="openSpotlight(this)" tabindex="0" role="button" aria-haspopup="dialog"
-            onkeydown="handleCardKey(event, this)" data-term="Summer 2022" data-location="Johns Creek, GA"
-            data-role="Front Desk Attendant" data-company="Atlanta Athletic Club" data-dept="Aquatics Center">
-            <div class="space-y-1">
-              <div class="flex flex-wrap items-center gap-2 mb-1">
-                <span
-                  class="px-2.5 py-0.5 rounded-full text-xs font-medium tracking-wide bg-white/[0.06] text-neutral-300 border border-white/[0.08]">
-                  Summer 2022
-                </span>
-                <span class="text-xs font-medium tracking-wider uppercase text-neutral-400">Johns Creek, GA</span>
-              </div>
-              <h2 class="text-base sm:text-lg font-bold tracking-tight text-white leading-snug">
-                Front Desk Attendant
-              </h2>
-              <div class="text-xs sm:text-sm font-medium text-neutral-300">Atlanta Athletic Club</div>
-              <div class="text-[0.75rem] text-neutral-400">Aquatics Center</div>
-            </div>
-
-            <!-- hidden description for spotlight modal -->
-            <div class="spotlight-content hidden">
-              <ul class="space-y-3 text-[0.875rem] text-neutral-300 font-normal leading-relaxed list-none pl-0">
-                <li class="flex items-start gap-2.5">
-                  <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">—</span>
-                  <span class="text-neutral-200">Collaborated with the front desk team to provide members and guests
-                    with exceptional customer service, managing check-ins and routing incoming calls to corresponding
-                    departments.</span>
-                </li>
-                <li class="flex items-start gap-2.5">
-                  <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">—</span>
-                  <span class="text-neutral-200">Operated the POS system to charge program fees, guest fees, and
-                    merchandise sales accurately to members' accounts.</span>
-                </li>
-                <li class="flex items-start gap-2.5">
-                  <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">—</span>
-                  <span class="text-neutral-200">Assisted lifeguards with facility operations, helping pace member
-                    traffic on the waterslides to maintain safety.</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- desktop right spacer -->
-        <div class="hidden md:block md:w-[calc(50%-1.25rem)]"></div>
       </div>
 
     </div>
