@@ -42,3 +42,26 @@ function theme() {
     themeText.style.color = checkbox.checked ? 'whitesmoke' : '#222';
   }
 }
+
+// switcher for previewing home page layout and font options
+function switchLayout(n) {
+  [1, 2, 3].forEach(i => {
+    const el = document.getElementById('layout-' + i);
+    const btn = document.getElementById('btn-layout-' + i);
+    if (el) {
+      if (i === n) {
+        el.classList.remove('hidden');
+      } else {
+        el.classList.add('hidden');
+      }
+    }
+    if (btn) {
+      if (i === n) {
+        btn.className = 'px-3.5 py-1.5 rounded-full transition-all bg-white dark:bg-white/[0.15] text-neutral-900 dark:text-white shadow-sm font-semibold';
+      } else {
+        btn.className = 'px-3.5 py-1.5 rounded-full transition-all text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white font-medium';
+      }
+    }
+  });
+}
+window.switchLayout = switchLayout;

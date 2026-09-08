@@ -4,11 +4,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>👩🏻‍💻 Aesha Shah</title>
-    <link href="/style.css?v=8" rel="stylesheet" type="text/css" />
-    <script>
-      tailwind = { darkMode: 'class' };
-    </script>
+    <link href="/style.css?v=12" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = { darkMode: 'class' };
+    </script>
     <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -50,19 +50,69 @@
 
     <!-- main content container -->
     <div id="main-content" class="w-full flex flex-col items-center">
-      <div class="w-full max-w-4xl pt-6">
-        <p class="text-base text-neutral-500 dark:text-neutral-400 mb-2 font-normal">Hi 👋 my name is</p>
-        <div class="flex flex-wrap items-center gap-6 mb-6">
-          <h1 class="text-[9vmin] sm:text-[11vmin] font-bold text-neutral-900 dark:text-white tracking-tight leading-none">
-            Aesha Shah
-          </h1>
-          <a href="https://www.linkedin.com/in/aeshashah7/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium bg-black/[0.06] hover:bg-black/[0.1] text-neutral-800 hover:text-black border border-black/[0.12] dark:bg-white/[0.08] dark:hover:bg-white/[0.14] dark:text-neutral-200 dark:hover:text-white dark:border-white/[0.12] transition-all duration-200">
-            Let's connect ↗
-          </a>
+      <div class="w-full max-w-5xl pt-4 sm:pt-8 font-jakarta">
+        <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center w-full">
+          <!-- left column: intro and action links -->
+          <div class="lg:col-span-7">
+            <p class="text-sm font-mono text-neutral-500 dark:text-neutral-400 mb-2 tracking-wider">01 / INTRODUCTION</p>
+            <h1 class="font-jakarta text-5xl sm:text-6xl lg:text-7xl font-extrabold text-neutral-900 dark:text-white tracking-tight leading-none mb-8">
+              Aesha Shah
+            </h1>
+            <div class="flex flex-wrap items-center gap-3">
+              <a href="https://www.linkedin.com/in/aeshashah7/" target="_blank" rel="noopener" class="btn-action">
+                Let's connect ↗
+              </a>
+              <!-- view experience with hover dropdown -->
+              <div class="relative group inline-block">
+                <button type="button" class="btn-action">
+                  <span>View Experience</span>
+                  <svg class="w-3.5 h-3.5 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <!-- dropdown menu on hover -->
+                <div class="action-dropdown">
+                  <div class="action-dropdown-card">
+                    <a href="/resume/" class="action-dropdown-item" data-nav>Resume</a>
+                    <a href="/internships/" class="action-dropdown-item" data-nav>Internships</a>
+                    <a href="/research/" class="action-dropdown-item" data-nav>Research</a>
+                    <a href="/projects/" class="action-dropdown-item" data-nav>Projects</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- right column: system profile box -->
+          <div class="lg:col-span-5">
+            <div class="hackathon-box bg-[#161619] border border-white/[0.08] p-6 rounded-2xl shadow-[0_16px_36px_-12px_rgba(0,0,0,0.5)]">
+              <div class="space-y-3 font-mono text-xs">
+                <div class="flex justify-between py-1.5 border-b border-black/[0.06] dark:border-white/[0.06]">
+                  <span class="text-neutral-500 dark:text-neutral-400">DEGREE</span>
+                  <span class="text-neutral-900 dark:text-white text-right font-medium">BS/MS in Computer Science</span>
+                </div>
+                <div class="flex justify-between py-1.5 border-b border-black/[0.06] dark:border-white/[0.06]">
+                  <span class="text-neutral-500 dark:text-neutral-400">INSTITUTION</span>
+                  <span class="text-neutral-900 dark:text-white text-right font-medium">Georgia Tech</span>
+                </div>
+                <div class="flex justify-between py-1.5 border-b border-black/[0.06] dark:border-white/[0.06]">
+                  <span class="text-neutral-500 dark:text-neutral-400">CONCENTRATIONS</span>
+                  <span class="text-neutral-900 dark:text-white text-right font-medium">Cybersecurity • AI</span>
+                </div>
+                <div class="flex justify-between py-1.5 border-b border-black/[0.06] dark:border-white/[0.06]">
+                  <span class="text-neutral-500 dark:text-neutral-400">MINORS</span>
+                  <span class="text-neutral-900 dark:text-white text-right font-medium">FinTech • Law</span>
+                </div>
+                <div class="flex justify-between py-1.5 border-b border-black/[0.06] dark:border-white/[0.06]">
+                  <span class="text-neutral-500 dark:text-neutral-400">CURRENT</span>
+                  <span class="text-neutral-900 dark:text-white text-right font-medium">SWE Intern @ Google</span>
+                </div>
+                <div class="flex justify-between py-1.5">
+                  <span class="text-neutral-500 dark:text-neutral-400">FOCUS</span>
+                  <span class="text-neutral-900 dark:text-white text-right font-medium">AI/ML Security</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <p class="text-base sm:text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed font-normal">
-          I'm a third-year student @ Georgia Tech pursuing a degree in computer science with concentrations in cybersecurity and artificial intelligence, and minors in financial technology and law, science, & technology. I'm excited to pursue internship opportunities in software / security engineering and financial technology.
-        </p>
       </div>
     </div>
 
@@ -71,7 +121,7 @@
       async function loadContent(page) {
         let url = page;
         if (page === '/' || page === 'index.html' || page === '/index.html') {
-          url = 'index.html';
+          url = '/index.html';
         } else if (page.endsWith('/')) {
           url = page + 'index.html';
         }
@@ -80,6 +130,7 @@
         try {
           const parser = new DOMParser();
           const doc = parser.parseFromString(text, 'text/html');
+          if (doc.title) document.title = doc.title;
           const newMain = doc.getElementById('main-content');
           if (newMain) {
             const possibleFooters = Array.from(newMain.querySelectorAll('div'));
@@ -100,6 +151,7 @@
           content = content.replace(/<div id="orb"[\s\S]*?<\/div>/, '');
           document.getElementById('main-content').innerHTML = content;
         }
+        window.scrollTo({ top: 0, behavior: 'instant' });
       }
 
       // update active nav link
@@ -121,16 +173,17 @@
         });
       }
 
-      // intercept nav clicks for spa transition
-      document.querySelectorAll('a[data-nav]').forEach(link => {
-        link.addEventListener('click', function(e) {
-          e.preventDefault();
-          const page = this.getAttribute('href');
-          window.history.pushState({}, '', page);
-          loadContent(page).then(() => {
-            updateActiveNav();
-          }).catch(() => updateActiveNav());
-        });
+      // intercept nav clicks with delegation
+      document.addEventListener('click', function(e) {
+        const link = e.target.closest('a[data-nav]');
+        if (!link) return;
+        const page = link.getAttribute('href');
+        if (!page) return;
+        e.preventDefault();
+        window.history.pushState({}, '', page);
+        loadContent(page).then(() => {
+          updateActiveNav();
+        }).catch(() => updateActiveNav());
       });
 
       // handle back/forward history navigation
@@ -143,13 +196,8 @@
         updateActiveNav();
       });
 
-      // load current page content on initial load
+      // initial load
       document.addEventListener('DOMContentLoaded', () => {
-        let page = window.location.pathname;
-        if (page === '/' || page === '/index.html') {
-          page = '/';
-        }
-        loadContent(page);
         updateActiveNav();
       });
     </script>
