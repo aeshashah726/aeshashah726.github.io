@@ -1,23 +1,14 @@
-<!-- section file for projects: content intended to be injected into the spa main area -->
-<!-- contains project cards; header and nav are managed by the spa root -->
 <!DOCTYPE html>
-<html>
+<html lang="en" class="dark" data-theme="dark">
   <head>
-    <script>
-      // redirect guard: when this file is loaded as a top-level page, always send user back to the SPA root '/'.
-      // This ensures a browser reload or direct navigation doesn't show the raw section fragment with duplicated header/nav.
-      if (window.top === window) {
-        window.location.replace('/');
-      }
-    </script>
-    <!-- meta tags for character set and responsive design -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-  <title>👩🏻‍💻 Aesha Shah - cybersecurity & law @ georgia tech</title>
-  <!-- page title and description for browser and search engines -->
-  <link href="style.css" rel="stylesheet" type="text/css" />
-  <!-- tailwindcss for utility-first styling -->
-  <script src="https://cdn.tailwindcss.com"></script>
+    <title>👩🏻‍💻 Aesha Shah - Projects</title>
+    <link href="/style.css?v=8" rel="stylesheet" type="text/css" />
+    <script>
+      tailwind = { darkMode: 'class' };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -25,84 +16,132 @@
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
-  <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
-  <!-- flowbite css included for optional components; safe to remove if unused -->
-    <!DOCTYPE html>
-    <html>
-      <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width" />
-        <title>👩🏻‍💻 Aesha Shah - Internships</title>
-        <link href="style.css" rel="stylesheet" type="text/css" />
-        <script src="https://cdn.tailwindcss.com"></script>
-        <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <link rel="manifest" href="/site.webmanifest" />
-        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
-        <meta name="msapplication-TileColor" content="#da532c" />
-        <meta name="theme-color" content="#ffffff" />
-        <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
-        <style>
-          /* small head-level style: suppress underlines on nav anchors when injected */
-          nav a.no-underline,
-          nav a.no-underline:hover,
-          nav a.no-underline:focus,
-          nav a.no-underline:active {
-            text-decoration: none !important;
-          }
-        </style>
-      <!-- include shared script handling theme and header ui behaviors -->
-      <script src="script.js"></script>
-      </head>
-      <body class="padded flex flex-col items-center pt-[5vmin]">
-  <!-- flowbite js: optionally used by interactive components inside the section -->
-        <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
-        <!-- main-content wrapper: this id is expected by the spa when injecting this file -->
-        <div id="main-content" class="w-full flex flex-col items-center">
-          <!-- projects section header: page title for this section -->
-          <div class="w-full pt-6 pb-6">
-            <div class="flex items-center">
-              <h1 class="text-[6vmin] opacity-70 leading-none">
-                Projects
-              </h1>
-            </div>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+    <script src="/script.js"></script>
+  </head>
+  <body class="padded flex flex-col items-center pt-[5vmin]">
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+
+    <!-- site header island -->
+    <header id="site-header">
+      <div class="nav-island">
+        <div class="hidden md:flex items-center pl-1 pr-1">
+          <span id="local-time" class="text-xs font-mono tracking-wider text-neutral-400"></span>
+        </div>
+        <nav class="flex items-center gap-1">
+          <a href="/" class="nav-link" data-nav>Home</a>
+          <a href="/resume/" class="nav-link" data-nav>Resume</a>
+          <a href="/internships/" class="nav-link" data-nav>Internships</a>
+          <a href="/research/" class="nav-link" data-nav>Research</a>
+          <a href="/projects/" class="nav-link active-nav" data-nav>Projects</a>
+        </nav>
+        <div class="flex items-center pl-1">
+          <label class="theme-switch" title="Toggle theme">
+            <input type="checkbox" checked onchange="theme()">
+            <span class="theme-switch-slider"></span>
+          </label>
+        </div>
+      </div>
+    </header>
+
+    <div id="header-spacer"></div>
+
+    <!-- main content container -->
+    <div id="main-content" class="w-full flex flex-col items-center">
+      <div class="w-full pt-6 pb-6">
+        <div class="flex items-center">
+          <h1 class="text-[6vmin] opacity-70 leading-none">
+            Projects
+          </h1>
+        </div>
+      </div>
+
+      <div class="grid xl:grid-cols-2 gap-8 w-full">
+
+        <!-- project card 1 -->
+        <div class="hackathon-box bg-[#161619] border border-white/[0.08] p-6 sm:p-7 rounded-2xl transition-all duration-300 ease-out hover:-translate-y-1 hover:border-white/[0.22] hover:shadow-[0_16px_36px_-12px_rgba(0,0,0,0.5)] cursor-default">
+          <div class="flex items-center justify-between gap-3 mb-4">
+            <span class="px-3 py-1 rounded-full text-xs font-medium tracking-wide bg-white/[0.06] text-neutral-300 border border-white/[0.08]">
+              Featured Project
+            </span>
+            <span class="text-xs font-medium tracking-wider uppercase text-neutral-400">[Category / Tech]</span>
           </div>
-          <!-- grid container: add one card per project inside this grid -->
-          <div class="grid xl:grid-cols-2 gap-8 w-full">
-            <!-- project card 1: replace placeholder text with project details -->
-            <div class="hackathon-box bg-[#222] p-4 transition ease-in-out hover:-translate-y-1 hover:scale-105 hover: duration-180 hover:cursor-default" style="padding: 2em; padding-top: 0.5em">
-              <div class="text-left">
-                <p class="bg-green-900 inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-white">
-                  []add text here
-                </p>
-              </div>
-              <h2 class="mb-1" style="font-size: 1.5em">[]add text here</h2>
-              <p class="mt-1 mb-1 text-white font-light">[]add text here</p>
-              <div class="text-right text-lightgray">
-                <!-- external resources for project: specs, demo, or repo links -->
-                <a href="https://www.linkedin.com/in/aeshashah7/n"><p class="button bg-[#fffaf0] inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-black">Technical specs →</p></a>
-                <!-- demo link or live preview for this project -->
-                <a href="https://www.linkedin.com/in/aeshashah7/"><p class="button bg-[#fffaf0] inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-black">See the demo →</p></a>
-              </div>
-            </div>
-            <!-- project card 2: duplicate this block to add more projects -->
-            <div class="hackathon-box bg-[#222] p-4 transition ease-in-out hover:-translate-y-1 hover:scale-105 hover: duration-180 hover:cursor-default" style="padding: 2em; padding-top: 0.5em">
-              <div class="text-left">
-                <p class="bg-green-900 inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-white">
-                  []add text here
-                </p>
-              </div>
-              <h2 class="mb-1" style="font-size: 1.5em">[]add text here</h2>
-              <p class="mt-1 mb-1 text-white font-light">[]add text here</p>
-              <div class="text-right text-lightgray">
-                <!-- second project's external resources: link to writeups or demos -->
-                <a href="https://www.linkedin.com/in/aeshashah7"><p class="button bg-[#fffaf0] inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-black">Technical specs →</p></a>
-                <!-- demo or repo link for the second project -->
-                <a href="https://www.linkedin.com/in/aeshashah7"><p class="button bg-[#fffaf0] inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-black">See the demo →</p></a>
-              </div>
-            </div>
+
+          <div class="mb-4">
+            <h2 class="text-xl font-bold tracking-tight text-white mb-0.5" style="font-size: 1.35rem">[Project Title]</h2>
+            <div class="text-sm font-medium text-neutral-300">[Technologies Used, e.g. Python, React, PyTorch]</div>
+          </div>
+
+          <ul class="space-y-3 text-[0.875rem] text-neutral-300 font-normal leading-relaxed border-t border-white/[0.06] pt-4 list-none pl-0 mb-5">
+            <li class="flex items-start gap-2.5">
+              <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">—</span>
+              <span class="text-neutral-200">[Key feature, architecture, or algorithmic contribution]</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">—</span>
+              <span class="text-neutral-200">[Performance, benchmark metrics, or deployment details]</span>
+            </li>
+          </ul>
+
+          <div class="flex flex-wrap gap-2.5 pt-2 border-t border-white/[0.06]">
+            <a href="https://www.linkedin.com/in/aeshashah7/" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-medium bg-white/[0.08] text-neutral-200 border border-white/[0.1] hover:bg-white/[0.14] hover:text-white transition-all">
+              Technical specs →
+            </a>
+            <a href="https://www.linkedin.com/in/aeshashah7/" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-medium bg-white/[0.08] text-neutral-200 border border-white/[0.1] hover:bg-white/[0.14] hover:text-white transition-all">
+              See the demo →
+            </a>
           </div>
         </div>
-      </body>
-    </html>
+
+        <!-- project card 2 -->
+        <div class="hackathon-box bg-[#161619] border border-white/[0.08] p-6 sm:p-7 rounded-2xl transition-all duration-300 ease-out hover:-translate-y-1 hover:border-white/[0.22] hover:shadow-[0_16px_36px_-12px_rgba(0,0,0,0.5)] cursor-default">
+          <div class="flex items-center justify-between gap-3 mb-4">
+            <span class="px-3 py-1 rounded-full text-xs font-medium tracking-wide bg-white/[0.06] text-neutral-300 border border-white/[0.08]">
+              Project
+            </span>
+            <span class="text-xs font-medium tracking-wider uppercase text-neutral-400">[Category / Tech]</span>
+          </div>
+
+          <div class="mb-4">
+            <h2 class="text-xl font-bold tracking-tight text-white mb-0.5" style="font-size: 1.35rem">[Project Title]</h2>
+            <div class="text-sm font-medium text-neutral-300">[Technologies Used]</div>
+          </div>
+
+          <ul class="space-y-3 text-[0.875rem] text-neutral-300 font-normal leading-relaxed border-t border-white/[0.06] pt-4 list-none pl-0 mb-5">
+            <li class="flex items-start gap-2.5">
+              <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">—</span>
+              <span class="text-neutral-200">[Key feature, architecture, or algorithmic contribution]</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">—</span>
+              <span class="text-neutral-200">[Performance, benchmark metrics, or deployment details]</span>
+            </li>
+          </ul>
+
+          <div class="flex flex-wrap gap-2.5 pt-2 border-t border-white/[0.06]">
+            <a href="https://www.linkedin.com/in/aeshashah7/" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-medium bg-white/[0.08] text-neutral-200 border border-white/[0.1] hover:bg-white/[0.14] hover:text-white transition-all">
+              Technical specs →
+            </a>
+            <a href="https://www.linkedin.com/in/aeshashah7/" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-medium bg-white/[0.08] text-neutral-200 border border-white/[0.1] hover:bg-white/[0.14] hover:text-white transition-all">
+              See the demo →
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- footer -->
+    <div class="w-full mt-[3em] mb-0">
+      <div class="w-full text-center py-6 border-t border-white/[0.08]">
+        <p>
+          Made with 💌 by Aesha Shah
+        </p>
+        <p>
+          code repository on
+          <a href="https://github.com/aeshashah726" class="text-blue-600 underline"> my Github</a>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

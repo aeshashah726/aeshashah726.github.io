@@ -1,24 +1,14 @@
-<!-- section file for internships: contains markup that spa injects into the main page -->
 <!DOCTYPE html>
-<html>
+<html lang="en" class="dark" data-theme="dark">
   <head>
-    <script>
-      // redirect guard: when this file is loaded as a top-level page, always send user back to the SPA root '/'.
-      // This prevents showing a duplicate header or a partial layout when the browser does a full navigation
-      // (including a reload). The SPA injects this file via fetch and DOMParser, so this script only runs
-      // when the browser actually navigates to /internships/, which is the scenario we want to redirect.
-      if (window.top === window) {
-        window.location.replace('/');
-      }
-    </script>
-    <!-- meta tags for character set and responsive design -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-  <title>👩🏻‍💻 Aesha Shah</title>
-  <!-- page title and description for browser and search engines -->
-  <link href="style.css" rel="stylesheet" type="text/css" />
-  <!-- tailwindcss for utility-first styling -->
-  <script src="https://cdn.tailwindcss.com"></script>
+    <title>👩🏻‍💻 Aesha Shah - Internships</title>
+    <link href="/style.css?v=8" rel="stylesheet" type="text/css" />
+    <script>
+      tailwind = { darkMode: 'class' };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -26,129 +16,284 @@
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
-  <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
-  <!-- flowbite css loaded for optional ui helpers used by some components -->
-    <!DOCTYPE html>
-    <html>
-      <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width" />
-        <title>👩🏻‍💻 Aesha Shah - Internships</title>
-        <link href="style.css" rel="stylesheet" type="text/css" />
-        <script src="https://cdn.tailwindcss.com"></script>
-        <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <link rel="manifest" href="/site.webmanifest" />
-        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
-        <meta name="msapplication-TileColor" content="#da532c" />
-        <meta name="theme-color" content="#ffffff" />
-        <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
-        <style>
-          /* small head-level tweak: remove underline from nav anchors when injected into header */
-          nav a.no-underline,
-          nav a.no-underline:hover,
-          nav a.no-underline:focus,
-          nav a.no-underline:active {
-            text-decoration: none !important;
-          }
-        </style>
-      <!-- main javascript file for interactivity and theme -->
-      <script src="script.js"></script>
-      </head>
-      <body class="padded flex flex-col items-center pt-[5vmin]">
-  <!-- flowbite js included in case this section uses interactive flowbite components -->
-        <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
-        <!-- main-content wrapper: the spa expects this id when injecting into the root page -->
-        <div id="main-content" class="w-full flex flex-col items-center">
-          <!-- internships section header shown when this section is active -->
-          <div class="w-full pt-6 pb-6">
-            <div class="flex items-center">
-              <h1 class="text-[6vmin] opacity-70 leading-none">
-                Internships
-              </h1>
-            </div>
-            <!-- additional internship cards can be added below the main grid to keep layout consistent -->
-          </div>
-          <!-- grid container holding internship cards; add or remove cards here -->
-          <div class="grid xl:grid-cols-2 gap-8 w-full">
-            <!-- card: aws solutions architect internship -->
-            <div class="hackathon-box bg-[#222] p-4 transition ease-in-out hover:-translate-y-1 hover:scale-105 hover: duration-180 hover:cursor-default" style="padding: 2em; padding-top: 0.5em">
-              <div class="text-left">
-                <p class="bg-green-900 inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-white">
-                  Summer 2025
-                </p>
-              </div>
-              <h2 class="mb-1" style="font-size: 1.5em">Solutions Architect Intern</h2>
-              <h2 class="mb-1" style="font-size: 1em">Amazon Web Services (AWS)</h2>
-              <p class="mt-1 mb-1 text-white font-light">
-                Cloud Sales Center, Enterprise Greenfield
-              </p>
-              <ul class="mt-1 mb-1 text-white font-light list-disc pl-5 marker:text-white">
-                <li class="text-white">Developed a secure full-stack specifications intelligence application with Python, React, Flask, Lambda functions, S3, EC2, and REST APIs, integrating Amazon Textract and Bedrock to extract and structure content and entities from unstructured, high-volume PDFs &mdash; reducing manual review by 70% for high-risk workflows in defense, real estate, and infrastructure sectors.</li>
-                <li class="text-white">Implemented robust end-to-end security architecture, including fine-grained IAM policies, document scoping guardrails, and distributed data protection; ensuring secure ingestion and processing of sensitive construction and defense-related documentation across distributed AWS services including Lambda functions, S3, and API Gateway.</li>
-                <li class="text-white">Defined mitigation controls for OWASP Top 10 risks for LLMs in Bedrock-based applications by integrating input/output validation, scoped model prompts, and content safety filters&mdash;eliminating prompt injection vectors and hallucinated outputs in internal testing environments.</li>
-              </ul>
-              <!-- <div class="text-right text-lightgray"> -->
-                <!-- external link: technical specs or resume link for this role -->
-                <!-- <a href="https://www.linkedin.com/in/aeshashah7/n"><p class="button bg-[#fffaf0] inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-black">Technical specs →</p></a> -->
-                <!-- external demo or profile link -->
-                <!-- <a href="https://www.linkedin.com/in/aeshashah7/"><p class="button bg-[#fffaf0] inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-black">See the demo →</p></a> -->
-              <!-- </div> -->
-            </div>
-            <!-- card: ups information systems / software engineering internship -->
-            <div class="hackathon-box bg-[#222] p-4 transition ease-in-out hover:-translate-y-1 hover:scale-105 hover: duration-180 hover:cursor-default" style="padding: 2em; padding-top: 0.5em">
-              <div class="text-left">
-                <p class="bg-green-900 inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-white">
-                  Summer 2024
-                </p>
-              </div>
-              <h2 class="mb-1" style="font-size: 1.5em">Software Engineering Intern</h2>
-              <h2 class="mb-1" style="font-size: 1em">United Parcel Service (UPS)</h2>
-              <p class="mt-1 mb-1 text-white font-light">Enterprise Technology, Information Services Management</p>
-              <ul class="mt-1 mb-1 text-white font-light list-disc pl-5 marker:text-white">
-                <li class="text-white">Engineered a GenAI-based system using GCP Vertex AI's text-bison model for classification to curate template responses and detect possible fraud for small-package billing inquiries (disputes, invoices, accounts), reducing human contact time by ~30%.</li>
-                <li class="text-white">Restructured the customer service messaging response application using the LangGraph multi-agent framework (after comparing LangChain, CrewAI, AutoGen, and Semantic Kernel) to support ~50k daily cases globally; projected operating cost savings of $1.5M.</li>
-                <li class="text-white">Implemented Microsoft Azure OpenAI's GPT-4o model with prompt engineering in Python to classify 100 customer service and non-service message categories.</li>
-              </ul>
-               <!-- <div class="text-right text-lightgray"> -->
-                <!-- external link: technical specs or more info for this internship -->
-                <!-- <a href="https://www.linkedin.com/in/aeshashah7"><p class="button bg-[#fffaf0] inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-black">Technical specs →</p></a> -->
-                <!-- external demo/profile link -->
-                <!-- <a href="https://www.linkedin.com/in/aeshashah7"><p class="button bg-[#fffaf0] inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-black">See the demo →</p></a> -->
-               <!-- </div> -->
-            </div>
-            <!-- additional placeholder internship cards (row 2) -->
-            <div class="hackathon-box bg-[#222] p-4 transition ease-in-out hover:-translate-y-1 hover:scale-105 hover: duration-180 hover:cursor-default" style="padding: 2em; padding-top: 0.5em">
-              <div class="text-left">
-                <p class="bg-green-900 inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-white">
-                  Summer 2023
-                </p>
-              </div>
-              <h2 class="mb-1" style="font-size: 1.5em">[Add internship title]</h2>
-              <h2 class="mb-1" style="font-size: 1em">[Company / Organization]</h2>
-              <p class="mt-1 mb-1 text-white font-light">[Short description — technologies, team, or focus]</p>
-              <div class="text-right text-lightgray">
-                <!-- placeholder for external links -->
-                <!-- <a href="#"><p class="button bg-[#fffaf0] inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-black">Details →</p></a> -->
-              </div>
-            </div>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+    <script src="/script.js"></script>
+  </head>
+  <body class="padded flex flex-col items-center pt-[5vmin]">
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
 
-            <div class="hackathon-box bg-[#222] p-4 transition ease-in-out hover:-translate-y-1 hover:scale-105 hover: duration-180 hover:cursor-default" style="padding: 2em; padding-top: 0.5em">
-              <div class="text-left">
-                <p class="bg-green-900 inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-white">
-                  Summer 2022
-                </p>
-              </div>
-              <h2 class="mb-1" style="font-size: 1.5em">[Add internship title]</h2>
-              <h2 class="mb-1" style="font-size: 1em">[Company / Organization]</h2>
-              <p class="mt-1 mb-1 text-white font-light">[Short description — technologies, team, or focus]</p>
-              <div class="text-right text-lightgray">
-                <!-- placeholder for external links -->
-                <!-- <a href="#"><p class="button bg-[#fffaf0] inline-block px-3 py-1 rounded mb-[1.5vmin] mt-[1.5vmin] text-black">Details →</p></a> -->
-              </div>
-            </div>
-          </div>
+    <!-- site header island -->
+    <header id="site-header">
+      <div class="nav-island">
+        <div class="hidden md:flex items-center pl-1 pr-1">
+          <span id="local-time" class="text-xs font-mono tracking-wider text-neutral-400"></span>
         </div>
-      </body>
-    </html>
+        <nav class="flex items-center gap-1">
+          <a href="/" class="nav-link" data-nav>Home</a>
+          <a href="/resume/" class="nav-link" data-nav>Resume</a>
+          <a href="/internships/" class="nav-link active-nav" data-nav>Internships</a>
+          <a href="/research/" class="nav-link" data-nav>Research</a>
+          <a href="/projects/" class="nav-link" data-nav>Projects</a>
+        </nav>
+        <div class="flex items-center pl-1">
+          <label class="theme-switch" title="Toggle theme">
+            <input type="checkbox" checked onchange="theme()">
+            <span class="theme-switch-slider"></span>
+          </label>
+        </div>
+      </div>
+    </header>
+
+    <div id="header-spacer"></div>
+
+    <div id="main-content" class="w-full flex flex-col items-center">
+      <div class="w-full pt-6 pb-6">
+        <div class="flex items-center">
+          <h1 class="text-[6vmin] opacity-70 leading-none">
+            Internships
+          </h1>
+        </div>
+      </div>
+
+      <div class="grid xl:grid-cols-2 gap-8 w-full">
+
+        <!-- aws -->
+        <div class="hackathon-box bg-[#161619] border border-white/[0.08] p-6 sm:p-7 rounded-2xl transition-all duration-300 ease-out hover:-translate-y-1 hover:border-white/[0.22] hover:shadow-[0_16px_36px_-12px_rgba(0,0,0,0.5)] cursor-default">
+          <div class="flex items-center justify-between gap-3 mb-4">
+            <span class="px-3 py-1 rounded-full text-xs font-medium tracking-wide bg-white/[0.06] text-neutral-300 border border-white/[0.08]">
+              Summer 2025
+            </span>
+            <span class="text-xs font-medium tracking-wider uppercase text-neutral-400">Atlanta, GA</span>
+          </div>
+
+          <div class="mb-4">
+            <h2 class="text-xl font-bold tracking-tight text-white mb-0.5" style="font-size: 1.35rem">Solutions Architect Intern</h2>
+            <div class="text-sm font-medium text-neutral-300">Amazon Web Services (AWS)</div>
+            <div class="text-xs text-neutral-400 mt-0.5">Cloud Sales Center, Enterprise Greenfield</div>
+          </div>
+
+          <ul class="space-y-3 text-[0.875rem] text-neutral-300 font-normal leading-relaxed border-t border-white/[0.06] pt-4 list-none pl-0">
+            <li class="flex items-start gap-2.5">
+              <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">—</span>
+              <span class="text-neutral-200">Developed a secure full-stack specifications intelligence application with Python, React, Flask, Lambda functions, S3, EC2, and REST APIs, integrating Amazon Textract and Bedrock to extract and structure content and entities from unstructured, high-volume PDFs &mdash; reducing manual review by 70% for high-risk workflows in defense, real estate, and infrastructure sectors.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">—</span>
+              <span class="text-neutral-200">Implemented robust end-to-end security architecture, including fine-grained IAM policies, document scoping guardrails, and distributed data protection; ensuring secure ingestion and processing of sensitive construction and defense-related documentation across distributed AWS services including Lambda functions, S3, and API Gateway.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">—</span>
+              <span class="text-neutral-200">Defined mitigation controls for OWASP Top 10 risks for LLMs in Bedrock-based applications by integrating input/output validation, scoped model prompts, and content safety filters&mdash;eliminating prompt injection vectors and hallucinated outputs in internal testing environments.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- ups -->
+        <div class="hackathon-box bg-[#161619] border border-white/[0.08] p-6 sm:p-7 rounded-2xl transition-all duration-300 ease-out hover:-translate-y-1 hover:border-white/[0.22] hover:shadow-[0_16px_36px_-12px_rgba(0,0,0,0.5)] cursor-default">
+          <div class="flex items-center justify-between gap-3 mb-4">
+            <span class="px-3 py-1 rounded-full text-xs font-medium tracking-wide bg-white/[0.06] text-neutral-300 border border-white/[0.08]">
+              Summer 2024
+            </span>
+            <span class="text-xs font-medium tracking-wider uppercase text-neutral-400">Atlanta, GA</span>
+          </div>
+
+          <div class="mb-4">
+            <h2 class="text-xl font-bold tracking-tight text-white mb-0.5" style="font-size: 1.35rem">Software Engineering Intern</h2>
+            <div class="text-sm font-medium text-neutral-300">United Parcel Service (UPS)</div>
+            <div class="text-xs text-neutral-400 mt-0.5">Enterprise Technology, Information Services Management</div>
+          </div>
+
+          <ul class="space-y-3 text-[0.875rem] text-neutral-300 font-normal leading-relaxed border-t border-white/[0.06] pt-4 list-none pl-0">
+            <li class="flex items-start gap-2.5">
+              <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">—</span>
+              <span class="text-neutral-200">Engineered a GenAI-based system using GCP Vertex AI's text-bison model for classification to curate template responses and detect possible fraud for small-package billing inquiries (disputes, invoices, accounts), reducing human contact time by ~30%.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">—</span>
+              <span class="text-neutral-200">Restructured the customer service messaging response application using the LangGraph multi-agent framework (after comparing LangChain, CrewAI, AutoGen, and Semantic Kernel) to support ~50k daily cases globally; projected operating cost savings of $1.5M.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">—</span>
+              <span class="text-neutral-200">Implemented Microsoft Azure OpenAI's GPT-4o model with prompt engineering in Python to classify 100 customer service and non-service message categories.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- nasa -->
+        <div class="hackathon-box bg-[#161619] border border-white/[0.08] p-6 sm:p-7 rounded-2xl transition-all duration-300 ease-out hover:-translate-y-1 hover:border-white/[0.22] hover:shadow-[0_16px_36px_-12px_rgba(0,0,0,0.5)] cursor-default">
+          <div class="flex items-center justify-between gap-3 mb-4">
+            <span class="px-3 py-1 rounded-full text-xs font-medium tracking-wide bg-white/[0.06] text-neutral-300 border border-white/[0.08]">
+              Summer 2022
+            </span>
+            <span class="text-xs font-medium tracking-wider uppercase text-neutral-400">Austin, TX</span>
+          </div>
+
+          <div class="mb-4">
+            <h2 class="text-xl font-bold tracking-tight text-white mb-0.5" style="font-size: 1.35rem">Engineering Research Intern</h2>
+            <div class="text-sm font-medium text-neutral-300">National Aeronautics and Space Administration (NASA), UT Austin Center for Space Research</div>
+            <div class="text-xs text-neutral-400 mt-0.5">STEM Enhancement in Earth Science (SEES)</div>
+          </div>
+
+          <ul class="space-y-3 text-[0.875rem] text-neutral-300 font-normal leading-relaxed border-t border-white/[0.06] pt-4 list-none pl-0">
+            <li class="flex items-start gap-2.5">
+              <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">—</span>
+              <span class="text-neutral-200">Developed a Machine Learning model leveraging NASA satellite data on Google Colab to analyze land cover changes and evaluate public health risks associated with vector-borne diseases. Utilized GLOBE Advanced Data Access Tool, Collect Earth Online, AppEARS, NASA Worldview, Google Earth Engine, and ArcGIS Online to generate geospatial analysis and inform environmental &amp; health policy decisions.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">—</span>
+              <span class="text-neutral-200">First author of research study: <em>MASC AI: A Novel Method for Effective Mosquito Data Classification and Mapping</em> (presented at AGU Fall Meeting 2022).</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">—</span>
+              <span class="text-neutral-200">Explored Python applications for stellar disk kinematics, stellar evolution, H-R diagrams/color-magnitude diagrams, spectra, Doppler shift, disk dynamics, galaxy formation, evolution, and mergers, combined with mathematical and statistical concepts of logarithms and standard deviation.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">—</span>
+              <span class="text-neutral-200">Completed 4 certifications based on course content developed by NASA &amp; the Texas Space Grant Consortium: Climate Science Background; Space Exploration, Science &amp; Engineering; Earth Exploration; Mars &amp; Beyond.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- georgia tech asdl -->
+        <div class="hackathon-box bg-[#161619] border border-white/[0.08] p-6 sm:p-7 rounded-2xl transition-all duration-300 ease-out hover:-translate-y-1 hover:border-white/[0.22] hover:shadow-[0_16px_36px_-12px_rgba(0,0,0,0.5)] cursor-default">
+          <div class="flex items-center justify-between gap-3 mb-4">
+            <span class="px-3 py-1 rounded-full text-xs font-medium tracking-wide bg-white/[0.06] text-neutral-300 border border-white/[0.08]">
+              Summer 2022
+            </span>
+            <span class="text-xs font-medium tracking-wider uppercase text-neutral-400">Atlanta, GA</span>
+          </div>
+
+          <div class="mb-4">
+            <h2 class="text-xl font-bold tracking-tight text-white mb-0.5" style="font-size: 1.35rem">High School STEM Intern</h2>
+            <div class="text-sm font-medium text-neutral-300">Georgia Tech School of Aerospace Engineering</div>
+            <div class="text-xs text-neutral-400 mt-0.5">Aerospace Systems Design Laboratory (ASDL)</div>
+          </div>
+
+          <ul class="space-y-3 text-[0.875rem] text-neutral-300 font-normal leading-relaxed border-t border-white/[0.06] pt-4 list-none pl-0">
+            <li class="flex items-start gap-2.5">
+              <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">—</span>
+              <span class="text-neutral-200">Developed small-scale moon rovers: designed structure, machined parts, and programmed (using C++) the implementation of LiDAR, GPS, imaging, sensing, and driving through simulated terrain.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">—</span>
+              <span class="text-neutral-200">Presented findings to a panel of academia and industry representatives from Lockheed Martin, NASA, GA Space Grant Consortium, Georgia Tech Aerospace Systems Design Laboratory, and the Daniel Guggenheim School of Aerospace Engineering.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">—</span>
+              <span class="text-neutral-200">Conducted research under the advisement of Dr. Kelly Griendling, School of Aerospace Engineering.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- atlanta athletic club -->
+        <div class="hackathon-box bg-[#161619] border border-white/[0.08] p-6 sm:p-7 rounded-2xl transition-all duration-300 ease-out hover:-translate-y-1 hover:border-white/[0.22] hover:shadow-[0_16px_36px_-12px_rgba(0,0,0,0.5)] cursor-default">
+          <div class="flex items-center justify-between gap-3 mb-4">
+            <span class="px-3 py-1 rounded-full text-xs font-medium tracking-wide bg-white/[0.06] text-neutral-300 border border-white/[0.08]">
+              Summer 2022
+            </span>
+            <span class="text-xs font-medium tracking-wider uppercase text-neutral-400">Johns Creek, GA</span>
+          </div>
+
+          <div class="mb-4">
+            <h2 class="text-xl font-bold tracking-tight text-white mb-0.5" style="font-size: 1.35rem">Front Desk Attendant</h2>
+            <div class="text-sm font-medium text-neutral-300">Atlanta Athletic Club</div>
+            <div class="text-xs text-neutral-400 mt-0.5">Aquatics Center</div>
+          </div>
+
+          <ul class="space-y-3 text-[0.875rem] text-neutral-300 font-normal leading-relaxed border-t border-white/[0.06] pt-4 list-none pl-0">
+            <li class="flex items-start gap-2.5">
+              <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">—</span>
+              <span class="text-neutral-200">Collaborated with the front desk team to provide members and guests with exceptional customer service, managing check-ins and routing incoming calls to corresponding departments.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">—</span>
+              <span class="text-neutral-200">Operated the POS system to charge program fees, guest fees, and merchandise sales accurately to members' accounts.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">—</span>
+              <span class="text-neutral-200">Assisted lifeguards with facility operations, helping pace member traffic on the waterslides to maintain safety.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- placeholder / summer 2023 -->
+        <div class="hackathon-box bg-[#161619] border border-white/[0.08] p-6 sm:p-7 rounded-2xl transition-all duration-300 ease-out hover:-translate-y-1 hover:border-white/[0.22] hover:shadow-[0_16px_36px_-12px_rgba(0,0,0,0.5)] cursor-default">
+          <div class="flex items-center justify-between gap-3 mb-4">
+            <span class="px-3 py-1 rounded-full text-xs font-medium tracking-wide bg-white/[0.06] text-neutral-300 border border-white/[0.08]">
+              Summer 2023
+            </span>
+            <span class="text-xs font-medium tracking-wider uppercase text-neutral-400">[City, State]</span>
+          </div>
+
+          <div class="mb-4">
+            <h2 class="text-xl font-bold tracking-tight text-white mb-0.5" style="font-size: 1.35rem">[Role / Position Title]</h2>
+            <div class="text-sm font-medium text-neutral-300">[Company / Organization]</div>
+            <div class="text-xs text-neutral-400 mt-0.5">[Department / Team / Focus Area]</div>
+          </div>
+
+          <ul class="space-y-3 text-[0.875rem] text-neutral-300 font-normal leading-relaxed border-t border-white/[0.06] pt-4 list-none pl-0">
+            <li class="flex items-start gap-2.5">
+              <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">—</span>
+              <span class="text-neutral-200">[Key achievement, project developed, or main technical responsibility]</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">—</span>
+              <span class="text-neutral-200">[Impact, performance metric, tools, or technologies utilized]</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">—</span>
+              <span class="text-neutral-200">[Collaboration, deployment, or system design contribution]</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- template: duplicate to add more internship cards -->
+        <!--
+        <div class="hackathon-box bg-[#161619] border border-white/[0.08] p-6 sm:p-7 rounded-2xl transition-all duration-300 ease-out hover:-translate-y-1 hover:border-white/[0.22] hover:shadow-[0_16px_36px_-12px_rgba(0,0,0,0.5)] cursor-default">
+          <div class="flex items-center justify-between gap-3 mb-4">
+            <span class="px-3 py-1 rounded-full text-xs font-medium tracking-wide bg-white/[0.06] text-neutral-300 border border-white/[0.08]">
+              [Term / Year]
+            </span>
+            <span class="text-xs font-medium tracking-wider uppercase text-neutral-400">[City, State]</span>
+          </div>
+
+          <div class="mb-4">
+            <h2 class="text-xl font-bold tracking-tight text-white mb-0.5" style="font-size: 1.35rem">[Role Title]</h2>
+            <div class="text-sm font-medium text-neutral-300">[Company Name]</div>
+            <div class="text-xs text-neutral-400 mt-0.5">[Department / Team Name]</div>
+          </div>
+
+          <ul class="space-y-3 text-[0.875rem] text-neutral-300 font-normal leading-relaxed border-t border-white/[0.06] pt-4 list-none pl-0">
+            <li class="flex items-start gap-2.5">
+              <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">—</span>
+              <span class="text-neutral-200">[Key responsibility or impact bullet point 1]</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">—</span>
+              <span class="text-neutral-200">[Key responsibility or impact bullet point 2]</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">—</span>
+              <span class="text-neutral-200">[Key responsibility or impact bullet point 3]</span>
+            </li>
+          </ul>
+        </div>
+        -->
+
+      </div>
+    </div>
+
+    <!-- footer -->
+    <div class="w-full mt-[3em] mb-0">
+      <div class="w-full text-center py-6 border-t border-white/[0.08]">
+        <p>
+          Made with 💌 by Aesha Shah
+        </p>
+        <p>
+          code repository on
+          <a href="https://github.com/aeshashah726" class="text-blue-600 underline"> my Github</a>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
