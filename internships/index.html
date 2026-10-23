@@ -63,7 +63,7 @@
       <!-- vertical spine line through the middle -->
       <div class="timeline-center-spine"></div>
 
-      <!-- 1. google (current) - left side -->
+      <!-- 1. google (fall 2026) - left side -->
       <div class="relative flex flex-col md:flex-row items-center justify-between w-full mb-3.5 sm:mb-4 timeline-row">
         <!-- center node -->
         <div class="timeline-center-node">
@@ -78,14 +78,14 @@
           <div
             class="timeline-card-preview hackathon-box bg-[#161619] border border-white/[0.08] p-4 sm:p-5 rounded-2xl cursor-pointer"
             onclick="openSpotlight(this)" tabindex="0" role="button" aria-haspopup="dialog"
-            onkeydown="handleCardKey(event, this)" data-term="Current" data-location="Sunnyvale, CA"
+            onkeydown="handleCardKey(event, this)" data-term="Fall 2026" data-location="Sunnyvale, CA"
             data-role="Software Engineering Intern" data-company="Google"
-            data-dept="Cloud Security — Chronicle Detections Platform & Experience">
+            data-dept="Google Cloud Platform — Security Operations (Chronicle)">
             <div class="space-y-1">
               <div class="flex flex-wrap items-center gap-2 mb-1">
                 <span
                   class="px-2.5 py-0.5 rounded-full text-xs font-medium tracking-wide bg-white/[0.06] text-neutral-300 border border-white/[0.08]">
-                  Current
+                  Fall 2026
                 </span>
                 <span class="text-xs font-medium tracking-wider uppercase text-neutral-400">Sunnyvale, CA</span>
               </div>
@@ -93,7 +93,8 @@
                 Software Engineering Intern
               </h2>
               <div class="text-xs sm:text-sm font-medium text-neutral-300">Google</div>
-              <div class="text-[0.75rem] text-neutral-400">Cloud Security — Chronicle Detections Platform & Experience
+              <div class="text-[0.75rem] text-neutral-400">Google Cloud Platform — Cloud Security (Security Operations,
+                Chronicle)
               </div>
             </div>
 
@@ -102,7 +103,36 @@
               <ul class="space-y-3 text-[0.875rem] text-neutral-300 font-normal leading-relaxed list-none pl-0">
                 <li class="flex items-start gap-2.5">
                   <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">—</span>
-                  <span class="text-neutral-200">In-progress</span>
+                  <span class="text-neutral-200">Architected and implemented an asynchronous curated rule deployment
+                    pipeline in Go, replacing a synchronous batch rollout with a four-stage fanout architecture built
+                    using Cloud Spanner queues; decoupled rule ingestion from customer delivery to achieve constant-time
+                    ingestion, isolated per-customer failure domains, and eliminated write stampedes that previously
+                    triggered database hotspotting and downstream compiler overloads touching 112K+ rule-customer pairs
+                    and 270M+ cascading RPC calls.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">—</span>
+                  <span class="text-neutral-200">Optimized deterministic load-leveling and fault-tolerant worker
+                    orchestration using CRC32-based hashing to distribute writes across intervals within a 60-minute
+                    rollout window, preventing cache-invalidation stampedes across approximately 11K evaluator tasks;
+                    implemented idempotent transactional workers, delivery deduplication, interval-aligned exponential
+                    backoff, and atomic rule updates.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">—</span>
+                  <span class="text-neutral-200">Authored project proposal, technical design specifications, and
+                    multi-phase plan; shipped production infrastructure and operational tooling with metrics, alerting,
+                    and integration tests simulating propagation and load scenarios up to 5,000 customers for a single
+                    deployment window.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">—</span>
+                  <span class="text-neutral-200">Strengthened platform access controls, schema persistence, and
+                    configuration lifecycles across production services: implemented fine-grained entitlement-based rule
+                    access evaluating customer feature flags and subscription tags with automated active teardown on
+                    revocation; extracted, tokenized, and persisted curated rule metadata tags into Cloud Spanner
+                    columns while preventing false update conflicts; and deprecated legacy service flags, validating
+                    staged rollouts across 4 production waves via live database SQL verification queries.</span>
                 </li>
               </ul>
             </div>
@@ -133,7 +163,7 @@
             onclick="openSpotlight(this)" tabindex="0" role="button" aria-haspopup="dialog"
             onkeydown="handleCardKey(event, this)" data-term="Summer 2026" data-location="Redmond, WA"
             data-role="Software Engineering Intern" data-company="Microsoft"
-            data-dept="Business & Industry Copilot — Copilot Studio & Azure Bot Service">
+            data-dept="Business & Industry Copilot — Managed Apps & Agents (Copilot Studio & Azure Bot Service)">
             <div class="space-y-1">
               <div class="flex flex-wrap items-center gap-2 mb-1">
                 <span
@@ -146,8 +176,7 @@
                 Software Engineering Intern
               </h2>
               <div class="text-xs sm:text-sm font-medium text-neutral-300">Microsoft</div>
-              <div class="text-[0.75rem] text-neutral-400">Business & Industry Copilot — Copilot Studio & Azure Bot
-                Service</div>
+              <div class="text-[0.75rem] text-neutral-400">Business & Industry Copilot — Managed Apps & Agents (Copilot Studio & Azure Bot Service)</div>
             </div>
 
             <!-- hidden description for spotlight modal -->
@@ -168,23 +197,35 @@
                     cross-repository integration via a shared NuGet package consumed by a downstream Azure
                     service.</span>
                 </li>
-                <li class="flex items-start gap-2.5">
-                  <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">—</span>
-                  <span class="text-neutral-200">Built a full-stack intelligence platform to unify artifacts from
-                    Microsoft Graph (Teams, Outlook, OneNote, SharePoint, etc.), Azure DevOps, and GitHub into a
-                    source-backed project knowledge graph using TypeScript, Node.js, Azure OpenAI, and Express; with
-                    relevance filtering, typed entity extraction (decisions, blockers, risks, action items), and
-                    confidence scoring. (Hackathon, 2nd Place)</span>
-                </li>
-                <li class="flex items-start gap-2.5">
-                  <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">—</span>
-                  <span class="text-neutral-200">Crafted a modular cloud-native architecture using React, Fluent UI,
-                    REST APIs, Server-Sent Events (SSE), and Azure OpenAI to power a live interactive graph
-                    visualization, semantic relationship construction, automated project summaries, actionable
-                    recommendations, source-backed insights, and hallucination-resistant workflows with deterministic
-                    fallback logic. (Hackathon, 2nd Place)</span>
-                </li>
               </ul>
+
+              <!-- nested hackathon project section -->
+              <div class="mt-5 pt-4 border-t border-black/[0.08] dark:border-white/[0.08]">
+                <div class="flex items-center gap-2 mb-3">
+                  <span
+                    class="px-2.5 py-0.5 rounded-full text-xs font-mono uppercase tracking-wider font-semibold bg-black/[0.05] dark:bg-white/[0.06] text-neutral-700 dark:text-neutral-300 border border-black/[0.08] dark:border-white/[0.08]">
+                    Hackathon Project &bull; 2nd Place
+                  </span>
+                </div>
+                <ul class="space-y-3 text-[0.875rem] text-neutral-300 font-normal leading-relaxed list-none pl-0">
+                  <li class="flex items-start gap-2.5">
+                    <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">—</span>
+                    <span class="text-neutral-200">Built a full-stack intelligence platform to unify artifacts from
+                      Microsoft Graph (Teams, Outlook, OneNote, SharePoint, etc.), Azure DevOps, and GitHub into a
+                      source-backed project knowledge graph using TypeScript, Node.js, Azure OpenAI, and Express; with
+                      relevance filtering, typed entity extraction (decisions, blockers, risks, action items), and
+                      confidence scoring.</span>
+                  </li>
+                  <li class="flex items-start gap-2.5">
+                    <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">—</span>
+                    <span class="text-neutral-200">Crafted a modular cloud-native architecture using React, Fluent UI,
+                      REST APIs, Server-Sent Events (SSE), and Azure OpenAI to power a live interactive graph
+                      visualization, semantic relationship construction, automated project summaries, actionable
+                      recommendations, source-backed insights, and hallucination-resistant workflows with deterministic
+                      fallback logic.</span>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -249,6 +290,25 @@
                     testing environments.</span>
                 </li>
               </ul>
+
+              <!-- nested hackathon project section -->
+              <div class="mt-5 pt-4 border-t border-black/[0.08] dark:border-white/[0.08]">
+                <div class="flex items-center gap-2 mb-3">
+                  <span
+                    class="px-2.5 py-0.5 rounded-full text-xs font-mono uppercase tracking-wider font-semibold bg-black/[0.05] dark:bg-white/[0.06] text-neutral-700 dark:text-neutral-300 border border-black/[0.08] dark:border-white/[0.08]">
+                    Hackathon Project
+                  </span>
+                </div>
+                <ul class="space-y-3 text-[0.875rem] text-neutral-300 font-normal leading-relaxed list-none pl-0">
+                  <li class="flex items-start gap-2.5">
+                    <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">—</span>
+                    <span class="text-neutral-200">Created frameworks for enterprise-grade encryption and audit controls
+                      using AWS Key Management Service and S3, securing AI-generated content for customer financial
+                      interactions; ensured regulatory compliance through encrypted data-at-rest, security event
+                      tracking, and integration with financial-grade monitoring protocols.</span>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
