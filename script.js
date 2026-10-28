@@ -75,3 +75,11 @@ if ('serviceWorker' in navigator) {
   });
 }
 
+// close any open action dropdown when clicking outside
+document.addEventListener('click', (e) => {
+  if (!e.target.closest('.group')) {
+    document.querySelectorAll('.group.open').forEach(el => el.classList.remove('open'));
+  }
+});
+
+

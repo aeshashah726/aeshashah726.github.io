@@ -546,9 +546,15 @@ html[data-theme="one"] .btn-action:hover {
   min-width: 170px;
 }
 
-.group:hover .action-dropdown {
+.group:hover .action-dropdown,
+.group.open .action-dropdown {
   opacity: 1;
   visibility: visible;
+  pointer-events: auto;
+}
+
+.group.open button svg {
+  transform: rotate(180deg);
 }
 
 .action-dropdown-card {
