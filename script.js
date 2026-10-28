@@ -1,3 +1,20 @@
+// immediately apply saved theme preference to prevent FOUC on page transitions
+(function initTheme() {
+  try {
+    const saved = localStorage.getItem('theme');
+    const el = document.documentElement;
+    if (saved === 'light') {
+      el.setAttribute('data-theme', 'one');
+      el.classList.remove('dark');
+      el.classList.add('light');
+    } else if (saved === 'dark') {
+      el.setAttribute('data-theme', 'dark');
+      el.classList.remove('light');
+      el.classList.add('dark');
+    }
+  } catch (e) {}
+})();
+
 // header clock updater
 function updateLocalTime() {
   const now = new Date();
@@ -11,14 +28,23 @@ function updateLocalTime() {
 setInterval(updateLocalTime, 1000);
 window.addEventListener('DOMContentLoaded', () => {
   updateLocalTime();
-  updateThemeText();
+  syncThemeUI();
 });
+
+// sync theme checkbox state and text
+function syncThemeUI() {
+  const isDark = document.documentElement.classList.contains('dark') && !document.documentElement.classList.contains('light');
+  document.querySelectorAll('.theme-switch input[type="checkbox"], input[type="checkbox"][onchange*="theme"]').forEach(cb => {
+    cb.checked = isDark;
+  });
+  updateThemeText();
+}
 
 // update theme button text
 function updateThemeText() {
   const themeText = document.getElementById('themeText');
   if (!themeText) return;
-  const isDark = document.documentElement.classList.contains('dark');
+  const isDark = document.documentElement.classList.contains('dark') && !document.documentElement.classList.contains('light');
   themeText.textContent = isDark ? 'toggle to light mode' : 'toggle to dark mode';
 }
 window.updateThemeText = updateThemeText;
@@ -26,20 +52,29 @@ window.updateThemeText = updateThemeText;
 // toggle theme between dark and light mode
 function theme() {
   var element = document.documentElement;
-  var checkbox = document.querySelector('input[type="checkbox"]');
-  if (checkbox.checked) {
+  var checkbox = document.querySelector('.theme-switch input[type="checkbox"], input[type="checkbox"][onchange*="theme"]');
+  var isDark = checkbox ? checkbox.checked : !element.classList.contains('dark');
+
+  if (isDark) {
     element.setAttribute('data-theme', 'dark');
     element.classList.add('dark');
     element.classList.remove('light');
+    try { localStorage.setItem('theme', 'dark'); } catch (e) {}
   } else {
     element.setAttribute('data-theme', 'one');
     element.classList.remove('dark');
     element.classList.add('light');
+    try { localStorage.setItem('theme', 'light'); } catch (e) {}
   }
+
+  document.querySelectorAll('.theme-switch input[type="checkbox"], input[type="checkbox"][onchange*="theme"]').forEach(cb => {
+    cb.checked = isDark;
+  });
+
   if (window.updateThemeText) window.updateThemeText();
   var themeText = document.getElementById('themeText');
   if (themeText) {
-    themeText.style.color = checkbox.checked ? 'whitesmoke' : '#222';
+    themeText.style.color = isDark ? 'whitesmoke' : '#222';
   }
 }
 
