@@ -1,112 +1,284 @@
 <!DOCTYPE html>
 <html lang="en" class="dark" data-theme="dark">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Aesha Shah - Research</title>
-    <link href="/style.css?v=13" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = { darkMode: 'class' };
-    </script>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="apple-touch-icon" href="/favicon.svg" />
-    <meta name="theme-color" content="#ffffff" />
-    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
-    <script src="/script.js?v=14"></script>
-  </head>
-  <body class="padded flex flex-col items-center pt-[5vmin]">
-    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
 
-    <!-- site header island -->
-    <header id="site-header">
-      <div class="nav-island">
-        <div class="hidden md:flex items-center pl-1 pr-1">
-          <span id="local-time" class="text-xs font-mono tracking-wider text-neutral-400"></span>
-        </div>
-        <nav class="flex items-center gap-1">
-          <a href="/" class="nav-link">Home</a>
-          <a href="/education/" class="nav-link">Education</a>
-          <a href="/internships/" class="nav-link">Internships</a>
-          <!-- hidden until fully updated: resume, research, projects
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Aesha Shah - Research</title>
+  <meta name="description"
+    content="Aesha Shah's undergraduate research at Georgia Tech — NLP for Financial Markets (VIP/FSIL) and Robot Autonomy & Interactive Learning (RAIL Lab)." />
+  <link href="/style.css?v=14" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { darkMode: 'class' };
+  </script>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="apple-touch-icon" href="/favicon.svg" />
+  <meta name="theme-color" content="#ffffff" />
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+  <script src="/script.js?v=14"></script>
+</head>
+
+<body class="padded flex flex-col items-center pt-[5vmin]">
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+
+  <!-- site header island -->
+  <header id="site-header">
+    <div class="nav-island">
+      <div class="hidden md:flex items-center pl-1 pr-1">
+        <span id="local-time" class="text-xs font-mono tracking-wider text-neutral-400"></span>
+      </div>
+      <nav class="flex items-center gap-1">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/education/" class="nav-link">Education</a>
+        <a href="/internships/" class="nav-link">Internships</a>
+        <a href="/research/" class="nav-link active-nav">Research</a>
+        <!-- hidden until fully updated: resume, projects
           <a href="/resume/" class="nav-link">Resume</a>
-          <a href="/research/" class="nav-link active-nav">Research</a>
           <a href="/projects/" class="nav-link">Projects</a>
           -->
-        </nav>
-        <div class="flex items-center pl-1">
-          <label class="theme-switch" title="Toggle theme">
-            <input type="checkbox" checked onchange="theme()">
-            <span class="theme-switch-slider"></span>
-          </label>
+      </nav>
+      <div class="flex items-center pl-1">
+        <label class="theme-switch" title="Toggle theme">
+          <input type="checkbox" checked onchange="theme()">
+          <span class="theme-switch-slider"></span>
+        </label>
+      </div>
+    </div>
+  </header>
+
+  <div id="header-spacer"></div>
+
+  <!-- main content container -->
+  <div id="main-content" class="w-full flex flex-col items-center font-jakarta">
+    <div class="w-full max-w-5xl pt-4 sm:pt-6 pb-6 font-jakarta px-4">
+      <p class="text-sm font-mono text-neutral-500 dark:text-neutral-400 mb-2 tracking-wider">04 / RESEARCH</p>
+      <h1
+        class="font-jakarta text-5xl sm:text-6xl lg:text-7xl font-extrabold text-neutral-900 dark:text-white tracking-tight leading-none mb-3">
+        Research
+      </h1>
+    </div>
+
+    <!-- research panels grid -->
+    <div class="w-full max-w-5xl px-4 grid lg:grid-cols-2 gap-6 mb-16">
+
+      <!-- Panel 1: VIP / FSIL — NLP for Financial Markets -->
+      <div
+        class="hackathon-box bg-[#161619] border border-white/[0.08] p-6 sm:p-8 rounded-2xl transition-all duration-300 hover:border-white/[0.18] shadow-[0_12px_32px_-10px_rgba(0,0,0,0.5)] flex flex-col">
+
+        <!-- badges -->
+        <div class="flex flex-wrap items-center gap-2 mb-4">
+          <span
+            class="px-2.5 py-0.5 rounded-full text-xs font-medium tracking-wide bg-white/[0.06] text-neutral-300 border border-white/[0.08]">
+            VIP Research
+          </span>
+          <span
+            class="px-2.5 py-0.5 rounded-full text-xs font-mono font-medium tracking-wide bg-neutral-500/10 text-neutral-400 border border-neutral-500/20">
+            Completed
+          </span>
         </div>
-      </div>
-    </header>
 
-    <div id="header-spacer"></div>
-
-    <!-- main content container -->
-    <div id="main-content" class="w-full flex flex-col items-center font-jakarta">
-      <div class="w-full max-w-3xl pt-4 sm:pt-8 pb-6 font-jakarta text-center">
-        <p class="text-sm font-mono text-neutral-500 dark:text-neutral-400 mb-2 tracking-wider">04 / RESEARCH</p>
-        <h1 class="font-jakarta text-5xl sm:text-6xl lg:text-7xl font-extrabold text-neutral-900 dark:text-white tracking-tight leading-none mb-3">
-          Research
-        </h1>
-      </div>
-
-      <!-- under construction card -->
-      <div class="w-full max-w-2xl mb-12 px-4">
-        <div class="hackathon-box bg-[#161619] border border-white/[0.08] p-8 sm:p-12 rounded-3xl text-center flex flex-col items-center shadow-[0_20px_40px_-15px_rgba(0,0,0,0.5)]">
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-mono font-medium tracking-wider uppercase bg-amber-500/10 text-amber-700 dark:text-amber-300 border border-amber-500/20 mb-5">
-            <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
-            <span>under construction</span>
-          </div>
-          <h2 class="text-2xl sm:text-3xl font-extrabold text-neutral-900 dark:text-white tracking-tight mb-3">
-            Research is being updated
+        <!-- title block -->
+        <div class="mb-5">
+          <h2 class="text-xl sm:text-2xl font-extrabold text-neutral-900 dark:text-white tracking-tight mb-1">
+            NLP / ML for Financial Markets
           </h2>
-          <p class="text-sm sm:text-base text-neutral-600 dark:text-neutral-400 max-w-md leading-relaxed mb-8">
-            I'm currently updating this section with recent publications and ongoing work from the Financial Services Innovation Lab and machine learning projects. Check back soon!
-          </p>
-          <div class="flex flex-wrap items-center justify-center gap-3">
-            <a href="/"
-              class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-semibold tracking-wide bg-black/[0.04] text-neutral-700 border border-black/[0.08] hover:bg-black/[0.08] hover:text-black dark:bg-white/[0.06] dark:text-neutral-200 dark:border-white/[0.1] dark:hover:bg-white/[0.12] dark:hover:text-white transition-all duration-200">
-              ← Back to Home
-            </a>
-            <a href="/internships/"
-              class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-semibold tracking-wide bg-neutral-900 text-white hover:bg-neutral-800 dark:bg-white dark:text-neutral-900 dark:hover:bg-neutral-200 transition-all duration-200 shadow-sm">
-              Explore Internships →
-            </a>
-            <a href="https://www.linkedin.com/in/aeshashah7/" target="_blank" rel="noopener"
-              class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-semibold tracking-wide bg-black/[0.04] text-neutral-700 border border-black/[0.08] hover:bg-black/[0.08] hover:text-black dark:bg-white/[0.06] dark:text-neutral-200 dark:border-white/[0.1] dark:hover:bg-white/[0.12] dark:hover:text-white transition-all duration-200">
-              Connect on LinkedIn ↗
-            </a>
+          <div class="text-sm font-semibold text-neutral-700 dark:text-neutral-300">
+            Financial Services Innovation Lab (FSIL)
+          </div>
+          <div class="text-xs text-neutral-500 dark:text-neutral-400 mt-1">
+            Georgia Tech VIP Team
+          </div>
+        </div>
+
+        <!-- role & dates -->
+        <div
+          class="flex flex-wrap items-center gap-3 mb-5 p-3 rounded-xl bg-black/[0.03] dark:bg-white/[0.03] border border-black/[0.06] dark:border-white/[0.06]">
+          <div>
+            <div class="text-[0.7rem] font-mono uppercase tracking-wider text-neutral-500 dark:text-neutral-400 mb-0.5">
+              Role</div>
+            <div class="text-sm font-bold text-neutral-900 dark:text-white">Lead Undergraduate Researcher</div>
+          </div>
+          <div class="hidden sm:block w-px h-8 bg-white/[0.08]"></div>
+          <div>
+            <div class="text-[0.7rem] font-mono uppercase tracking-wider text-neutral-500 dark:text-neutral-400 mb-0.5">
+              Duration</div>
+            <div class="text-sm font-bold text-neutral-900 dark:text-white">January 2025 &mdash; May 2026</div>
+          </div>
+        </div>
+
+        <!-- divider -->
+        <div class="border-t border-black/[0.08] dark:border-white/[0.08] mb-5"></div>
+
+        <!-- bullets -->
+        <ul class="space-y-4 text-[0.84rem] text-neutral-300 font-normal leading-relaxed list-none pl-0 flex-1">
+          <li class="flex items-start gap-2.5">
+            <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">&mdash;</span>
+            <span class="text-neutral-200">Developed a natural-language-to-SQL pipeline using compositional
+              multi-stage SQL generation, schema serialization, schema canonicalization, and schema-aware prompting to
+              reliably translate financial queries into grounded SQL across heterogeneous IMF financial statistics
+              datasets; incorporated retrieval-augmented generation (RAG) principles to reduce hallucinations and
+              improve execution accuracy.
+              <span class="text-neutral-500 text-xs ml-1">Aug &ndash; Dec 2025</span>
+            </span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">&mdash;</span>
+            <span class="text-neutral-200">Built a scalable evaluation harness featuring 110 complexity-controlled
+              query templates covering multi-hop reasoning, cross-indicator &amp; temporal comparisons, and nested SQL
+              to benchmark LLM reasoning quality in natural-language financial analytics applications.
+              <span class="text-neutral-500 text-xs ml-1">Aug &ndash; Dec 2025</span>
+            </span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">&mdash;</span>
+            <span class="text-neutral-200">Contributed to the construction of FinLitQA, a 4,300-example benchmark of
+              long-context financial reasoning questions sourced from real credit-card agreements, enabling LLM
+              performance evaluation on compounding, payment rules, and consumer-oriented financial reasoning under
+              Chain-of-Thought and Program-of-Thought prompting.
+              <span class="text-neutral-500 text-xs ml-1">Jan &ndash; May 2025</span>
+            </span>
+          </li>
+        </ul>
+
+        <!-- coursework tie-in -->
+        <div class="border-t border-black/[0.08] dark:border-white/[0.08] mt-5 pt-4">
+          <div class="text-[0.7rem] font-mono uppercase tracking-wider text-neutral-500 dark:text-neutral-400 mb-2">
+            Related Coursework
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span
+              class="inline-flex items-center px-2.5 py-1 rounded-lg text-xs font-medium font-mono bg-black/[0.03] dark:bg-white/[0.04] text-neutral-800 dark:text-neutral-200 border border-black/[0.08] dark:border-white/[0.08]">
+              VIP 3601
+            </span>
+            <span
+              class="inline-flex items-center px-2.5 py-1 rounded-lg text-xs font-medium font-mono bg-black/[0.03] dark:bg-white/[0.04] text-neutral-800 dark:text-neutral-200 border border-black/[0.08] dark:border-white/[0.08]">
+              VIP 3602
+            </span>
+            <span
+              class="inline-flex items-center px-2.5 py-1 rounded-lg text-xs font-medium font-mono bg-black/[0.03] dark:bg-white/[0.04] text-neutral-800 dark:text-neutral-200 border border-black/[0.08] dark:border-white/[0.08]">
+              VIP 4601
+            </span>
+            <span
+              class="inline-flex items-center px-2.5 py-1 rounded-lg text-xs font-medium font-mono bg-black/[0.03] dark:bg-white/[0.04] text-neutral-800 dark:text-neutral-200 border border-black/[0.08] dark:border-white/[0.08]">
+              VIP 4602
+            </span>
           </div>
         </div>
       </div>
 
-      <!-- existing research cards preserved below for future update
-      <div class="grid xl:grid-cols-2 gap-8 w-full">
-        <div class="hackathon-box bg-[#161619] border border-white/[0.08] p-6 sm:p-7 rounded-2xl">
-          <div class="mb-4">
-            <h2 class="text-xl font-bold tracking-tight text-white mb-0.5">Undergraduate Researcher</h2>
-            <div class="text-sm font-medium text-neutral-300">Financial Services Innovation Lab @ Georgia Tech</div>
+      <!-- Panel 2: RAIL Lab — Robot Autonomy & Interactive Learning -->
+      <div
+        class="hackathon-box bg-[#161619] border border-white/[0.08] p-6 sm:p-8 rounded-2xl transition-all duration-300 hover:border-white/[0.18] shadow-[0_12px_32px_-10px_rgba(0,0,0,0.5)] flex flex-col">
+
+        <!-- badges -->
+        <div class="flex flex-wrap items-center gap-2 mb-4">
+          <span
+            class="px-2.5 py-0.5 rounded-full text-xs font-medium tracking-wide bg-white/[0.06] text-neutral-300 border border-white/[0.08]">
+            Lab Research
+          </span>
+          <span
+            class="px-2.5 py-0.5 rounded-full text-xs font-mono font-medium tracking-wide bg-neutral-500/10 text-neutral-400 border border-neutral-500/20">
+            Completed
+          </span>
+        </div>
+
+        <!-- title block -->
+        <div class="mb-5">
+          <h2 class="text-xl sm:text-2xl font-extrabold text-neutral-900 dark:text-white tracking-tight mb-1">
+            Robot Autonomy &amp; Interactive Learning
+          </h2>
+          <div class="text-sm font-semibold text-neutral-700 dark:text-neutral-300">
+            RAIL Lab
+          </div>
+          <div class="text-xs text-neutral-500 dark:text-neutral-400 mt-1">
+            Georgia Tech College of Computing, School of Interactive Computing
+          </div>
+        </div>
+
+        <!-- role & dates -->
+        <div
+          class="flex flex-wrap items-center gap-3 mb-5 p-3 rounded-xl bg-black/[0.03] dark:bg-white/[0.03] border border-black/[0.06] dark:border-white/[0.06]">
+          <div>
+            <div class="text-[0.7rem] font-mono uppercase tracking-wider text-neutral-500 dark:text-neutral-400 mb-0.5">
+              Role</div>
+            <div class="text-sm font-bold text-neutral-900 dark:text-white">Undergraduate Research Assistant</div>
+          </div>
+          <div class="hidden sm:block w-px h-8 bg-white/[0.08]"></div>
+          <div>
+            <div class="text-[0.7rem] font-mono uppercase tracking-wider text-neutral-500 dark:text-neutral-400 mb-0.5">
+              Duration</div>
+            <div class="text-sm font-bold text-neutral-900 dark:text-white">June 2023 &mdash; December 2024</div>
+          </div>
+        </div>
+
+        <!-- divider -->
+        <div class="border-t border-black/[0.08] dark:border-white/[0.08] mb-5"></div>
+
+        <!-- bullets -->
+        <ul class="space-y-4 text-[0.84rem] text-neutral-300 font-normal leading-relaxed list-none pl-0 flex-1">
+          <li class="flex items-start gap-2.5">
+            <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">&mdash;</span>
+            <span class="text-neutral-200">Utilized Meta Llama 3.2 and advanced NLP techniques to perform
+              contrastive analysis and provide explanations for multi-agent robotic systems (e.g., search and rescue,
+              software-dispatch transportation), guiding users in justifying and explaining decisions based on task
+              allocation, scheduling, and motion-planning data.</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">&mdash;</span>
+            <span class="text-neutral-200">Programmed HelloRobot's Stretch model using ROS and Python to replicate
+              human movements with precision for assisting daily routine activities (e.g., household chores).
+              <span class="text-neutral-500 text-xs ml-1">Jan &ndash; May 2024</span>
+            </span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">&mdash;</span>
+            <span class="text-neutral-200">Utilized zero-prompt engineering and Python scripts to automate the
+              labeling process for 10K+ data records of daily human activity, streamlining access for behavioral
+              research and analysis of brain degeneration trends.
+              <span class="text-neutral-500 text-xs ml-1">Jun &ndash; Aug 2023</span>
+            </span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">&mdash;</span>
+            <span class="text-neutral-200">Implemented GPT-4 and OpenAI developer tools to generate accurate
+              narrations for home sensor readings, reducing analysis time.</span>
+          </li>
+        </ul>
+
+        <!-- coursework tie-in -->
+        <div class="border-t border-black/[0.08] dark:border-white/[0.08] mt-5 pt-4">
+          <div class="text-[0.7rem] font-mono uppercase tracking-wider text-neutral-500 dark:text-neutral-400 mb-2">
+            Related Coursework
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span
+              class="inline-flex items-center px-2.5 py-1 rounded-lg text-xs font-medium font-mono bg-black/[0.03] dark:bg-white/[0.04] text-neutral-800 dark:text-neutral-200 border border-black/[0.08] dark:border-white/[0.08]">
+              CS 2699
+            </span>
+            <span
+              class="inline-flex items-center px-2.5 py-1 rounded-lg text-xs font-medium font-mono bg-black/[0.03] dark:bg-white/[0.04] text-neutral-800 dark:text-neutral-200 border border-black/[0.08] dark:border-white/[0.08]">
+              CS 4699
+            </span>
           </div>
         </div>
       </div>
-      -->
-    </div>
 
-    <!-- footer -->
-    <div class="w-full mt-[3em] mb-0">
-      <div class="w-full text-center py-6 border-t border-white/[0.08]">
-        <p>
-          Made with 💌 by Aesha Shah
-        </p>
-        <p>
-          code repository on
-          <a href="https://github.com/aeshashah726" class="text-blue-600 underline"> my Github</a>
-        </p>
-      </div>
     </div>
-  </body>
+  </div>
+
+  <!-- footer -->
+  <div class="w-full mt-[3em] mb-0">
+    <div class="w-full text-center py-6 border-t border-white/[0.08]">
+      <p>
+        Made with 💌 by Aesha Shah
+      </p>
+      <p>
+        code repository on
+        <a href="https://github.com/aeshashah726" class="text-blue-600 underline"> my Github</a>
+      </p>
+    </div>
+  </div>
+</body>
+
 </html>
