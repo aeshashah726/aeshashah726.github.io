@@ -184,7 +184,6 @@ h1 {
 
 h2 {
   color: var(--h2-h3-color);
-  font-size: 5vmin;
 }
 
 h3 {
@@ -200,8 +199,7 @@ p {
   font-family: var(--p-font);
   font-weight: 500;
   color: var(--p-color);
-  font-size: 0.9vw;
-  line-height: 1.5em;
+  line-height: 1.6em;
   margin: 0;
 }
 
@@ -257,58 +255,27 @@ button {
 /* responsive rules */
 
 @media all and (max-width: 1280px) {
-	.no-mobile {
-		display: none;
+  .no-mobile {
+    display: none;
     visibility: hidden;
-	}
+  }
 
   .padded {
     padding-left: 5vw;
     padding-right: 5vw;
   }
-
-  h1 {
-    font-size: 25vw;
-  }
-
-  li,
-  p {
-    font-size: 2vmax;
-  }
-
-  h2 {
-    font-size: 2.4vmax;
-  }
-
-  .left-margin {
-    margin-top: 2vmax;
-  }
-
 }
 
 @media all and (min-width: 1280px) {
-	.mobile {
-		visibility: collapse;
-		display: none;
-	}
+  .mobile {
+    visibility: collapse;
+    display: none;
+  }
   
   .padded {
     padding-left: 15vw;
     padding-right: 15vw;
   }
-  h1 {
-    font-size: 5vw;
-  }
-
-  h2 {
-    font-size: 1.3vw;
-    
-  }
-
-  .left-margin {
-    margin-left: 2vmin;
-  }
-
 }
 
 .hackathon-box {
@@ -360,6 +327,14 @@ button {
   border: 1px solid rgba(255, 255, 255, 0.12);
   box-shadow: 0 16px 40px -8px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.04);
   transition: all 0.25s ease;
+  max-width: 95vw;
+}
+
+@media (max-width: 640px) {
+  .nav-island {
+    gap: 0.35rem;
+    padding: 0.25rem 0.45rem;
+  }
 }
 
 #header-spacer {
@@ -375,6 +350,13 @@ button {
   transition: all 0.18s ease;
   text-decoration: none !important;
   white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .nav-link {
+    font-size: 0.78rem;
+    padding: 0.25rem 0.45rem;
+  }
 }
 
 .nav-link:hover {
@@ -439,16 +421,17 @@ html[data-theme="one"] .nav-link.active-nav {
   position: absolute;
 }
 
+/* Default static states tied directly to document root theme (zero transition/movement on load) */
 .theme-switch-slider {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  background-color: rgba(255, 255, 255, 0.32);
+  border: 1px solid rgba(255, 255, 255, 0.28);
   border-radius: 9999px;
-  transition: background-color 0.25s ease, border-color 0.25s ease;
+  transition: none !important;
 }
 
 .theme-switch-slider::before {
@@ -461,28 +444,29 @@ html[data-theme="one"] .nav-link.active-nav {
   background-color: #ffffff;
   border-radius: 50%;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
-  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.theme-switch input:checked + .theme-switch-slider {
-  background-color: rgba(255, 255, 255, 0.32);
-  border-color: rgba(255, 255, 255, 0.28);
-}
-
-.theme-switch input:checked + .theme-switch-slider::before {
   transform: translateX(14px);
+  transition: none !important;
 }
 
+/* Light mode static state */
 html.light .theme-switch-slider,
 html[data-theme="one"] .theme-switch-slider {
   background-color: rgba(0, 0, 0, 0.15);
   border-color: rgba(0, 0, 0, 0.2);
 }
 
-html.light .theme-switch input:checked + .theme-switch-slider,
-html[data-theme="one"] .theme-switch input:checked + .theme-switch-slider {
-  background-color: #2563eb;
-  border-color: #1d4ed8;
+html.light .theme-switch-slider::before,
+html[data-theme="one"] .theme-switch-slider::before {
+  transform: translateX(0);
+}
+
+/* Only enable smooth animation when user clicks/interacts with theme toggle */
+html.theme-interactive .theme-switch-slider {
+  transition: background-color 0.25s ease, border-color 0.25s ease !important;
+}
+
+html.theme-interactive .theme-switch-slider::before {
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
 
 /* font utility classes */

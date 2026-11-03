@@ -25,13 +25,51 @@ function updateLocalTime() {
   if (el) el.textContent = `${hours}:${minutes}:${seconds}`;
 }
 
+// automatically resolve absolute navigation links when browsing locally via file:// protocol
+function fixLocalFileLinks() {
+  if (window.location.protocol === 'file:') {
+    const currentPath = window.location.pathname;
+    const isSubdir = /\/(education|internships|research|projects|resume)\//.test(currentPath);
+    const prefix = isSubdir ? '..' : '.';
+    document.querySelectorAll('a[href]').forEach(a => {
+      const href = a.getAttribute('href');
+      if (!href || href.startsWith('http') || href.startsWith('#') || href.startsWith('mailto:')) return;
+      if (href.startsWith('/')) {
+        const clean = href.replace(/^\//, '').replace(/\/$/, '');
+        a.setAttribute('href', clean === '' ? prefix + '/index.html' : prefix + '/' + clean + '/index.html');
+      } else if (href.endsWith('/')) {
+        a.setAttribute('href', href + 'index.html');
+      }
+    });
+  }
+}
+
+// Fallback click handler for local file navigation
+document.addEventListener('click', (e) => {
+  if (window.location.protocol === 'file:') {
+    const a = e.target.closest('a');
+    if (!a) return;
+    const href = a.getAttribute('href');
+    if (!href || href.startsWith('http') || href.startsWith('#') || href.startsWith('mailto:')) return;
+    if (href.startsWith('/')) {
+      e.preventDefault();
+      const currentPath = window.location.pathname;
+      const isSubdir = /\/(education|internships|research|projects|resume)\//.test(currentPath);
+      const prefix = isSubdir ? '..' : '.';
+      const clean = href.replace(/^\//, '').replace(/\/$/, '');
+      window.location.href = clean === '' ? prefix + '/index.html' : prefix + '/' + clean + '/index.html';
+    }
+  }
+});
+
 setInterval(updateLocalTime, 1000);
 window.addEventListener('DOMContentLoaded', () => {
   updateLocalTime();
   syncThemeUI();
+  fixLocalFileLinks();
 });
 
-// sync theme checkbox state and text
+// sync theme checkbox state and text without animating toggle
 function syncThemeUI() {
   const isDark = document.documentElement.classList.contains('dark') && !document.documentElement.classList.contains('light');
   document.querySelectorAll('.theme-switch input[type="checkbox"], input[type="checkbox"][onchange*="theme"]').forEach(cb => {
@@ -51,6 +89,7 @@ window.updateThemeText = updateThemeText;
 
 // toggle theme between dark and light mode
 function theme() {
+  document.documentElement.classList.add('theme-interactive');
   var element = document.documentElement;
   var checkbox = document.querySelector('.theme-switch input[type="checkbox"], input[type="checkbox"][onchange*="theme"]');
   var isDark = checkbox ? checkbox.checked : !element.classList.contains('dark');
