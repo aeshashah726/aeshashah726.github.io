@@ -99,67 +99,67 @@ html[data-theme="one"] p {
   color: #374151 !important;
 }
 
-html.light .hackathon-box,
-html[data-theme="one"] .hackathon-box {
+html.light .portfolio-card,
+html[data-theme="one"] .portfolio-card {
   background-color: #ffffff !important;
   border: 1px solid rgba(0, 0, 0, 0.12) !important;
   box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(0, 0, 0, 0.04) !important;
 }
 
 /* badge boxes inside cards (e.g. summer 2024) outline and contrast */
-html.light .hackathon-box .rounded-full,
-html[data-theme="one"] .hackathon-box .rounded-full {
+html.light .portfolio-card .rounded-full,
+html[data-theme="one"] .portfolio-card .rounded-full {
   background-color: rgba(0, 0, 0, 0.04) !important;
   color: #1f2937 !important;
   border: 1px solid rgba(0, 0, 0, 0.16) !important;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03) !important;
 }
 
-html.light .hackathon-box h2,
-html[data-theme="one"] .hackathon-box h2 {
+html.light .portfolio-card h2,
+html[data-theme="one"] .portfolio-card h2 {
   color: #111111 !important;
 }
 
-html.light .hackathon-box .text-white,
-html[data-theme="one"] .hackathon-box .text-white {
+html.light .portfolio-card .text-white,
+html[data-theme="one"] .portfolio-card .text-white {
   color: #111111 !important;
 }
 
-html.light .hackathon-box .text-neutral-200,
-html.light .hackathon-box .text-neutral-300,
-html[data-theme="one"] .hackathon-box .text-neutral-200,
-html[data-theme="one"] .hackathon-box .text-neutral-300 {
+html.light .portfolio-card .text-neutral-200,
+html.light .portfolio-card .text-neutral-300,
+html[data-theme="one"] .portfolio-card .text-neutral-200,
+html[data-theme="one"] .portfolio-card .text-neutral-300 {
   color: #374151 !important;
 }
 
-html.light .hackathon-box .text-neutral-400,
-html.light .hackathon-box .text-neutral-500,
-html[data-theme="one"] .hackathon-box .text-neutral-400,
-html[data-theme="one"] .hackathon-box .text-neutral-500 {
+html.light .portfolio-card .text-neutral-400,
+html.light .portfolio-card .text-neutral-500,
+html[data-theme="one"] .portfolio-card .text-neutral-400,
+html[data-theme="one"] .portfolio-card .text-neutral-500 {
   color: #6b7280 !important;
 }
 
-html.light .hackathon-box a,
-html[data-theme="one"] .hackathon-box a {
+html.light .portfolio-card a,
+html[data-theme="one"] .portfolio-card a {
   background-color: rgba(0, 0, 0, 0.05) !important;
   border-color: rgba(0, 0, 0, 0.1) !important;
   color: #111111 !important;
 }
 
-html.light .hackathon-box a:hover,
-html[data-theme="one"] .hackathon-box a:hover {
+html.light .portfolio-card a:hover,
+html[data-theme="one"] .portfolio-card a:hover {
   background-color: rgba(0, 0, 0, 0.1) !important;
 }
 
-html.light .hackathon-box ul,
-html.light .hackathon-box ul li,
-html[data-theme="one"] .hackathon-box ul,
-html[data-theme="one"] .hackathon-box ul li {
+html.light .portfolio-card ul,
+html.light .portfolio-card ul li,
+html[data-theme="one"] .portfolio-card ul,
+html[data-theme="one"] .portfolio-card ul li {
   color: #374151 !important;
 }
 
-html.light .hackathon-box ul li::marker,
-html[data-theme="one"] .hackathon-box ul li::marker {
+html.light .portfolio-card ul li::marker,
+html[data-theme="one"] .portfolio-card ul li::marker {
   color: #6b7280 !important;
 }
 
@@ -236,7 +236,7 @@ button {
   max-height: 8vh;
 }
 
-.hackathon-box:hover {
+.portfolio-card:hover {
   cursor: pointer;
 }
 
@@ -278,7 +278,7 @@ button {
   }
 }
 
-.hackathon-box {
+.portfolio-card {
   border-radius: 1em; 
 }
 
@@ -292,11 +292,11 @@ button {
 }
 
 /* ensure card list text remains light */
-.hackathon-box ul,
-.hackathon-box ul li {
+.portfolio-card ul,
+.portfolio-card ul li {
   color: white !important;
 }
-.hackathon-box ul li::marker {
+.portfolio-card ul li::marker {
   color: white !important;
 }
 
