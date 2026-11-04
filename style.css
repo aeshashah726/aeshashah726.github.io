@@ -240,6 +240,17 @@ button {
   cursor: pointer;
 }
 
+/* report dropdown styling */
+details.report-dropdown > summary::-webkit-details-marker {
+  display: none;
+}
+details.report-dropdown > summary {
+  list-style: none;
+}
+details.report-dropdown[open] summary svg.chevron-arrow {
+  transform: rotate(180deg);
+}
+
 @keyframes enlarge {
   0% {
     transform: scale(1);
