@@ -1,0 +1,5 @@
+# macOS
+.DS_Store
+
+# Local unencrypted project source
+projects/source.html
