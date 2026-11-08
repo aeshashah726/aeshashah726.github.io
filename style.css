@@ -166,16 +166,43 @@ html[data-theme="one"] .portfolio-card .text-neutral-500 {
   color: #6b7280 !important;
 }
 
-html.light .portfolio-card a,
-html[data-theme="one"] .portfolio-card a {
+html.light .portfolio-card a:not(.btn-primary-action):not(#unlock-button),
+html[data-theme="one"] .portfolio-card a:not(.btn-primary-action):not(#unlock-button) {
   background-color: rgba(0, 0, 0, 0.05) !important;
   border-color: rgba(0, 0, 0, 0.1) !important;
   color: #111111 !important;
 }
 
-html.light .portfolio-card a:hover,
-html[data-theme="one"] .portfolio-card a:hover {
+html.light .portfolio-card a:not(.btn-primary-action):not(#unlock-button):hover,
+html[data-theme="one"] .portfolio-card a:not(.btn-primary-action):not(#unlock-button):hover {
   background-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Primary action buttons in light and dark mode */
+html.light .btn-primary-action,
+html[data-theme="one"] .btn-primary-action {
+  background-color: #18181b !important;
+  color: #ffffff !important;
+  border-color: #18181b !important;
+}
+
+html.light .btn-primary-action:hover,
+html[data-theme="one"] .btn-primary-action:hover {
+  background-color: #27272a !important;
+  color: #ffffff !important;
+}
+
+html.dark .btn-primary-action,
+html[data-theme="dark"] .btn-primary-action {
+  background-color: #ffffff !important;
+  color: #18181b !important;
+  border-color: #ffffff !important;
+}
+
+html.dark .btn-primary-action:hover,
+html[data-theme="dark"] .btn-primary-action:hover {
+  background-color: #e4e4e7 !important;
+  color: #18181b !important;
 }
 
 html.light .portfolio-card ul,
@@ -292,28 +319,10 @@ details.report-dropdown[open] summary svg.chevron-arrow {
 
 /* responsive rules */
 
-@media all and (max-width: 1280px) {
-  .no-mobile {
-    display: none;
-    visibility: hidden;
-  }
-
-  .padded {
-    padding-left: 5vw;
-    padding-right: 5vw;
-  }
-}
-
-@media all and (min-width: 1280px) {
-  .mobile {
-    visibility: collapse;
-    display: none;
-  }
-  
-  .padded {
-    padding-left: 15vw;
-    padding-right: 15vw;
-  }
+/* responsive container padding */
+.padded {
+  padding-left: clamp(1rem, 3.5vw, 2rem);
+  padding-right: clamp(1rem, 3.5vw, 2rem);
 }
 
 .portfolio-card {
@@ -329,13 +338,16 @@ details.report-dropdown[open] summary svg.chevron-arrow {
   z-index: 0;
 }
 
-/* ensure card list text remains light */
-.portfolio-card ul,
-.portfolio-card ul li {
-  color: white !important;
+/* ensure card list text remains light in dark mode */
+html.dark .portfolio-card ul,
+html.dark .portfolio-card ul li,
+html[data-theme="dark"] .portfolio-card ul,
+html[data-theme="dark"] .portfolio-card ul li {
+  color: #f4f4f5 !important;
 }
-.portfolio-card ul li::marker {
-  color: white !important;
+html.dark .portfolio-card ul li::marker,
+html[data-theme="dark"] .portfolio-card ul li::marker {
+  color: #a1a1aa !important;
 }
 
 /* apple-style floating island header */
@@ -455,6 +467,11 @@ html[data-theme="one"] .nav-link.active-nav {
   color: #09090b !important;
   background-color: #ffffff !important;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(0, 0, 0, 0.06) !important;
+}
+
+html.light #local-time,
+html[data-theme="one"] #local-time {
+  color: #71717a !important;
 }
 
 /* apple-style theme toggle */
@@ -737,9 +754,16 @@ html[data-theme="one"] #spotlight-card button:hover {
   background-color: rgba(0, 0, 0, 0.1) !important;
 }
 
-html.light #spotlight-card #spotlight-body span.text-neutral-200,
-html[data-theme="one"] #spotlight-card #spotlight-body span.text-neutral-200 {
+html.light #spotlight-card #spotlight-body,
+html.light #spotlight-card #spotlight-body *,
+html[data-theme="one"] #spotlight-card #spotlight-body,
+html[data-theme="one"] #spotlight-card #spotlight-body * {
   color: #374151 !important;
+}
+
+html.light #spotlight-card #spotlight-body span.text-neutral-500,
+html[data-theme="one"] #spotlight-card #spotlight-body span.text-neutral-500 {
+  color: #9ca3af !important;
 }
 
 /* center alternating timeline styles */
