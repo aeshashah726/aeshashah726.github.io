@@ -372,6 +372,7 @@ details.report-dropdown[open] summary svg.chevron-arrow {
   display: flex;
   align-items: center;
   gap: 0.25rem;
+  padding: 3px 2px;
   overflow-x: auto;
   scrollbar-width: none;
   -ms-overflow-style: none;
@@ -421,7 +422,7 @@ details.report-dropdown[open] summary svg.chevron-arrow {
   color: #ffffff !important;
   font-weight: 600;
   background-color: rgba(255, 255, 255, 0.14);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.08);
 }
 
 nav a.no-underline,
@@ -451,8 +452,9 @@ html[data-theme="one"] .nav-link:hover {
 
 html.light .nav-link.active-nav,
 html[data-theme="one"] .nav-link.active-nav {
-  color: #111111 !important;
-  background-color: rgba(0, 0, 0, 0.08);
+  color: #09090b !important;
+  background-color: #ffffff !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(0, 0, 0, 0.06) !important;
 }
 
 /* apple-style theme toggle */
