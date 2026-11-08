@@ -1,0 +1,8 @@
+# macOS
+.DS_Store
+
+# Local unencrypted project source
+projects/source.html
+
+# Local unencrypted project files
+projectfiles/*.pdf

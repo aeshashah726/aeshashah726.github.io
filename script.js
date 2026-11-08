@@ -154,6 +154,11 @@ document.addEventListener('click', (e) => {
   if (!e.target.closest('.group')) {
     document.querySelectorAll('.group.open').forEach(el => el.classList.remove('open'));
   }
+  document.querySelectorAll('details.report-dropdown[open]').forEach(el => {
+    if (!el.contains(e.target)) {
+      el.removeAttribute('open');
+    }
+  });
 });
 
 
