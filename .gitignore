@@ -1,6 +1,9 @@
 # macOS
 .DS_Store
 
+# Build and encryption scripts
+scripts/
+
 # Local unencrypted project source
 projects/source.html
 
