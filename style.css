@@ -120,8 +120,8 @@ html[data-theme="one"] .portfolio-card h2 {
   color: #111111 !important;
 }
 
-html.light .portfolio-card .text-white:not(#unlock-button):not(#unlock-button *),
-html[data-theme="one"] .portfolio-card .text-white:not(#unlock-button):not(#unlock-button *) {
+html.light .portfolio-card .text-white:not(#unlock-button):not(#unlock-button *):not(.btn-primary-action):not(.btn-primary-action *),
+html[data-theme="one"] .portfolio-card .text-white:not(#unlock-button):not(#unlock-button *):not(.btn-primary-action):not(.btn-primary-action *) {
   color: #111111 !important;
 }
 
@@ -130,12 +130,14 @@ html.light #unlock-button,
 html[data-theme="one"] #unlock-button {
   background-color: #18181b !important;
   color: #ffffff !important;
+  border: 1px solid #18181b !important;
 }
 
 html.light #unlock-button:hover,
 html[data-theme="one"] #unlock-button:hover {
   background-color: #27272a !important;
   color: #ffffff !important;
+  border-color: #27272a !important;
 }
 
 html.light #unlock-button *,
@@ -145,8 +147,20 @@ html[data-theme="one"] #unlock-button * {
 }
 
 html.dark #unlock-button,
+html[data-theme="dark"] #unlock-button {
+  background-color: #ffffff !important;
+  color: #18181b !important;
+  border: 1px solid #ffffff !important;
+}
+
+html.dark #unlock-button:hover,
+html[data-theme="dark"] #unlock-button:hover {
+  background-color: #e4e4e7 !important;
+  color: #18181b !important;
+  border-color: #e4e4e7 !important;
+}
+
 html.dark #unlock-button *,
-html[data-theme="dark"] #unlock-button,
 html[data-theme="dark"] #unlock-button * {
   color: #18181b !important;
   stroke: #18181b !important;
@@ -166,16 +180,43 @@ html[data-theme="one"] .portfolio-card .text-neutral-500 {
   color: #6b7280 !important;
 }
 
-html.light .portfolio-card a:not(.btn-primary-action):not(#unlock-button),
-html[data-theme="one"] .portfolio-card a:not(.btn-primary-action):not(#unlock-button) {
+/* Card interactive links and secondary buttons */
+html.light .portfolio-card a:not(.btn-primary-action):not(#unlock-button):not(.report-dropdown-menu a),
+html[data-theme="one"] .portfolio-card a:not(.btn-primary-action):not(#unlock-button):not(.report-dropdown-menu a) {
   background-color: rgba(0, 0, 0, 0.05) !important;
-  border-color: rgba(0, 0, 0, 0.1) !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
   color: #111111 !important;
 }
 
-html.light .portfolio-card a:not(.btn-primary-action):not(#unlock-button):hover,
-html[data-theme="one"] .portfolio-card a:not(.btn-primary-action):not(#unlock-button):hover {
+html.light .portfolio-card a:not(.btn-primary-action):not(#unlock-button):not(.report-dropdown-menu a):hover,
+html[data-theme="one"] .portfolio-card a:not(.btn-primary-action):not(#unlock-button):not(.report-dropdown-menu a):hover {
   background-color: rgba(0, 0, 0, 0.1) !important;
+  color: #000000 !important;
+}
+
+html.light .portfolio-card a:not(.btn-primary-action):not(#unlock-button):not(.report-dropdown-menu a) *,
+html[data-theme="one"] .portfolio-card a:not(.btn-primary-action):not(#unlock-button):not(.report-dropdown-menu a) * {
+  color: inherit !important;
+  stroke: currentColor !important;
+}
+
+html.dark .portfolio-card a:not(.btn-primary-action):not(#unlock-button):not(.report-dropdown-menu a),
+html[data-theme="dark"] .portfolio-card a:not(.btn-primary-action):not(#unlock-button):not(.report-dropdown-menu a) {
+  background-color: rgba(255, 255, 255, 0.06) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  color: #f4f4f5 !important;
+}
+
+html.dark .portfolio-card a:not(.btn-primary-action):not(#unlock-button):not(.report-dropdown-menu a):hover,
+html[data-theme="dark"] .portfolio-card a:not(.btn-primary-action):not(#unlock-button):not(.report-dropdown-menu a):hover {
+  background-color: rgba(255, 255, 255, 0.12) !important;
+  color: #ffffff !important;
+}
+
+html.dark .portfolio-card a:not(.btn-primary-action):not(#unlock-button):not(.report-dropdown-menu a) *,
+html[data-theme="dark"] .portfolio-card a:not(.btn-primary-action):not(#unlock-button):not(.report-dropdown-menu a) * {
+  color: inherit !important;
+  stroke: currentColor !important;
 }
 
 /* Primary action buttons in light and dark mode */
@@ -183,26 +224,40 @@ html.light .btn-primary-action,
 html[data-theme="one"] .btn-primary-action {
   background-color: #18181b !important;
   color: #ffffff !important;
-  border-color: #18181b !important;
+  border: 1px solid #18181b !important;
 }
 
 html.light .btn-primary-action:hover,
 html[data-theme="one"] .btn-primary-action:hover {
   background-color: #27272a !important;
   color: #ffffff !important;
+  border-color: #27272a !important;
+}
+
+html.light .btn-primary-action *,
+html[data-theme="one"] .btn-primary-action * {
+  color: #ffffff !important;
+  stroke: #ffffff !important;
 }
 
 html.dark .btn-primary-action,
 html[data-theme="dark"] .btn-primary-action {
   background-color: #ffffff !important;
   color: #18181b !important;
-  border-color: #ffffff !important;
+  border: 1px solid #ffffff !important;
 }
 
 html.dark .btn-primary-action:hover,
 html[data-theme="dark"] .btn-primary-action:hover {
   background-color: #e4e4e7 !important;
   color: #18181b !important;
+  border-color: #e4e4e7 !important;
+}
+
+html.dark .btn-primary-action *,
+html[data-theme="dark"] .btn-primary-action * {
+  color: #18181b !important;
+  stroke: #18181b !important;
 }
 
 html.light .portfolio-card ul,
@@ -303,6 +358,65 @@ details.report-dropdown > summary {
 }
 details.report-dropdown[open] summary svg.chevron-arrow {
   transform: rotate(180deg);
+}
+
+/* Report dropdown summary trigger contrast */
+html.light details.report-dropdown > summary,
+html[data-theme="one"] details.report-dropdown > summary {
+  background-color: rgba(0, 0, 0, 0.04) !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  color: #374151 !important;
+}
+html.light details.report-dropdown > summary:hover,
+html[data-theme="one"] details.report-dropdown > summary:hover {
+  background-color: rgba(0, 0, 0, 0.08) !important;
+  color: #111111 !important;
+}
+html.light details.report-dropdown > summary *,
+html[data-theme="one"] details.report-dropdown > summary * {
+  color: inherit !important;
+  stroke: currentColor !important;
+}
+
+html.dark details.report-dropdown > summary,
+html[data-theme="dark"] details.report-dropdown > summary {
+  background-color: rgba(255, 255, 255, 0.06) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  color: #d4d4d8 !important;
+}
+html.dark details.report-dropdown > summary:hover,
+html[data-theme="dark"] details.report-dropdown > summary:hover {
+  background-color: rgba(255, 255, 255, 0.12) !important;
+  color: #ffffff !important;
+}
+html.dark details.report-dropdown > summary *,
+html[data-theme="dark"] details.report-dropdown > summary * {
+  color: inherit !important;
+  stroke: currentColor !important;
+}
+
+/* Report dropdown menu items */
+html.light .report-dropdown-menu a,
+html[data-theme="one"] .report-dropdown-menu a {
+  background-color: transparent !important;
+  border-color: transparent !important;
+  color: #374151 !important;
+}
+html.light .report-dropdown-menu a:hover,
+html[data-theme="one"] .report-dropdown-menu a:hover {
+  background-color: rgba(0, 0, 0, 0.05) !important;
+  color: #111111 !important;
+}
+html.dark .report-dropdown-menu a,
+html[data-theme="dark"] .report-dropdown-menu a {
+  background-color: transparent !important;
+  border-color: transparent !important;
+  color: #d4d4d8 !important;
+}
+html.dark .report-dropdown-menu a:hover,
+html[data-theme="dark"] .report-dropdown-menu a:hover {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  color: #ffffff !important;
 }
 
 @keyframes enlarge {
@@ -590,6 +704,20 @@ html[data-theme="one"] .btn-action:hover {
   color: #000000 !important;
 }
 
+html.dark .btn-action,
+html[data-theme="dark"] .btn-action {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  color: #f4f4f5 !important;
+  border: 1px solid rgba(255, 255, 255, 0.14) !important;
+}
+
+html.dark .btn-action:hover,
+html[data-theme="dark"] .btn-action:hover {
+  background-color: rgba(255, 255, 255, 0.15) !important;
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.24) !important;
+}
+
 .action-dropdown {
   position: absolute;
   left: 0;
@@ -752,6 +880,19 @@ html.light #spotlight-card button:hover,
 html[data-theme="one"] #spotlight-card button:hover {
   color: #111111 !important;
   background-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+html.dark #spotlight-card button,
+html[data-theme="dark"] #spotlight-card button {
+  color: #a1a1aa !important;
+  background-color: rgba(255, 255, 255, 0.06) !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+html.dark #spotlight-card button:hover,
+html[data-theme="dark"] #spotlight-card button:hover {
+  color: #ffffff !important;
+  background-color: rgba(255, 255, 255, 0.12) !important;
 }
 
 html.light #spotlight-card #spotlight-body,
