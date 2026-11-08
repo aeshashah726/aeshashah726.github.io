@@ -368,10 +368,25 @@ details.report-dropdown[open] summary svg.chevron-arrow {
   max-width: 95vw;
 }
 
+.nav-island nav {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.nav-island nav::-webkit-scrollbar {
+  display: none;
+}
+
 @media (max-width: 640px) {
   .nav-island {
     gap: 0.35rem;
     padding: 0.25rem 0.45rem;
+    max-width: 98vw;
   }
 }
 
@@ -392,7 +407,7 @@ details.report-dropdown[open] summary svg.chevron-arrow {
 
 @media (max-width: 640px) {
   .nav-link {
-    font-size: 0.78rem;
+    font-size: 0.76rem;
     padding: 0.25rem 0.45rem;
   }
 }
