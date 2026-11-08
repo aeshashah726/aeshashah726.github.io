@@ -120,9 +120,36 @@ html[data-theme="one"] .portfolio-card h2 {
   color: #111111 !important;
 }
 
-html.light .portfolio-card .text-white,
-html[data-theme="one"] .portfolio-card .text-white {
+html.light .portfolio-card .text-white:not(#unlock-button):not(#unlock-button *),
+html[data-theme="one"] .portfolio-card .text-white:not(#unlock-button):not(#unlock-button *) {
   color: #111111 !important;
+}
+
+/* Unlock button contrast in light and dark modes */
+html.light #unlock-button,
+html[data-theme="one"] #unlock-button {
+  background-color: #18181b !important;
+  color: #ffffff !important;
+}
+
+html.light #unlock-button:hover,
+html[data-theme="one"] #unlock-button:hover {
+  background-color: #27272a !important;
+  color: #ffffff !important;
+}
+
+html.light #unlock-button *,
+html[data-theme="one"] #unlock-button * {
+  color: #ffffff !important;
+  stroke: #ffffff !important;
+}
+
+html.dark #unlock-button,
+html.dark #unlock-button *,
+html[data-theme="dark"] #unlock-button,
+html[data-theme="dark"] #unlock-button * {
+  color: #18181b !important;
+  stroke: #18181b !important;
 }
 
 html.light .portfolio-card .text-neutral-200,
