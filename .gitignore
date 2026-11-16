@@ -4,8 +4,5 @@
 # Build and encryption scripts
 scripts/
 
-# Local unencrypted project source
-projects/source.html
-
 # Local unencrypted project files
 projectfiles/*.pdf
