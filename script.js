@@ -29,7 +29,7 @@ function updateLocalTime() {
 function fixLocalFileLinks() {
   if (window.location.protocol === 'file:') {
     const currentPath = window.location.pathname;
-    const isSubdir = /\/(education|internships|research|projects)\//.test(currentPath);
+    const isSubdir = /\/(education|internships|research-projects|research|projects)\//.test(currentPath);
     const prefix = isSubdir ? '..' : '.';
     document.querySelectorAll('a[href]').forEach(a => {
       const href = a.getAttribute('href');
@@ -54,7 +54,7 @@ document.addEventListener('click', (e) => {
     if (href.startsWith('/')) {
       e.preventDefault();
       const currentPath = window.location.pathname;
-      const isSubdir = /\/(education|internships|research|projects)\//.test(currentPath);
+      const isSubdir = /\/(education|internships|research-projects|research|projects)\//.test(currentPath);
       const prefix = isSubdir ? '..' : '.';
       const clean = href.replace(/^\//, '').replace(/\/$/, '');
       window.location.href = clean === '' ? prefix + '/index.html' : prefix + '/' + clean + '/index.html';
