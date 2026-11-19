@@ -106,36 +106,43 @@
               <ul class="space-y-3 text-[0.875rem] text-neutral-300 font-normal leading-relaxed list-none pl-0">
                 <li class="flex items-start gap-2.5">
                   <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">—</span>
-                  <span class="text-neutral-200">Architected and implemented an asynchronous curated rule deployment
-                    pipeline in Go, replacing a synchronous batch rollout with a four-stage fanout architecture built
-                    using Cloud Spanner queues; decoupled rule ingestion from customer delivery to achieve constant-time
-                    ingestion, isolated per-customer failure domains, and eliminated write stampedes that previously
-                    triggered database hotspotting and downstream compiler overloads touching 112K+ rule-customer pairs
-                    and 270M+ cascading RPC calls.</span>
+                  <span class="text-neutral-200">Authored the project proposal, technical design specifications, and
+                    5-phased implementation for an asynchronous curated rule deployment pipeline in Go, eliminating
+                    rollout blocks and compiler overloads (112K+ rule-customer pairs, 270M+ cascading RPCs).</span>
                 </li>
                 <li class="flex items-start gap-2.5">
                   <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">—</span>
-                  <span class="text-neutral-200">Optimized deterministic load-leveling and fault-tolerant worker
-                    orchestration using CRC32-based hashing to distribute writes across intervals within a 60-minute
-                    rollout window, preventing cache-invalidation stampedes across approximately 11K evaluator tasks;
-                    implemented idempotent transactional workers, delivery deduplication, interval-aligned exponential
-                    backoff, and atomic rule updates.</span>
+                  <span class="text-neutral-200">Architected two-stage Cloud Spanner push-queue fanout and deployment
+                    across shared multi-tenant and isolated CMEK databases, decoupling rule ingestion from customer
+                    delivery (reducing from near-exponential to linear time) and strict per-customer failure
+                    isolation.</span>
                 </li>
                 <li class="flex items-start gap-2.5">
                   <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">—</span>
-                  <span class="text-neutral-200">Authored project proposal, technical design specifications, and
-                    multi-phase plan; shipped production infrastructure and operational tooling with metrics, alerting,
-                    and integration tests simulating propagation and load scenarios up to 5,000 customers for a single
-                    deployment window.</span>
+                  <span class="text-neutral-200">Optimized deterministic bucket pacing using IEEE CRC32 hashing to
+                    distribute customer writes across 120 30-second intervals over a 1-hour rollout window, preventing
+                    Spanner lock contention and downstream read stampedes across 11K+ evaluator tasks.</span>
                 </li>
                 <li class="flex items-start gap-2.5">
                   <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">—</span>
-                  <span class="text-neutral-200">Strengthened platform access controls, schema persistence, and
-                    configuration lifecycles across production services: implemented fine-grained entitlement-based rule
+                  <span class="text-neutral-200">Built an idempotent, object-oriented deployment worker (Read &rarr;
+                    Decide &rarr; Apply) with elided-delivery deduplication, interval-aligned exponential backoff
+                    retries, and a transaction pattern that executes external rule compilation and scheduling gRPCs
+                    outside database locks.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">—</span>
+                  <span class="text-neutral-200">Verified end-to-end reliability with 92%&ndash;100% Spanner Emulator
+                    test coverage, building hermetic integration tests and load benchmarks simulating customer rollouts,
+                    backlog alerting, and breakglass RPCs to purge, throttle, or re-trigger deployments.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">—</span>
+                  <span class="text-neutral-200">(Starter Projects) Implemented fine-grained entitlement-based rule
                     access evaluating customer feature flags and subscription tags with automated active teardown on
-                    revocation; extracted, tokenized, and persisted curated rule metadata tags into Cloud Spanner
-                    columns while preventing false update conflicts; and deprecated legacy service flags, validating
-                    staged rollouts across 4 production waves via live database SQL verification queries.</span>
+                    revocation; extracted, tokenized, and persisted curated rule metadata tags while preventing false
+                    update conflicts; and deprecated legacy service flags, validating staged rollouts across production
+                    waves via live database SQL verification queries.</span>
                 </li>
               </ul>
             </div>
