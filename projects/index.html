@@ -256,10 +256,14 @@
                   <path stroke-linecap="round" stroke-linejoin="round"
                     d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                 </svg>
-                <span>Demo (Code Walkthrough) Video</span>
+                <span>Code Walkthrough</span>
               </a>
             </div>
           </div>
+
+          <p class="text-[0.84rem] text-neutral-200 font-normal leading-relaxed">
+            Fishing is one the most significant drivers of declines in ocean wildlife populations. Overfished stock numbers have nearly tripled in half a century and a third of the world's assessed fisheries have been pushed beyond their ecological limits. Scientists regularly assess fish stocks to provide critical information for conservation and management. Mandatory implementation of Vessel Monitoring Systems (VMS) on all commercial vessels has allowed for Satellite-Automatic Identification System (S-AIS) data to be captured efficiently, without the logistical difficulties of putting government supervisors on ships. However, immense volumes of data have been collected, requiring manual processing, and significant time, labor, and money. The use of deep learning to automate fishing detection has substantial benefits but is currently limited solely to proprietary methods. This project proposes a method of training a publicly available, deep learning-based fishing detection model, with accuracies greater than 90%, and plotting of detected fishing locations on a global map. Publicly available, anonymized S-AIS datasets for trawler and longline vessel types were utilized. Once the S-AIS data was pre-processed, it was used to develop the Convolutional Neural Network (CNN) models for both vessel types, resulting in 94% and 86% efficacy for the trawler and longline vessel types, respectively. Further, these detected fishing locations were plotted on a global map. These publicly available deep learning models and detected fishing locations on a comprehensive world map will help aquatic ecologists, governments, and fishery managers to rebuild fisheries and protect critical aquatic ecology.
+          </p>
 
           <!-- side-by-side: 12-slide presentation gallery + standalone quad chart -->
           <div class="grid grid-cols-1 md:grid-cols-2 gap-5 items-start">
@@ -359,6 +363,115 @@
                   d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
               </svg>
               <span>Awards Announcement</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 4. Braille Buzz -->
+        <div class="portfolio-card bg-[#161619] border border-white/[0.08] p-5 sm:p-6 rounded-2xl transition-all duration-300 hover:border-white/[0.18] shadow-[0_12px_32px_-10px_rgba(0,0,0,0.5)] flex flex-col gap-5 cursor-default">
+          <div>
+            <h2 class="text-lg sm:text-xl font-bold text-neutral-900 dark:text-white tracking-tight leading-snug">
+              Braille Buzz
+            </h2>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+
+            <!-- Left: 10-slide Presentation Gallery -->
+            <div class="space-y-2">
+              <div class="text-[11px] font-mono uppercase tracking-wider text-neutral-500 dark:text-neutral-400">
+                Presentation Slides
+              </div>
+              <div class="relative group rounded-xl overflow-hidden border border-black/[0.1] dark:border-white/[0.12] bg-[#041533] aspect-video select-none">
+                <img id="braille-gallery-main" src="../projectimages/braille-buzz/slide-01.jpg"
+                  alt="Slide 1 — Braille Buzz"
+                  onclick="openBrailleLightbox()"
+                  class="w-full h-full object-contain cursor-zoom-in transition-opacity duration-150" />
+
+                <!-- slide counter badge -->
+                <span id="braille-gallery-counter"
+                  class="gallery-badge absolute bottom-2.5 left-2.5 px-2 py-0.5 rounded-md text-[11px] font-mono font-medium pointer-events-none">
+                  01 / 10
+                </span>
+
+                <!-- fullscreen expand button -->
+                <button type="button" onclick="openBrailleLightbox()"
+                  class="gallery-ctrl absolute top-2.5 right-2.5 w-7 h-7 rounded-lg inline-flex items-center justify-center transition-all cursor-pointer"
+                  aria-label="Expand Braille Buzz slide gallery">
+                  <svg class="w-3.5 h-3.5 fill-none" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                  </svg>
+                </button>
+
+                <!-- prev / next buttons -->
+                <button type="button" onclick="stepBrailleSlide(-1)"
+                  class="gallery-ctrl absolute left-2.5 top-1/2 -translate-y-1/2 w-8 h-8 rounded-lg inline-flex items-center justify-center transition-all cursor-pointer"
+                  aria-label="Previous slide">
+                  <svg class="w-4 h-4 fill-none" stroke-width="2.2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                  </svg>
+                </button>
+                <button type="button" onclick="stepBrailleSlide(1)"
+                  class="gallery-ctrl absolute right-2.5 top-1/2 -translate-y-1/2 w-8 h-8 rounded-lg inline-flex items-center justify-center transition-all cursor-pointer"
+                  aria-label="Next slide">
+                  <svg class="w-4 h-4 fill-none" stroke-width="2.2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                  </svg>
+                </button>
+              </div>
+
+              <!-- scrollable thumbnail filmstrip -->
+              <div id="braille-gallery-thumbs" class="gallery-thumbs flex items-center gap-1.5 overflow-x-auto pb-1"></div>
+            </div>
+
+            <!-- Right: Project Overview -->
+            <div class="md:pt-6">
+              <ul class="space-y-3 text-[0.84rem] text-neutral-300 font-normal leading-relaxed list-none pl-0">
+                <li class="flex items-start gap-2.5">
+                  <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">&mdash;</span>
+                  <span class="text-neutral-200">Served as Technical Lead developing an Android accessibility application (prototyped in Figma and built in Java) that captures or imports photos of raised Braille cells and translates them into written and spoken English for blind and low-vision users.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">&mdash;</span>
+                  <span class="text-neutral-200">Trained a Convolutional Neural Network (CNN) in PyTorch across varied lighting, zoom, and angle conditions to classify Braille imagery over an HTTP inference server integrated with Google's Text-to-Speech (TTS) Python API for real-time audio playback.</span>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+
+          <div class="pt-3 border-t border-black/[0.08] dark:border-white/[0.08] flex flex-wrap items-center gap-2">
+            <a href="https://www.figma.com/proto/8AmWVPjTbXXuiJ4m4MnkkF/Braille-Reader?node-id=1%3A6&amp;scaling=scale-down&amp;page-id=0%3A1&amp;starting-point-node-id=1%3A3" target="_blank" rel="noopener"
+              class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono font-medium bg-black/[0.04] dark:bg-white/[0.06] text-neutral-700 dark:text-neutral-300 hover:text-black dark:hover:text-white border border-black/[0.08] dark:border-white/[0.1] hover:border-black/[0.2] dark:hover:border-white/[0.25] transition-all">
+              <svg class="w-3.5 h-3.5 stroke-current fill-none shrink-0" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+              <span>Figma Mockup</span>
+            </a>
+            <a href="https://drive.google.com/drive/folders/19L5j-3ijWVqy0gWXfVhtv0VSc8AYtc5x" target="_blank" rel="noopener"
+              class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono font-medium bg-black/[0.04] dark:bg-white/[0.06] text-neutral-700 dark:text-neutral-300 hover:text-black dark:hover:text-white border border-black/[0.08] dark:border-white/[0.1] hover:border-black/[0.2] dark:hover:border-white/[0.25] transition-all">
+              <svg class="w-3.5 h-3.5 stroke-current fill-none shrink-0" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+              <span>Android Mobile App</span>
+            </a>
+            <a href="https://drive.google.com/file/d/1riGhywHhOd36J2xp_-3n5XLoZQ7I_1us/view" target="_blank" rel="noopener"
+              class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono font-medium bg-black/[0.04] dark:bg-white/[0.06] text-neutral-700 dark:text-neutral-300 hover:text-black dark:hover:text-white border border-black/[0.08] dark:border-white/[0.1] hover:border-black/[0.2] dark:hover:border-white/[0.25] transition-all">
+              <svg class="w-3.5 h-3.5 stroke-current fill-none shrink-0" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+              <span>TTS</span>
+            </a>
+            <a href="https://drive.google.com/file/d/1MQKOy7IBOXzhpbkVZjmqNGjx9jn-nSma/view" target="_blank" rel="noopener"
+              class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono font-medium bg-black/[0.04] dark:bg-white/[0.06] text-neutral-700 dark:text-neutral-300 hover:text-black dark:hover:text-white border border-black/[0.08] dark:border-white/[0.1] hover:border-black/[0.2] dark:hover:border-white/[0.25] transition-all">
+              <svg class="w-3.5 h-3.5 stroke-current fill-none shrink-0" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+              <span>CNN Model</span>
             </a>
           </div>
         </div>
@@ -702,19 +815,19 @@
       </div>
 
       <!-- slide stage -->
-      <div class="relative w-full rounded-2xl overflow-hidden bg-white shadow-2xl border border-white/20 flex items-center justify-center max-h-[80vh]">
+      <div id="gallery-lightbox-stage" class="relative w-full rounded-2xl overflow-hidden bg-white shadow-2xl border border-white/20 flex items-center justify-center max-h-[80vh]">
         <img id="gallery-lightbox-img" src="../projectimages/aquatic-ecology/slide-01.jpg"
           alt="Presentation slide"
           class="max-h-[80vh] w-auto max-w-full object-contain select-none" />
 
-        <button id="lightbox-prev-btn" type="button" onclick="stepAquaticSlide(-1)"
+        <button id="lightbox-prev-btn" type="button" onclick="stepActiveLightbox(-1)"
           class="gallery-ctrl absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-xl inline-flex items-center justify-center transition-all cursor-pointer"
           aria-label="Previous slide">
           <svg class="w-5 h-5 fill-none" stroke-width="2.2" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
           </svg>
         </button>
-        <button id="lightbox-next-btn" type="button" onclick="stepAquaticSlide(1)"
+        <button id="lightbox-next-btn" type="button" onclick="stepActiveLightbox(1)"
           class="gallery-ctrl absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-xl inline-flex items-center justify-center transition-all cursor-pointer"
           aria-label="Next slide">
           <svg class="w-5 h-5 fill-none" stroke-width="2.2" viewBox="0 0 24 24">
@@ -1124,7 +1237,7 @@
     window.addEventListener('scroll', updateActiveSectionOnScroll, { passive: true });
     window.addEventListener('DOMContentLoaded', updateActiveSectionOnScroll);
 
-    // Aquatic Ecology 12-slide presentation gallery + lightbox
+    // Project slide galleries (Aquatic Ecology & Braille Buzz) + shared lightbox
     const AQUATIC_SLIDES = [
       { src: '../projectimages/aquatic-ecology/slide-01.jpg', title: 'Title Slide' },
       { src: '../projectimages/aquatic-ecology/slide-02.jpg', title: 'The Problem of Overfishing' },
@@ -1141,6 +1254,28 @@
     ];
     let aquaticIndex = 0;
 
+    const BRAILLE_SLIDES = [
+      { src: '../projectimages/braille-buzz/slide-01.jpg', title: 'Braille Buzz — Team & Roles' },
+      { src: '../projectimages/braille-buzz/slide-02.jpg', title: 'Blindness Prevalence in the US' },
+      { src: '../projectimages/braille-buzz/slide-03.jpg', title: 'Vision Loss Impact on the US' },
+      { src: '../projectimages/braille-buzz/slide-04.jpg', title: 'Braille Overview' },
+      { src: '../projectimages/braille-buzz/slide-05.jpg', title: 'Introducing Braille Buzz' },
+      { src: '../projectimages/braille-buzz/slide-06.jpg', title: 'How Does It Work?' },
+      { src: '../projectimages/braille-buzz/slide-07.jpg', title: 'CNN Model Development' },
+      { src: '../projectimages/braille-buzz/slide-08.jpg', title: 'Jupyter Notebook Code (PyTorch)' },
+      { src: '../projectimages/braille-buzz/slide-09.jpg', title: 'Android App & Google TTS' },
+      { src: '../projectimages/braille-buzz/slide-10.jpg', title: 'Android App Java Code' }
+    ];
+    let brailleIndex = 0;
+    let lightboxMode = 'aquatic';
+
+    function setLightboxStageBg(darkNavy) {
+      const stage = document.getElementById('gallery-lightbox-stage');
+      if (!stage) return;
+      stage.classList.toggle('bg-[#041533]', Boolean(darkNavy));
+      stage.classList.toggle('bg-white', !darkNavy);
+    }
+
     function renderAquaticGallery(scrollThumbs = false) {
       const slide = AQUATIC_SLIDES[aquaticIndex];
       const numStr = String(aquaticIndex + 1).padStart(2, '0') + ' / ' + String(AQUATIC_SLIDES.length).padStart(2, '0');
@@ -1155,11 +1290,13 @@
         mainImg.alt = 'Slide ' + (aquaticIndex + 1) + ' — ' + slide.title;
       }
       if (counter) counter.textContent = numStr;
-      if (lbImg) {
-        lbImg.src = slide.src;
-        lbImg.alt = 'Slide ' + (aquaticIndex + 1) + ' — ' + slide.title;
+      if (lightboxMode === 'aquatic') {
+        if (lbImg) {
+          lbImg.src = slide.src;
+          lbImg.alt = 'Slide ' + (aquaticIndex + 1) + ' — ' + slide.title;
+        }
+        if (lbCap) lbCap.textContent = numStr + ' — ' + slide.title;
       }
-      if (lbCap) lbCap.textContent = numStr + ' — ' + slide.title;
 
       const thumbsEl = document.getElementById('aquatic-gallery-thumbs');
       if (thumbsEl) {
@@ -1201,10 +1338,77 @@
     }
     window.stepAquaticSlide = stepAquaticSlide;
 
-    let lightboxMode = 'slides';
+    function renderBrailleGallery(scrollThumbs = false) {
+      const slide = BRAILLE_SLIDES[brailleIndex];
+      const numStr = String(brailleIndex + 1).padStart(2, '0') + ' / ' + String(BRAILLE_SLIDES.length).padStart(2, '0');
+
+      const mainImg = document.getElementById('braille-gallery-main');
+      const counter = document.getElementById('braille-gallery-counter');
+      const lbImg = document.getElementById('gallery-lightbox-img');
+      const lbCap = document.getElementById('gallery-lightbox-caption');
+
+      if (mainImg) {
+        mainImg.src = slide.src;
+        mainImg.alt = 'Slide ' + (brailleIndex + 1) + ' — ' + slide.title;
+      }
+      if (counter) counter.textContent = numStr;
+      if (lightboxMode === 'braille') {
+        if (lbImg) {
+          lbImg.src = slide.src;
+          lbImg.alt = 'Slide ' + (brailleIndex + 1) + ' — ' + slide.title;
+        }
+        if (lbCap) lbCap.textContent = numStr + ' — ' + slide.title;
+      }
+
+      const thumbsEl = document.getElementById('braille-gallery-thumbs');
+      if (thumbsEl) {
+        if (!thumbsEl.children.length) {
+          thumbsEl.innerHTML = BRAILLE_SLIDES.map((s, idx) => `
+            <button type="button" onclick="setBrailleSlide(${idx})" data-braille-idx="${idx}"
+              class="w-16 h-9 shrink-0 rounded-md overflow-hidden bg-[#041533] border-2 transition-all cursor-pointer p-0"
+              aria-label="Go to slide ${idx + 1}: ${s.title}">
+              <img src="${s.src}" alt="" loading="lazy" class="w-full h-full object-cover" />
+            </button>
+          `).join('');
+        }
+        thumbsEl.querySelectorAll('[data-braille-idx]').forEach(btn => {
+          const idx = Number(btn.getAttribute('data-braille-idx'));
+          if (idx === brailleIndex) {
+            btn.className = 'w-16 h-9 shrink-0 rounded-md overflow-hidden bg-[#041533] border-2 border-neutral-900 dark:border-white opacity-100 transition-all cursor-pointer p-0';
+          } else {
+            btn.className = 'w-16 h-9 shrink-0 rounded-md overflow-hidden bg-[#041533] border border-black/15 dark:border-white/15 opacity-55 hover:opacity-90 transition-all cursor-pointer p-0';
+          }
+        });
+        if (scrollThumbs === true) {
+          const activeThumb = thumbsEl.querySelector(`[data-braille-idx="${brailleIndex}"]`);
+          if (activeThumb) {
+            const targetLeft = activeThumb.offsetLeft - (thumbsEl.clientWidth / 2) + (activeThumb.clientWidth / 2);
+            thumbsEl.scrollTo({ left: Math.max(0, targetLeft), behavior: 'smooth' });
+          }
+        }
+      }
+    }
+
+    function setBrailleSlide(idx) {
+      brailleIndex = (idx + BRAILLE_SLIDES.length) % BRAILLE_SLIDES.length;
+      renderBrailleGallery(true);
+    }
+    window.setBrailleSlide = setBrailleSlide;
+
+    function stepBrailleSlide(delta) {
+      setBrailleSlide(brailleIndex + delta);
+    }
+    window.stepBrailleSlide = stepBrailleSlide;
+
+    function stepActiveLightbox(delta) {
+      if (lightboxMode === 'aquatic') stepAquaticSlide(delta);
+      else if (lightboxMode === 'braille') stepBrailleSlide(delta);
+    }
+    window.stepActiveLightbox = stepActiveLightbox;
 
     function openGalleryLightbox() {
-      lightboxMode = 'slides';
+      lightboxMode = 'aquatic';
+      setLightboxStageBg(false);
       const overlay = document.getElementById('gallery-lightbox-overlay');
       const prevBtn = document.getElementById('lightbox-prev-btn');
       const nextBtn = document.getElementById('lightbox-next-btn');
@@ -1218,8 +1422,25 @@
     }
     window.openGalleryLightbox = openGalleryLightbox;
 
+    function openBrailleLightbox() {
+      lightboxMode = 'braille';
+      setLightboxStageBg(true);
+      const overlay = document.getElementById('gallery-lightbox-overlay');
+      const prevBtn = document.getElementById('lightbox-prev-btn');
+      const nextBtn = document.getElementById('lightbox-next-btn');
+      if (prevBtn) prevBtn.classList.remove('hidden');
+      if (nextBtn) nextBtn.classList.remove('hidden');
+      if (overlay) {
+        renderBrailleGallery();
+        overlay.classList.add('is-open');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+    window.openBrailleLightbox = openBrailleLightbox;
+
     function openQuadChartLightbox() {
       lightboxMode = 'quad';
+      setLightboxStageBg(false);
       const overlay = document.getElementById('gallery-lightbox-overlay');
       const lbImg = document.getElementById('gallery-lightbox-img');
       const lbCap = document.getElementById('gallery-lightbox-caption');
@@ -1259,12 +1480,16 @@
       const overlay = document.getElementById('gallery-lightbox-overlay');
       if (!overlay || !overlay.classList.contains('is-open')) return;
       if (e.key === 'Escape') closeGalleryLightbox();
-      else if (lightboxMode === 'slides' && e.key === 'ArrowLeft') stepAquaticSlide(-1);
-      else if (lightboxMode === 'slides' && e.key === 'ArrowRight') stepAquaticSlide(1);
+      else if ((lightboxMode === 'aquatic' || lightboxMode === 'braille') && e.key === 'ArrowLeft') stepActiveLightbox(-1);
+      else if ((lightboxMode === 'aquatic' || lightboxMode === 'braille') && e.key === 'ArrowRight') stepActiveLightbox(1);
     });
 
-    window.addEventListener('DOMContentLoaded', renderAquaticGallery);
+    window.addEventListener('DOMContentLoaded', () => {
+      renderAquaticGallery();
+      renderBrailleGallery();
+    });
     renderAquaticGallery();
+    renderBrailleGallery();
   </script>
 </body>
 
