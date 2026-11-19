@@ -869,36 +869,36 @@ html[data-theme="one"] #spotlight-card #spotlight-location {
   color: #525252 !important;
 }
 
-html.light #spotlight-card button,
-html[data-theme="one"] #spotlight-card button {
+html.light #spotlight-card button:not(.gallery-ctrl):not(.gallery-thumb-btn),
+html[data-theme="one"] #spotlight-card button:not(.gallery-ctrl):not(.gallery-thumb-btn) {
   color: #525252 !important;
   background-color: rgba(0, 0, 0, 0.05) !important;
   border-color: rgba(0, 0, 0, 0.12) !important;
 }
 
-html.light #spotlight-card button:hover,
-html[data-theme="one"] #spotlight-card button:hover {
+html.light #spotlight-card button:not(.gallery-ctrl):not(.gallery-thumb-btn):hover,
+html[data-theme="one"] #spotlight-card button:not(.gallery-ctrl):not(.gallery-thumb-btn):hover {
   color: #111111 !important;
   background-color: rgba(0, 0, 0, 0.1) !important;
 }
 
-html.dark #spotlight-card button,
-html[data-theme="dark"] #spotlight-card button {
+html.dark #spotlight-card button:not(.gallery-ctrl):not(.gallery-thumb-btn),
+html[data-theme="dark"] #spotlight-card button:not(.gallery-ctrl):not(.gallery-thumb-btn) {
   color: #a1a1aa !important;
   background-color: rgba(255, 255, 255, 0.06) !important;
   border-color: rgba(255, 255, 255, 0.12) !important;
 }
 
-html.dark #spotlight-card button:hover,
-html[data-theme="dark"] #spotlight-card button:hover {
+html.dark #spotlight-card button:not(.gallery-ctrl):not(.gallery-thumb-btn):hover,
+html[data-theme="dark"] #spotlight-card button:not(.gallery-ctrl):not(.gallery-thumb-btn):hover {
   color: #ffffff !important;
   background-color: rgba(255, 255, 255, 0.12) !important;
 }
 
 html.light #spotlight-card #spotlight-body,
-html.light #spotlight-card #spotlight-body *,
+html.light #spotlight-card #spotlight-body *:not(.gallery-badge):not(.gallery-ctrl),
 html[data-theme="one"] #spotlight-card #spotlight-body,
-html[data-theme="one"] #spotlight-card #spotlight-body * {
+html[data-theme="one"] #spotlight-card #spotlight-body *:not(.gallery-badge):not(.gallery-ctrl) {
   color: #374151 !important;
 }
 
@@ -1051,8 +1051,9 @@ html[data-theme="one"] .timeline-card-preview:hover {
   box-shadow: 0 16px 32px -10px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.1) !important;
 }
 
-/* individual PDF password unlock modal */
-#pdf-unlock-overlay {
+/* individual PDF password unlock modal & Georgia Tech access modal */
+#pdf-unlock-overlay,
+#gt-access-overlay {
   position: fixed;
   inset: 0;
   z-index: 100;
@@ -1068,12 +1069,14 @@ html[data-theme="one"] .timeline-card-preview:hover {
   transition: opacity 0.22s ease, visibility 0.22s ease;
 }
 
-#pdf-unlock-overlay.is-open {
+#pdf-unlock-overlay.is-open,
+#gt-access-overlay.is-open {
   opacity: 1;
   visibility: visible;
 }
 
-#pdf-unlock-card {
+#pdf-unlock-card,
+#gt-access-card {
   position: relative;
   width: 100%;
   max-width: 30rem;
@@ -1088,18 +1091,23 @@ html[data-theme="one"] .timeline-card-preview:hover {
   transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.2s ease;
 }
 
-#pdf-unlock-overlay.is-open #pdf-unlock-card {
+#pdf-unlock-overlay.is-open #pdf-unlock-card,
+#gt-access-overlay.is-open #gt-access-card {
   transform: scale(1) translateY(0);
   opacity: 1;
 }
 
 html.light #pdf-unlock-overlay,
-html[data-theme="one"] #pdf-unlock-overlay {
+html[data-theme="one"] #pdf-unlock-overlay,
+html.light #gt-access-overlay,
+html[data-theme="one"] #gt-access-overlay {
   background-color: rgba(255, 255, 255, 0.72);
 }
 
 html.light #pdf-unlock-card,
-html[data-theme="one"] #pdf-unlock-card {
+html[data-theme="one"] #pdf-unlock-card,
+html.light #gt-access-card,
+html[data-theme="one"] #gt-access-card {
   background-color: #ffffff !important;
   border: 1px solid rgba(0, 0, 0, 0.14) !important;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.18), 0 0 0 1px rgba(0, 0, 0, 0.06) !important;

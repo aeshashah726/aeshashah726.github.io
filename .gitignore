@@ -4,5 +4,8 @@
 # Build and encryption scripts
 scripts/
 
+# Local environment secrets
+.env
+
 # Local unencrypted project files
 projectfiles/*.pdf
