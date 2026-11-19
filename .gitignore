@@ -9,6 +9,3 @@ scripts/
 
 # Local unencrypted project files
 projectfiles/*.pdf
-
-# Local LaTeX CV draft (never commit)
-cv.tex
