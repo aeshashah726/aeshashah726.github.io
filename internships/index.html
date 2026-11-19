@@ -770,7 +770,8 @@
           });
           const activeThumb = thumbsEl.querySelector(`[data-asdl-idx="${asdlIndex}"]`);
           if (activeThumb) {
-            activeThumb.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
+            const targetLeft = activeThumb.offsetLeft - (thumbsEl.clientWidth / 2) + (activeThumb.clientWidth / 2);
+            thumbsEl.scrollTo({ left: Math.max(0, targetLeft), behavior: 'smooth' });
           }
         }
       }
