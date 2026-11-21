@@ -221,7 +221,97 @@
           </div>
         </div>
 
-        <!-- 3. Protecting Critical Aquatic Ecology using Deep Learning -->
+        <!-- 3. WanderSync: Collaborative Travel Management System (CS 2340) -->
+        <div class="portfolio-card bg-[#161619] border border-white/[0.08] p-5 sm:p-6 rounded-2xl transition-all duration-300 hover:border-white/[0.18] shadow-[0_12px_32px_-10px_rgba(0,0,0,0.5)] flex flex-col gap-4 cursor-default">
+          <div>
+            <h2 class="text-lg sm:text-xl font-bold text-neutral-900 dark:text-white tracking-tight leading-snug">
+              WanderSync: Collaborative Travel Management System
+            </h2>
+            <div class="text-xs font-mono text-neutral-500 dark:text-neutral-400 mt-1">
+              CS 2340 Course Project: Objects &amp; Design &mdash; Georgia Institute of Technology
+            </div>
+          </div>
+
+          <ul class="space-y-2.5 text-[0.84rem] text-neutral-300 font-normal leading-relaxed list-none pl-0">
+            <li class="flex items-start gap-2.5">
+              <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">&mdash;</span>
+              <span class="text-neutral-200">Engineered a collaborative Android travel management application in Java with Firebase Authentication and Realtime Database across four Agile sprints, supporting real-time group itinerary planning, destination and vacation-day tracking, dining and lodging reservations, MPAndroidChart logistics visualizations, and community travel sharing.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">&mdash;</span>
+              <span class="text-neutral-200">Designed a modular MVVM architecture incorporating Singleton database handlers, Observer LiveData state synchronization, and Strategy-based reservation sorting, modeled end-to-end with Use Case, Domain, Design Class, and Sequence UML diagrams.</span>
+            </li>
+          </ul>
+
+          <!-- silently revealed after PDF session is unlocked -->
+          <div id="wandersync-unlocked-media" class="hidden grid-cols-1 md:grid-cols-2 gap-5 items-start pt-1">
+            <!-- Left: 4-slide UML & Architecture Diagrams Slideshow -->
+            <div class="space-y-2">
+              <div class="text-[11px] font-mono uppercase tracking-wider text-neutral-500 dark:text-neutral-400">
+                UML &amp; Architecture Diagrams
+              </div>
+              <div id="wandersync-gallery-stage" class="relative group rounded-xl overflow-hidden border border-black/[0.1] dark:border-white/[0.12] bg-white aspect-[11/8.5] select-none">
+                <img id="wandersync-gallery-main" alt="WanderSync UML diagram"
+                  onclick="openWandersyncLightbox()"
+                  class="w-full h-full object-contain cursor-zoom-in transition-opacity duration-150" />
+
+                <span id="wandersync-gallery-counter"
+                  class="gallery-badge absolute bottom-2.5 left-2.5 px-2 py-0.5 rounded-md text-[11px] font-mono font-medium pointer-events-none">
+                  01 / 04
+                </span>
+
+                <button type="button" onclick="openWandersyncLightbox()"
+                  class="gallery-ctrl absolute top-2.5 right-2.5 w-7 h-7 rounded-lg inline-flex items-center justify-center transition-all cursor-pointer"
+                  aria-label="Expand UML diagram gallery">
+                  <svg class="w-3.5 h-3.5 fill-none" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                  </svg>
+                </button>
+
+                <button type="button" onclick="stepWandersyncSlide(-1)"
+                  class="gallery-ctrl absolute left-2.5 top-1/2 -translate-y-1/2 w-8 h-8 rounded-lg inline-flex items-center justify-center transition-all cursor-pointer"
+                  aria-label="Previous diagram">
+                  <svg class="w-4 h-4 fill-none" stroke-width="2.2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                  </svg>
+                </button>
+                <button type="button" onclick="stepWandersyncSlide(1)"
+                  class="gallery-ctrl absolute right-2.5 top-1/2 -translate-y-1/2 w-8 h-8 rounded-lg inline-flex items-center justify-center transition-all cursor-pointer"
+                  aria-label="Next diagram">
+                  <svg class="w-4 h-4 fill-none" stroke-width="2.2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                  </svg>
+                </button>
+              </div>
+
+              <div id="wandersync-gallery-thumbs" class="gallery-thumbs flex items-center gap-1.5 overflow-x-auto pb-1"></div>
+            </div>
+
+            <!-- Right: Demo Video -->
+            <div class="space-y-2">
+              <div class="text-[11px] font-mono uppercase tracking-wider text-neutral-500 dark:text-neutral-400">
+                App Demonstration
+              </div>
+              <div class="relative rounded-xl overflow-hidden border border-black/[0.1] dark:border-white/[0.12] bg-[#0b0b0e] aspect-[11/8.5] flex items-center justify-center">
+                <video id="wandersync-demo-video" controls playsinline preload="metadata"
+                  class="w-full h-full object-contain"></video>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-3 border-t border-black/[0.08] dark:border-white/[0.08] flex flex-wrap items-center gap-2">
+            <a href="../projectfiles/wandersync_cs2340.enc" onclick="return openEncryptedFile(this.href, 'CS 2340 Course Project Report', event)"
+              class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono font-medium bg-black/[0.04] dark:bg-white/[0.06] text-neutral-700 dark:text-neutral-300 hover:text-black dark:hover:text-white border border-black/[0.08] dark:border-white/[0.1] hover:border-black/[0.2] dark:hover:border-white/[0.25] transition-all cursor-pointer">
+              <svg class="w-3.5 h-3.5 stroke-current fill-none shrink-0" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              <span>Report</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 4. Protecting Critical Aquatic Ecology using Deep Learning -->
         <div class="portfolio-card bg-[#161619] border border-white/[0.08] p-5 sm:p-6 rounded-2xl transition-all duration-300 hover:border-white/[0.18] shadow-[0_12px_32px_-10px_rgba(0,0,0,0.5)] flex flex-col gap-5 cursor-default">
           <div class="space-y-3">
             <div>
@@ -367,7 +457,7 @@
           </div>
         </div>
 
-        <!-- 4. Braille Buzz -->
+        <!-- 5. Braille Buzz -->
         <div class="portfolio-card bg-[#161619] border border-white/[0.08] p-5 sm:p-6 rounded-2xl transition-all duration-300 hover:border-white/[0.18] shadow-[0_12px_32px_-10px_rgba(0,0,0,0.5)] flex flex-col gap-5 cursor-default">
           <div>
             <h2 class="text-lg sm:text-xl font-bold text-neutral-900 dark:text-white tracking-tight leading-snug">
@@ -860,10 +950,11 @@
     let pendingPdf = null;
 
     function syncLockUI() {
-      let unlocked = false;
+      let password = '';
       try {
-        unlocked = Boolean(sessionStorage.getItem(PWD_SESSION_KEY));
+        password = sessionStorage.getItem(PWD_SESSION_KEY) || '';
       } catch (e) {}
+      const unlocked = Boolean(password);
 
       document.querySelectorAll('.pdf-session-bar').forEach(bar => {
         if (unlocked) {
@@ -874,6 +965,16 @@
           bar.classList.remove('flex');
         }
       });
+
+      if (unlocked) {
+        unlockWandersyncMedia(password);
+      } else {
+        const wsEl = document.getElementById('wandersync-unlocked-media');
+        if (wsEl) {
+          wsEl.classList.add('hidden');
+          wsEl.classList.remove('grid');
+        }
+      }
     }
 
     function togglePasswordVisibility() {
@@ -1190,9 +1291,6 @@
     }
     window.openEncryptedFile = openEncryptedFile;
 
-    window.addEventListener('DOMContentLoaded', syncLockUI);
-    syncLockUI();
-
     // Floating right-side glass dock scroll-spy & smooth section jump
     const SECTION_IDS = ['projects', 'papers'];
     let activeSectionId = 'projects';
@@ -1269,12 +1367,145 @@
     let brailleIndex = 0;
     let lightboxMode = 'aquatic';
 
-    function setLightboxStageBg(darkNavy) {
+    const WANDERSYNC_SLIDES = [
+      { encUrl: '../projectfiles/wandersync_uml_01.enc', src: '', title: 'Use Case Diagram', darkBg: false },
+      { encUrl: '../projectfiles/wandersync_uml_02.enc', src: '', title: 'Domain Model', darkBg: true },
+      { encUrl: '../projectfiles/wandersync_uml_03.enc', src: '', title: 'Design Class Diagram (MVVM)', darkBg: false },
+      { encUrl: '../projectfiles/wandersync_uml_04.enc', src: '', title: 'Authentication Sequence Diagram', darkBg: true }
+    ];
+    const WANDERSYNC_VIDEO_ENC = '../projectfiles/wandersync_demo.enc';
+    let wandersyncIndex = 0;
+    let wandersyncMediaState = 'idle'; // 'idle' | 'loading' | 'ready'
+
+    function setLightboxStageBg(mode) {
       const stage = document.getElementById('gallery-lightbox-stage');
       if (!stage) return;
-      stage.classList.toggle('bg-[#041533]', Boolean(darkNavy));
-      stage.classList.toggle('bg-white', !darkNavy);
+      stage.classList.remove('bg-[#041533]', 'bg-[#0b0b0e]', 'bg-white');
+      if (mode === 'navy') stage.classList.add('bg-[#041533]');
+      else if (mode === 'dark') stage.classList.add('bg-[#0b0b0e]');
+      else stage.classList.add('bg-white');
     }
+
+    async function decryptAssetBlobUrl(encUrl, mimeType, password) {
+      if (window.decryptedBlobCache.has(encUrl)) {
+        return window.decryptedBlobCache.get(encUrl);
+      }
+      const bytes = await fetchEncryptedBytes(encUrl);
+      const decryptedBuffer = await decryptPdfBytes(bytes, password);
+      const blob = new Blob([decryptedBuffer], { type: mimeType });
+      const blobUrl = URL.createObjectURL(blob);
+      window.decryptedBlobCache.set(encUrl, blobUrl);
+      return blobUrl;
+    }
+
+    async function unlockWandersyncMedia(password) {
+      const wsEl = document.getElementById('wandersync-unlocked-media');
+      if (!wsEl) return;
+      if (wandersyncMediaState === 'ready') {
+        wsEl.classList.remove('hidden');
+        wsEl.classList.add('grid');
+        return;
+      }
+      if (wandersyncMediaState === 'loading') return;
+      wandersyncMediaState = 'loading';
+
+      try {
+        const slideUrls = await Promise.all(
+          WANDERSYNC_SLIDES.map(s => decryptAssetBlobUrl(s.encUrl, 'image/jpeg', password))
+        );
+        slideUrls.forEach((url, i) => {
+          WANDERSYNC_SLIDES[i].src = url;
+        });
+
+        renderWandersyncGallery();
+        wsEl.classList.remove('hidden');
+        wsEl.classList.add('grid');
+        wandersyncMediaState = 'ready';
+
+        // Decrypt demo video asynchronously right after slides appear
+        decryptAssetBlobUrl(WANDERSYNC_VIDEO_ENC, 'video/mp4', password)
+          .then(videoBlobUrl => {
+            const vid = document.getElementById('wandersync-demo-video');
+            if (vid && vid.getAttribute('src') !== videoBlobUrl) {
+              vid.src = videoBlobUrl;
+            }
+          })
+          .catch(() => {});
+      } catch (e) {
+        wandersyncMediaState = 'idle';
+      }
+    }
+
+    function renderWandersyncGallery(scrollThumbs = false) {
+      const slide = WANDERSYNC_SLIDES[wandersyncIndex];
+      if (!slide || !slide.src) return;
+      const numStr = String(wandersyncIndex + 1).padStart(2, '0') + ' / ' + String(WANDERSYNC_SLIDES.length).padStart(2, '0');
+
+      const mainImg = document.getElementById('wandersync-gallery-main');
+      const stageEl = document.getElementById('wandersync-gallery-stage');
+      const counter = document.getElementById('wandersync-gallery-counter');
+      const lbImg = document.getElementById('gallery-lightbox-img');
+      const lbCap = document.getElementById('gallery-lightbox-caption');
+
+      if (stageEl) {
+        stageEl.classList.toggle('bg-[#0b0b0e]', Boolean(slide.darkBg));
+        stageEl.classList.toggle('bg-white', !slide.darkBg);
+      }
+      if (mainImg) {
+        mainImg.src = slide.src;
+        mainImg.alt = 'Diagram ' + (wandersyncIndex + 1) + ' — ' + slide.title;
+      }
+      if (counter) counter.textContent = numStr;
+      if (lightboxMode === 'wandersync') {
+        setLightboxStageBg(slide.darkBg ? 'dark' : 'white');
+        if (lbImg) {
+          lbImg.src = slide.src;
+          lbImg.alt = 'Diagram ' + (wandersyncIndex + 1) + ' — ' + slide.title;
+        }
+        if (lbCap) lbCap.textContent = numStr + ' — ' + slide.title;
+      }
+
+      const thumbsEl = document.getElementById('wandersync-gallery-thumbs');
+      if (thumbsEl) {
+        if (!thumbsEl.children.length) {
+          thumbsEl.innerHTML = WANDERSYNC_SLIDES.map((s, idx) => `
+            <button type="button" onclick="setWandersyncSlide(${idx})" data-ws-idx="${idx}"
+              class="w-14 h-10 shrink-0 rounded-md overflow-hidden ${s.darkBg ? 'bg-[#0b0b0e]' : 'bg-white'} border-2 transition-all cursor-pointer p-0"
+              aria-label="Go to diagram ${idx + 1}: ${s.title}">
+              <img src="${s.src}" alt="" class="w-full h-full object-cover" />
+            </button>
+          `).join('');
+        }
+        thumbsEl.querySelectorAll('[data-ws-idx]').forEach(btn => {
+          const idx = Number(btn.getAttribute('data-ws-idx'));
+          const s = WANDERSYNC_SLIDES[idx];
+          const bgCls = s && s.darkBg ? 'bg-[#0b0b0e]' : 'bg-white';
+          if (idx === wandersyncIndex) {
+            btn.className = `w-14 h-10 shrink-0 rounded-md overflow-hidden ${bgCls} border-2 border-neutral-900 dark:border-white opacity-100 transition-all cursor-pointer p-0`;
+          } else {
+            btn.className = `w-14 h-10 shrink-0 rounded-md overflow-hidden ${bgCls} border border-black/15 dark:border-white/15 opacity-55 hover:opacity-90 transition-all cursor-pointer p-0`;
+          }
+        });
+        if (scrollThumbs === true) {
+          const activeThumb = thumbsEl.querySelector(`[data-ws-idx="${wandersyncIndex}"]`);
+          if (activeThumb) {
+            const targetLeft = activeThumb.offsetLeft - (thumbsEl.clientWidth / 2) + (activeThumb.clientWidth / 2);
+            thumbsEl.scrollTo({ left: Math.max(0, targetLeft), behavior: 'smooth' });
+          }
+        }
+      }
+    }
+
+    function setWandersyncSlide(idx) {
+      wandersyncIndex = (idx + WANDERSYNC_SLIDES.length) % WANDERSYNC_SLIDES.length;
+      renderWandersyncGallery(true);
+    }
+    window.setWandersyncSlide = setWandersyncSlide;
+
+    function stepWandersyncSlide(delta) {
+      setWandersyncSlide(wandersyncIndex + delta);
+    }
+    window.stepWandersyncSlide = stepWandersyncSlide;
 
     function renderAquaticGallery(scrollThumbs = false) {
       const slide = AQUATIC_SLIDES[aquaticIndex];
@@ -1403,12 +1634,13 @@
     function stepActiveLightbox(delta) {
       if (lightboxMode === 'aquatic') stepAquaticSlide(delta);
       else if (lightboxMode === 'braille') stepBrailleSlide(delta);
+      else if (lightboxMode === 'wandersync') stepWandersyncSlide(delta);
     }
     window.stepActiveLightbox = stepActiveLightbox;
 
     function openGalleryLightbox() {
       lightboxMode = 'aquatic';
-      setLightboxStageBg(false);
+      setLightboxStageBg('white');
       const overlay = document.getElementById('gallery-lightbox-overlay');
       const prevBtn = document.getElementById('lightbox-prev-btn');
       const nextBtn = document.getElementById('lightbox-next-btn');
@@ -1424,7 +1656,7 @@
 
     function openBrailleLightbox() {
       lightboxMode = 'braille';
-      setLightboxStageBg(true);
+      setLightboxStageBg('navy');
       const overlay = document.getElementById('gallery-lightbox-overlay');
       const prevBtn = document.getElementById('lightbox-prev-btn');
       const nextBtn = document.getElementById('lightbox-next-btn');
@@ -1438,9 +1670,25 @@
     }
     window.openBrailleLightbox = openBrailleLightbox;
 
+    function openWandersyncLightbox() {
+      if (wandersyncMediaState !== 'ready') return;
+      lightboxMode = 'wandersync';
+      const overlay = document.getElementById('gallery-lightbox-overlay');
+      const prevBtn = document.getElementById('lightbox-prev-btn');
+      const nextBtn = document.getElementById('lightbox-next-btn');
+      if (prevBtn) prevBtn.classList.remove('hidden');
+      if (nextBtn) nextBtn.classList.remove('hidden');
+      if (overlay) {
+        renderWandersyncGallery();
+        overlay.classList.add('is-open');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+    window.openWandersyncLightbox = openWandersyncLightbox;
+
     function openQuadChartLightbox() {
       lightboxMode = 'quad';
-      setLightboxStageBg(false);
+      setLightboxStageBg('white');
       const overlay = document.getElementById('gallery-lightbox-overlay');
       const lbImg = document.getElementById('gallery-lightbox-img');
       const lbCap = document.getElementById('gallery-lightbox-caption');
@@ -1480,16 +1728,18 @@
       const overlay = document.getElementById('gallery-lightbox-overlay');
       if (!overlay || !overlay.classList.contains('is-open')) return;
       if (e.key === 'Escape') closeGalleryLightbox();
-      else if ((lightboxMode === 'aquatic' || lightboxMode === 'braille') && e.key === 'ArrowLeft') stepActiveLightbox(-1);
-      else if ((lightboxMode === 'aquatic' || lightboxMode === 'braille') && e.key === 'ArrowRight') stepActiveLightbox(1);
+      else if ((lightboxMode === 'aquatic' || lightboxMode === 'braille' || lightboxMode === 'wandersync') && e.key === 'ArrowLeft') stepActiveLightbox(-1);
+      else if ((lightboxMode === 'aquatic' || lightboxMode === 'braille' || lightboxMode === 'wandersync') && e.key === 'ArrowRight') stepActiveLightbox(1);
     });
 
     window.addEventListener('DOMContentLoaded', () => {
       renderAquaticGallery();
       renderBrailleGallery();
+      syncLockUI();
     });
     renderAquaticGallery();
     renderBrailleGallery();
+    syncLockUI();
   </script>
 </body>
 

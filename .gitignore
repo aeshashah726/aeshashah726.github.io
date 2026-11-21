@@ -7,5 +7,9 @@ scripts/
 # Local environment secrets
 .env
 
-# Local unencrypted project files
-projectfiles/*.pdf
+# Local unencrypted project files (only commit .enc files)
+projectfiles/*
+!projectfiles/*.enc
+
+# Local LaTeX CV draft (never commit)
+cv.tex
