@@ -54,7 +54,8 @@
   <!-- main content container -->
   <div id="main-content" class="w-full flex flex-col items-center font-jakarta">
     <div class="w-full max-w-5xl pt-4 sm:pt-6 pb-6 font-jakarta px-4">
-      <p class="text-sm font-mono text-neutral-500 dark:text-neutral-400 mb-2 tracking-wider">05 / PROJECTS &amp; PAPERS</p>
+      <p class="text-sm font-mono text-neutral-500 dark:text-neutral-400 mb-2 tracking-wider">05 / PROJECTS &amp; PAPERS
+      </p>
       <h1
         class="font-jakarta text-5xl sm:text-6xl lg:text-7xl font-extrabold text-neutral-900 dark:text-white tracking-tight leading-none mb-3">
         Projects &amp; Papers
@@ -81,7 +82,8 @@
 
     <!-- ==================== SECTION 1: PROJECTS ==================== -->
     <section id="projects" class="w-full max-w-5xl px-4 mb-16 scroll-mt-28">
-      <div class="flex flex-wrap items-center justify-between gap-4 mb-6 pb-3 border-b border-black/[0.08] dark:border-white/[0.08]">
+      <div
+        class="flex flex-wrap items-center justify-between gap-4 mb-6 pb-3 border-b border-black/[0.08] dark:border-white/[0.08]">
         <h2 class="text-2xl sm:text-3xl font-extrabold text-neutral-900 dark:text-white tracking-tight">
           Projects
         </h2>
@@ -98,111 +100,142 @@
       <div class="space-y-5">
 
         <!-- 1. Breast Cancer Diagnosis using Machine Learning (CS 7641) -->
-        <div class="portfolio-card bg-[#161619] border border-white/[0.08] p-5 sm:p-6 rounded-2xl transition-all duration-300 hover:border-white/[0.18] shadow-[0_12px_32px_-10px_rgba(0,0,0,0.5)] flex flex-col gap-4 cursor-default">
-          <div>
-            <h2 class="text-lg sm:text-xl font-bold text-neutral-900 dark:text-white tracking-tight leading-snug">
-              Breast Cancer Diagnosis using Machine Learning
-            </h2>
-            <div class="text-xs font-mono text-neutral-500 dark:text-neutral-400 mt-1">
-              CS 7641 Course Project: Machine Learning &mdash; Georgia Institute of Technology
+        <div
+          class="portfolio-card bg-[#161619] border border-white/[0.08] p-5 sm:p-6 rounded-2xl transition-all duration-300 hover:border-white/[0.18] shadow-[0_12px_32px_-10px_rgba(0,0,0,0.5)] flex flex-col gap-4 cursor-default">
+          <div class="space-y-3">
+            <div>
+              <h2 class="text-lg sm:text-xl font-bold text-neutral-900 dark:text-white tracking-tight leading-snug">
+                Breast Cancer Diagnosis using Machine Learning
+              </h2>
+              <div class="text-xs font-mono text-neutral-500 dark:text-neutral-400 mt-1">
+                CS 7641 Course Project: Machine Learning &mdash; Georgia Institute of Technology
+              </div>
+            </div>
+
+            <div class="flex flex-wrap items-center gap-2">
+              <a href="../projectfiles/breast_cancer_ml_cs7641.enc"
+                onclick="return openEncryptedFile(this.href, 'CS 7641 Course Project Final Report', event)"
+                class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono font-medium bg-black/[0.04] dark:bg-white/[0.06] text-neutral-700 dark:text-neutral-300 hover:text-black dark:hover:text-white border border-black/[0.08] dark:border-white/[0.1] hover:border-black/[0.2] dark:hover:border-white/[0.25] transition-all cursor-pointer">
+                <svg class="w-3.5 h-3.5 stroke-current fill-none shrink-0" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <span>Report</span>
+              </a>
+              <a href="https://github.gatech.edu/ashah726/ashah726.github.io"
+                onclick="return openGtAccessModal(this.href, 'CS 7641 Course Project GitHub Repository', event)"
+                class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono font-medium bg-black/[0.04] dark:bg-white/[0.06] text-neutral-700 dark:text-neutral-300 hover:text-black dark:hover:text-white border border-black/[0.08] dark:border-white/[0.1] hover:border-black/[0.2] dark:hover:border-white/[0.25] transition-all cursor-pointer">
+                <svg class="w-3.5 h-3.5 fill-current shrink-0" viewBox="0 0 24 24">
+                  <path
+                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                </svg>
+                <span>Repo</span>
+              </a>
+              <a href="https://github.gatech.edu/pages/ashah726/ashah726.github.io/"
+                onclick="return openGtAccessModal(this.href, 'CS 7641 Course Project Site', event)"
+                class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono font-medium bg-black/[0.04] dark:bg-white/[0.06] text-neutral-700 dark:text-neutral-300 hover:text-black dark:hover:text-white border border-black/[0.08] dark:border-white/[0.1] hover:border-black/[0.2] dark:hover:border-white/[0.25] transition-all cursor-pointer">
+                <svg class="w-3.5 h-3.5 stroke-current fill-none shrink-0" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+                <span>Project Site</span>
+              </a>
             </div>
           </div>
 
           <ul class="space-y-2.5 text-[0.84rem] text-neutral-300 font-normal leading-relaxed list-none pl-0">
             <li class="flex items-start gap-2.5">
               <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">&mdash;</span>
-              <span class="text-neutral-200">Evaluated unsupervised clustering (K-Means) and supervised classification (Support Vector Machines and XGBoost) alongside PCA and SelectKBest dimensionality reduction on the UCI Diagnostic Wisconsin Breast Cancer dataset (569 FNA biopsy samples, 30 nuclear morphology features) to maximize malignant tumor recall and clinical interpretability.</span>
+              <span class="text-neutral-200">Evaluated unsupervised clustering (K-Means) and supervised classification
+                (Support Vector Machines and XGBoost) alongside PCA and SelectKBest dimensionality reduction on the UCI
+                Diagnostic Wisconsin Breast Cancer dataset (569 FNA biopsy samples, 30 nuclear morphology features) to
+                maximize malignant tumor recall and clinical interpretability.</span>
             </li>
             <li class="flex items-start gap-2.5">
               <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">&mdash;</span>
-              <span class="text-neutral-200">Achieved 98.25% accuracy and 0.9950 ROC-AUC (98.61% malignant precision &amp; recall) with SVM&mdash;retaining full baseline accuracy with 15 PCA components (98.7% variance)&mdash;and 95.61% accuracy (0.9931 ROC-AUC) with XGBoost across 5-fold and 50-run repeated stratified cross-validation.</span>
+              <span class="text-neutral-200">Achieved 98.25% accuracy and 0.9950 ROC-AUC (98.61% malignant precision
+                &amp; recall) with SVM&mdash;retaining full baseline accuracy with 15 PCA components (98.7%
+                variance)&mdash;and 95.61% accuracy (0.9931 ROC-AUC) with XGBoost across 5-fold and 50-run repeated
+                stratified cross-validation.</span>
             </li>
           </ul>
 
-          <div class="pt-3 border-t border-black/[0.08] dark:border-white/[0.08] flex flex-wrap items-center gap-2">
-            <a href="../projectfiles/breast_cancer_ml_cs7641.enc" onclick="return openEncryptedFile(this.href, 'CS 7641 Course Project Final Report', event)"
-              class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono font-medium bg-black/[0.04] dark:bg-white/[0.06] text-neutral-700 dark:text-neutral-300 hover:text-black dark:hover:text-white border border-black/[0.08] dark:border-white/[0.1] hover:border-black/[0.2] dark:hover:border-white/[0.25] transition-all cursor-pointer">
-              <svg class="w-3.5 h-3.5 stroke-current fill-none shrink-0" stroke-width="2" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-              </svg>
-              <span>Report</span>
-            </a>
-            <a href="https://github.gatech.edu/pages/ashah726/ashah726.github.io/" onclick="return openGtAccessModal(this.href, 'CS 7641 Course Project Site', event)"
-              class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono font-medium bg-black/[0.04] dark:bg-white/[0.06] text-neutral-700 dark:text-neutral-300 hover:text-black dark:hover:text-white border border-black/[0.08] dark:border-white/[0.1] hover:border-black/[0.2] dark:hover:border-white/[0.25] transition-all cursor-pointer">
-              <svg class="w-3.5 h-3.5 stroke-current fill-none shrink-0" stroke-width="2" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-              </svg>
-              <span>Project Site</span>
-            </a>
-            <a href="https://github.gatech.edu/ashah726/ashah726.github.io" onclick="return openGtAccessModal(this.href, 'CS 7641 Course Project GitHub Repository', event)"
-              class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono font-medium bg-black/[0.04] dark:bg-white/[0.06] text-neutral-700 dark:text-neutral-300 hover:text-black dark:hover:text-white border border-black/[0.08] dark:border-white/[0.1] hover:border-black/[0.2] dark:hover:border-white/[0.25] transition-all cursor-pointer">
-              <svg class="w-3.5 h-3.5 fill-current shrink-0" viewBox="0 0 24 24">
-                <path
-                  d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
-              </svg>
-              <span>Repo</span>
-            </a>
-            <a href="https://docs.google.com/presentation/d/1ITbVAVpe3Ar63xhjsCVShazLIIEV8gkC/edit?usp=sharing&amp;ouid=104022726550479043511&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener"
-              class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono font-medium bg-black/[0.04] dark:bg-white/[0.06] text-neutral-700 dark:text-neutral-300 hover:text-black dark:hover:text-white border border-black/[0.08] dark:border-white/[0.1] hover:border-black/[0.2] dark:hover:border-white/[0.25] transition-all">
-              <svg class="w-3.5 h-3.5 stroke-current fill-none shrink-0" stroke-width="2" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-              </svg>
-              <span>Final Slides</span>
-            </a>
-            <a href="https://docs.google.com/presentation/d/1FLcbaeM0SAPhENrqE2YTM4Voni2K-sQHjwmWEPyKncg/edit?usp=sharing" target="_blank" rel="noopener"
-              class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono font-medium bg-black/[0.04] dark:bg-white/[0.06] text-neutral-700 dark:text-neutral-300 hover:text-black dark:hover:text-white border border-black/[0.08] dark:border-white/[0.1] hover:border-black/[0.2] dark:hover:border-white/[0.25] transition-all">
-              <svg class="w-3.5 h-3.5 stroke-current fill-none shrink-0" stroke-width="2" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-              </svg>
-              <span>Proposal Slides</span>
-            </a>
-            <a href="https://youtu.be/732VsacyU7g" target="_blank" rel="noopener"
-              class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono font-medium bg-black/[0.04] dark:bg-white/[0.06] text-neutral-700 dark:text-neutral-300 hover:text-black dark:hover:text-white border border-black/[0.08] dark:border-white/[0.1] hover:border-black/[0.2] dark:hover:border-white/[0.25] transition-all">
-              <svg class="w-3.5 h-3.5 stroke-current fill-none shrink-0" stroke-width="2" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-              </svg>
-              <span>Proposal Video</span>
-            </a>
-            <a href="https://archive.ics.uci.edu/dataset/17/breast+cancer+wisconsin+diagnostic" target="_blank" rel="noopener"
-              class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono font-medium bg-black/[0.04] dark:bg-white/[0.06] text-neutral-700 dark:text-neutral-300 hover:text-black dark:hover:text-white border border-black/[0.08] dark:border-white/[0.1] hover:border-black/[0.2] dark:hover:border-white/[0.25] transition-all">
-              <svg class="w-3.5 h-3.5 stroke-current fill-none shrink-0" stroke-width="2" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-              </svg>
-              <span>Dataset</span>
-            </a>
+          <!-- silently revealed after PDF session is unlocked -->
+          <div id="cs7641-unlocked-media" class="hidden space-y-2 pt-1">
+            <div class="text-[11px] font-mono uppercase tracking-wider text-neutral-500 dark:text-neutral-400">
+              Final Presentation Slides
+            </div>
+            <div class="relative group rounded-xl overflow-hidden border border-black/[0.1] dark:border-white/[0.12] bg-white aspect-video select-none">
+              <img id="cs7641-gallery-main" alt="CS 7641 Final Presentation Slide"
+                onclick="openCs7641Lightbox()"
+                class="w-full h-full object-contain cursor-zoom-in transition-opacity duration-150" />
+
+              <span id="cs7641-gallery-counter"
+                class="gallery-badge absolute bottom-2.5 left-2.5 px-2 py-0.5 rounded-md text-[11px] font-mono font-medium pointer-events-none">
+                01 / 15
+              </span>
+
+              <button type="button" onclick="openCs7641Lightbox()"
+                class="gallery-ctrl absolute top-2.5 right-2.5 w-7 h-7 rounded-lg inline-flex items-center justify-center transition-all cursor-pointer"
+                aria-label="Expand CS 7641 slide gallery">
+                <svg class="w-3.5 h-3.5 fill-none" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                </svg>
+              </button>
+
+              <button type="button" onclick="stepCs7641Slide(-1)"
+                class="gallery-ctrl absolute left-2.5 top-1/2 -translate-y-1/2 w-8 h-8 rounded-lg inline-flex items-center justify-center transition-all cursor-pointer"
+                aria-label="Previous slide">
+                <svg class="w-4 h-4 fill-none" stroke-width="2.2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+              <button type="button" onclick="stepCs7641Slide(1)"
+                class="gallery-ctrl absolute right-2.5 top-1/2 -translate-y-1/2 w-8 h-8 rounded-lg inline-flex items-center justify-center transition-all cursor-pointer"
+                aria-label="Next slide">
+                <svg class="w-4 h-4 fill-none" stroke-width="2.2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+
+            <div id="cs7641-gallery-thumbs" class="gallery-thumbs flex items-center gap-1.5 overflow-x-auto pb-1"></div>
           </div>
         </div>
 
         <!-- 2. Splay Trees & Amortized Analysis (CS 3511) -->
-        <div class="portfolio-card bg-[#161619] border border-white/[0.08] p-5 sm:p-6 rounded-2xl transition-all duration-300 hover:border-white/[0.18] shadow-[0_12px_32px_-10px_rgba(0,0,0,0.5)] flex flex-col gap-4 cursor-default">
+        <div
+          class="portfolio-card bg-[#161619] border border-white/[0.08] p-5 sm:p-6 rounded-2xl transition-all duration-300 hover:border-white/[0.18] shadow-[0_12px_32px_-10px_rgba(0,0,0,0.5)] flex flex-col gap-4 cursor-default">
           <div>
             <h2 class="text-lg sm:text-xl font-bold text-neutral-900 dark:text-white tracking-tight leading-snug">
               Splay Trees: Self-Adjusting Binary Search Trees &amp; Amortized Analysis
             </h2>
             <div class="text-xs font-mono text-neutral-500 dark:text-neutral-400 mt-1">
-              CS 3511 Course Project: Design &amp; Analysis of Algorithms (Honors) &mdash; Georgia Institute of Technology
+              CS 3511 Course Project: Design &amp; Analysis of Algorithms (Honors) &mdash; Georgia Institute of
+              Technology
             </div>
           </div>
 
           <ul class="space-y-2.5 text-[0.84rem] text-neutral-300 font-normal leading-relaxed list-none pl-0">
             <li class="flex items-start gap-2.5">
               <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">&mdash;</span>
-              <span class="text-neutral-200">Analyzed self-adjusting binary search trees (splay trees) as a metadata-free alternative to rigid height-balanced structures (AVL and Red-Black trees), detailing Zig, Zig-Zig, and Zig-Zag splaying rotations alongside access, join, split, insert, and delete primitives.</span>
+              <span class="text-neutral-200">Analyzed self-adjusting binary search trees (splay trees) as a
+                metadata-free alternative to rigid height-balanced structures (AVL and Red-Black trees), detailing Zig,
+                Zig-Zig, and Zig-Zag splaying rotations alongside access, join, split, insert, and delete
+                primitives.</span>
             </li>
             <li class="flex items-start gap-2.5">
               <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">&mdash;</span>
-              <span class="text-neutral-200">Proved the Access Lemma and O((m + n) log(m + n)) Performance Theorem (O(log n) amortized time per operation) via Tarjan's potential method, deriving Static Optimality, Working-Set, and Dynamic Finger bounds alongside systems applications in file indexing, string editors, link/cut network flow trees, and memory allocation.</span>
+              <span class="text-neutral-200">Proved the Access Lemma and O((m + n) log(m + n)) Performance Theorem
+                (O(log n) amortized time per operation) via Tarjan's potential method, deriving Static Optimality,
+                Working-Set, and Dynamic Finger bounds alongside systems applications in file indexing, string editors,
+                link/cut network flow trees, and memory allocation.</span>
             </li>
           </ul>
 
           <div class="pt-3 border-t border-black/[0.08] dark:border-white/[0.08] flex flex-wrap items-center gap-2">
-            <a href="../projectfiles/algorithms_cs3511_final_project.enc" onclick="return openEncryptedFile(this.href, 'CS 3511 Course Project Final Report', event)"
+            <a href="../projectfiles/algorithms_cs3511_final_project.enc"
+              onclick="return openEncryptedFile(this.href, 'CS 3511 Course Project Final Report', event)"
               class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono font-medium bg-black/[0.04] dark:bg-white/[0.06] text-neutral-700 dark:text-neutral-300 hover:text-black dark:hover:text-white border border-black/[0.08] dark:border-white/[0.1] hover:border-black/[0.2] dark:hover:border-white/[0.25] transition-all cursor-pointer">
               <svg class="w-3.5 h-3.5 stroke-current fill-none shrink-0" stroke-width="2" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -210,7 +243,8 @@
               </svg>
               <span>Report</span>
             </a>
-            <a href="../projectfiles/algorithms_cs3511_presentation.enc" onclick="return openEncryptedFile(this.href, 'CS 3511 Course Project Presentation Slides', event)"
+            <a href="../projectfiles/algorithms_cs3511_presentation.enc"
+              onclick="return openEncryptedFile(this.href, 'CS 3511 Course Project Presentation Slides', event)"
               class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono font-medium bg-black/[0.04] dark:bg-white/[0.06] text-neutral-700 dark:text-neutral-300 hover:text-black dark:hover:text-white border border-black/[0.08] dark:border-white/[0.1] hover:border-black/[0.2] dark:hover:border-white/[0.25] transition-all cursor-pointer">
               <svg class="w-3.5 h-3.5 stroke-current fill-none shrink-0" stroke-width="2" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -222,7 +256,8 @@
         </div>
 
         <!-- 3. WanderSync: Collaborative Travel Management System (CS 2340) -->
-        <div class="portfolio-card bg-[#161619] border border-white/[0.08] p-5 sm:p-6 rounded-2xl transition-all duration-300 hover:border-white/[0.18] shadow-[0_12px_32px_-10px_rgba(0,0,0,0.5)] flex flex-col gap-4 cursor-default">
+        <div
+          class="portfolio-card bg-[#161619] border border-white/[0.08] p-5 sm:p-6 rounded-2xl transition-all duration-300 hover:border-white/[0.18] shadow-[0_12px_32px_-10px_rgba(0,0,0,0.5)] flex flex-col gap-4 cursor-default">
           <div>
             <h2 class="text-lg sm:text-xl font-bold text-neutral-900 dark:text-white tracking-tight leading-snug">
               WanderSync: Collaborative Travel Management System
@@ -235,11 +270,16 @@
           <ul class="space-y-2.5 text-[0.84rem] text-neutral-300 font-normal leading-relaxed list-none pl-0">
             <li class="flex items-start gap-2.5">
               <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">&mdash;</span>
-              <span class="text-neutral-200">Engineered a collaborative Android travel management application in Java with Firebase Authentication and Realtime Database across four Agile sprints, supporting real-time group itinerary planning, destination and vacation-day tracking, dining and lodging reservations, MPAndroidChart logistics visualizations, and community travel sharing.</span>
+              <span class="text-neutral-200">Engineered a collaborative Android travel management application in Java
+                with Firebase Authentication and Realtime Database across four Agile sprints, supporting real-time group
+                itinerary planning, destination and vacation-day tracking, dining and lodging reservations,
+                MPAndroidChart logistics visualizations, and community travel sharing.</span>
             </li>
             <li class="flex items-start gap-2.5">
               <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">&mdash;</span>
-              <span class="text-neutral-200">Designed a modular MVVM architecture incorporating Singleton database handlers, Observer LiveData state synchronization, and Strategy-based reservation sorting, modeled end-to-end with Use Case, Domain, Design Class, and Sequence UML diagrams.</span>
+              <span class="text-neutral-200">Designed a modular MVVM architecture incorporating Singleton database
+                handlers, Observer LiveData state synchronization, and Strategy-based reservation sorting, modeled
+                end-to-end with Use Case, Domain, Design Class, and Sequence UML diagrams.</span>
             </li>
           </ul>
 
@@ -250,9 +290,9 @@
               <div class="text-[11px] font-mono uppercase tracking-wider text-neutral-500 dark:text-neutral-400">
                 UML &amp; Architecture Diagrams
               </div>
-              <div id="wandersync-gallery-stage" class="relative group rounded-xl overflow-hidden border border-black/[0.1] dark:border-white/[0.12] bg-white aspect-[11/8.5] select-none">
-                <img id="wandersync-gallery-main" alt="WanderSync UML diagram"
-                  onclick="openWandersyncLightbox()"
+              <div id="wandersync-gallery-stage"
+                class="relative group rounded-xl overflow-hidden border border-black/[0.1] dark:border-white/[0.12] bg-white aspect-[11/8.5] select-none">
+                <img id="wandersync-gallery-main" alt="WanderSync UML diagram" onclick="openWandersyncLightbox()"
                   class="w-full h-full object-contain cursor-zoom-in transition-opacity duration-150" />
 
                 <span id="wandersync-gallery-counter"
@@ -284,7 +324,8 @@
                 </button>
               </div>
 
-              <div id="wandersync-gallery-thumbs" class="gallery-thumbs flex items-center gap-1.5 overflow-x-auto pb-1"></div>
+              <div id="wandersync-gallery-thumbs" class="gallery-thumbs flex items-center gap-1.5 overflow-x-auto pb-1">
+              </div>
             </div>
 
             <!-- Right: Demo Video -->
@@ -292,7 +333,8 @@
               <div class="text-[11px] font-mono uppercase tracking-wider text-neutral-500 dark:text-neutral-400">
                 App Demonstration
               </div>
-              <div class="relative rounded-xl overflow-hidden border border-black/[0.1] dark:border-white/[0.12] bg-[#0b0b0e] aspect-[11/8.5] flex items-center justify-center">
+              <div
+                class="relative rounded-xl overflow-hidden border border-black/[0.1] dark:border-white/[0.12] bg-[#0b0b0e] aspect-[11/8.5] flex items-center justify-center">
                 <video id="wandersync-demo-video" controls playsinline preload="metadata"
                   class="w-full h-full object-contain"></video>
               </div>
@@ -300,7 +342,8 @@
           </div>
 
           <div class="pt-3 border-t border-black/[0.08] dark:border-white/[0.08] flex flex-wrap items-center gap-2">
-            <a href="../projectfiles/wandersync_cs2340.enc" onclick="return openEncryptedFile(this.href, 'CS 2340 Course Project Report', event)"
+            <a href="../projectfiles/wandersync_cs2340.enc"
+              onclick="return openEncryptedFile(this.href, 'CS 2340 Course Project Report', event)"
               class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono font-medium bg-black/[0.04] dark:bg-white/[0.06] text-neutral-700 dark:text-neutral-300 hover:text-black dark:hover:text-white border border-black/[0.08] dark:border-white/[0.1] hover:border-black/[0.2] dark:hover:border-white/[0.25] transition-all cursor-pointer">
               <svg class="w-3.5 h-3.5 stroke-current fill-none shrink-0" stroke-width="2" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -312,7 +355,8 @@
         </div>
 
         <!-- 4. Protecting Critical Aquatic Ecology using Deep Learning -->
-        <div class="portfolio-card bg-[#161619] border border-white/[0.08] p-5 sm:p-6 rounded-2xl transition-all duration-300 hover:border-white/[0.18] shadow-[0_12px_32px_-10px_rgba(0,0,0,0.5)] flex flex-col gap-5 cursor-default">
+        <div
+          class="portfolio-card bg-[#161619] border border-white/[0.08] p-5 sm:p-6 rounded-2xl transition-all duration-300 hover:border-white/[0.18] shadow-[0_12px_32px_-10px_rgba(0,0,0,0.5)] flex flex-col gap-5 cursor-default">
           <div class="space-y-3">
             <div>
               <h2 class="text-lg sm:text-xl font-bold text-neutral-900 dark:text-white tracking-tight leading-snug">
@@ -352,7 +396,22 @@
           </div>
 
           <p class="text-[0.84rem] text-neutral-200 font-normal leading-relaxed">
-            Fishing is one the most significant drivers of declines in ocean wildlife populations. Overfished stock numbers have nearly tripled in half a century and a third of the world's assessed fisheries have been pushed beyond their ecological limits. Scientists regularly assess fish stocks to provide critical information for conservation and management. Mandatory implementation of Vessel Monitoring Systems (VMS) on all commercial vessels has allowed for Satellite-Automatic Identification System (S-AIS) data to be captured efficiently, without the logistical difficulties of putting government supervisors on ships. However, immense volumes of data have been collected, requiring manual processing, and significant time, labor, and money. The use of deep learning to automate fishing detection has substantial benefits but is currently limited solely to proprietary methods. This project proposes a method of training a publicly available, deep learning-based fishing detection model, with accuracies greater than 90%, and plotting of detected fishing locations on a global map. Publicly available, anonymized S-AIS datasets for trawler and longline vessel types were utilized. Once the S-AIS data was pre-processed, it was used to develop the Convolutional Neural Network (CNN) models for both vessel types, resulting in 94% and 86% efficacy for the trawler and longline vessel types, respectively. Further, these detected fishing locations were plotted on a global map. These publicly available deep learning models and detected fishing locations on a comprehensive world map will help aquatic ecologists, governments, and fishery managers to rebuild fisheries and protect critical aquatic ecology.
+            Fishing is one the most significant drivers of declines in ocean wildlife populations. Overfished stock
+            numbers have nearly tripled in half a century and a third of the world's assessed fisheries have been pushed
+            beyond their ecological limits. Scientists regularly assess fish stocks to provide critical information for
+            conservation and management. Mandatory implementation of Vessel Monitoring Systems (VMS) on all commercial
+            vessels has allowed for Satellite-Automatic Identification System (S-AIS) data to be captured efficiently,
+            without the logistical difficulties of putting government supervisors on ships. However, immense volumes of
+            data have been collected, requiring manual processing, and significant time, labor, and money. The use of
+            deep learning to automate fishing detection has substantial benefits but is currently limited solely to
+            proprietary methods. This project proposes a method of training a publicly available, deep learning-based
+            fishing detection model, with accuracies greater than 90%, and plotting of detected fishing locations on a
+            global map. Publicly available, anonymized S-AIS datasets for trawler and longline vessel types were
+            utilized. Once the S-AIS data was pre-processed, it was used to develop the Convolutional Neural Network
+            (CNN) models for both vessel types, resulting in 94% and 86% efficacy for the trawler and longline vessel
+            types, respectively. Further, these detected fishing locations were plotted on a global map. These publicly
+            available deep learning models and detected fishing locations on a comprehensive world map will help aquatic
+            ecologists, governments, and fishery managers to rebuild fisheries and protect critical aquatic ecology.
           </p>
 
           <!-- side-by-side: 12-slide presentation gallery + standalone quad chart -->
@@ -363,10 +422,10 @@
               <div class="text-[11px] font-mono uppercase tracking-wider text-neutral-500 dark:text-neutral-400">
                 Presentation Slides
               </div>
-              <div class="relative group rounded-xl overflow-hidden border border-black/[0.1] dark:border-white/[0.12] bg-white aspect-[11/8.5] select-none">
+              <div
+                class="relative group rounded-xl overflow-hidden border border-black/[0.1] dark:border-white/[0.12] bg-white aspect-[11/8.5] select-none">
                 <img id="aquatic-gallery-main" src="../projectimages/aquatic-ecology/slide-01.jpg"
-                  alt="Slide 1 — Protecting Critical Aquatic Ecology with Deep Learning"
-                  onclick="openGalleryLightbox()"
+                  alt="Slide 1 — Protecting Critical Aquatic Ecology with Deep Learning" onclick="openGalleryLightbox()"
                   class="w-full h-full object-contain cursor-zoom-in transition-opacity duration-150" />
 
                 <!-- slide counter badge -->
@@ -402,7 +461,8 @@
               </div>
 
               <!-- scrollable thumbnail filmstrip -->
-              <div id="aquatic-gallery-thumbs" class="gallery-thumbs flex items-center gap-1.5 overflow-x-auto pb-1"></div>
+              <div id="aquatic-gallery-thumbs" class="gallery-thumbs flex items-center gap-1.5 overflow-x-auto pb-1">
+              </div>
             </div>
 
             <!-- Right: Standalone ISEF Quad Chart -->
@@ -410,7 +470,8 @@
               <div class="text-[11px] font-mono uppercase tracking-wider text-neutral-500 dark:text-neutral-400">
                 Quad Chart
               </div>
-              <div class="relative group rounded-xl overflow-hidden border border-black/[0.1] dark:border-white/[0.12] bg-white aspect-[11/8.5] select-none">
+              <div
+                class="relative group rounded-xl overflow-hidden border border-black/[0.1] dark:border-white/[0.12] bg-white aspect-[11/8.5] select-none">
                 <img src="../projectimages/aquatic-ecology/quad-chart.jpg"
                   alt="Quad Chart — Protecting Critical Aquatic Ecology with Deep Learning"
                   onclick="openQuadChartLightbox()"
@@ -430,7 +491,8 @@
           </div>
 
           <div class="pt-3 border-t border-black/[0.08] dark:border-white/[0.08] flex flex-wrap items-center gap-2">
-            <a href="https://isef.net/project/enev087---protecting-aquatic-ecology-with-deep-learning" target="_blank" rel="noopener"
+            <a href="https://isef.net/project/enev087---protecting-aquatic-ecology-with-deep-learning" target="_blank"
+              rel="noopener"
               class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono font-medium bg-black/[0.04] dark:bg-white/[0.06] text-neutral-700 dark:text-neutral-300 hover:text-black dark:hover:text-white border border-black/[0.08] dark:border-white/[0.1] hover:border-black/[0.2] dark:hover:border-white/[0.25] transition-all">
               <svg class="w-3.5 h-3.5 stroke-current fill-none shrink-0" stroke-width="2" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -438,7 +500,8 @@
               </svg>
               <span>ISEF Project</span>
             </a>
-            <a href="https://www.societyforscience.org/press-release/2021-regeneron-isef-grand-awards/#:~:text=ENEV087%20%E2%80%94%20Protecting,States%20of%20America" target="_blank" rel="noopener"
+            <a href="https://www.societyforscience.org/press-release/2021-regeneron-isef-grand-awards/#:~:text=ENEV087%20%E2%80%94%20Protecting,States%20of%20America"
+              target="_blank" rel="noopener"
               class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono font-medium bg-black/[0.04] dark:bg-white/[0.06] text-neutral-700 dark:text-neutral-300 hover:text-black dark:hover:text-white border border-black/[0.08] dark:border-white/[0.1] hover:border-black/[0.2] dark:hover:border-white/[0.25] transition-all">
               <svg class="w-3.5 h-3.5 stroke-current fill-none shrink-0" stroke-width="2" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -446,7 +509,8 @@
               </svg>
               <span>ISEF Grand Award</span>
             </a>
-            <a href="https://drive.google.com/file/d/17NBMLs8KXwThUEKlgJ1U3FeDkRJUSZkF/view?usp=sharing" target="_blank" rel="noopener"
+            <a href="https://drive.google.com/file/d/17NBMLs8KXwThUEKlgJ1U3FeDkRJUSZkF/view?usp=sharing" target="_blank"
+              rel="noopener"
               class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono font-medium bg-black/[0.04] dark:bg-white/[0.06] text-neutral-700 dark:text-neutral-300 hover:text-black dark:hover:text-white border border-black/[0.08] dark:border-white/[0.1] hover:border-black/[0.2] dark:hover:border-white/[0.25] transition-all">
               <svg class="w-3.5 h-3.5 stroke-current fill-none shrink-0" stroke-width="2" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -458,7 +522,8 @@
         </div>
 
         <!-- 5. Braille Buzz -->
-        <div class="portfolio-card bg-[#161619] border border-white/[0.08] p-5 sm:p-6 rounded-2xl transition-all duration-300 hover:border-white/[0.18] shadow-[0_12px_32px_-10px_rgba(0,0,0,0.5)] flex flex-col gap-5 cursor-default">
+        <div
+          class="portfolio-card bg-[#161619] border border-white/[0.08] p-5 sm:p-6 rounded-2xl transition-all duration-300 hover:border-white/[0.18] shadow-[0_12px_32px_-10px_rgba(0,0,0,0.5)] flex flex-col gap-5 cursor-default">
           <div>
             <h2 class="text-lg sm:text-xl font-bold text-neutral-900 dark:text-white tracking-tight leading-snug">
               Braille Buzz
@@ -472,10 +537,10 @@
               <div class="text-[11px] font-mono uppercase tracking-wider text-neutral-500 dark:text-neutral-400">
                 Presentation Slides
               </div>
-              <div class="relative group rounded-xl overflow-hidden border border-black/[0.1] dark:border-white/[0.12] bg-[#041533] aspect-video select-none">
+              <div
+                class="relative group rounded-xl overflow-hidden border border-black/[0.1] dark:border-white/[0.12] bg-[#041533] aspect-video select-none">
                 <img id="braille-gallery-main" src="../projectimages/braille-buzz/slide-01.jpg"
-                  alt="Slide 1 — Braille Buzz"
-                  onclick="openBrailleLightbox()"
+                  alt="Slide 1 — Braille Buzz" onclick="openBrailleLightbox()"
                   class="w-full h-full object-contain cursor-zoom-in transition-opacity duration-150" />
 
                 <!-- slide counter badge -->
@@ -511,7 +576,8 @@
               </div>
 
               <!-- scrollable thumbnail filmstrip -->
-              <div id="braille-gallery-thumbs" class="gallery-thumbs flex items-center gap-1.5 overflow-x-auto pb-1"></div>
+              <div id="braille-gallery-thumbs" class="gallery-thumbs flex items-center gap-1.5 overflow-x-auto pb-1">
+              </div>
             </div>
 
             <!-- Right: Project Overview -->
@@ -519,11 +585,16 @@
               <ul class="space-y-3 text-[0.84rem] text-neutral-300 font-normal leading-relaxed list-none pl-0">
                 <li class="flex items-start gap-2.5">
                   <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">&mdash;</span>
-                  <span class="text-neutral-200">Served as Technical Lead developing an Android accessibility application (prototyped in Figma and built in Java) that captures or imports photos of raised Braille cells and translates them into written and spoken English for blind and low-vision users.</span>
+                  <span class="text-neutral-200">Served as Technical Lead developing an Android accessibility
+                    application (prototyped in Figma and built in Java) that captures or imports photos of raised
+                    Braille cells and translates them into written and spoken English for blind and low-vision
+                    users.</span>
                 </li>
                 <li class="flex items-start gap-2.5">
                   <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">&mdash;</span>
-                  <span class="text-neutral-200">Trained a Convolutional Neural Network (CNN) in PyTorch across varied lighting, zoom, and angle conditions to classify Braille imagery over an HTTP inference server integrated with Google's Text-to-Speech (TTS) Python API for real-time audio playback.</span>
+                  <span class="text-neutral-200">Trained a Convolutional Neural Network (CNN) in PyTorch across varied
+                    lighting, zoom, and angle conditions to classify Braille imagery over an HTTP inference server
+                    integrated with Google's Text-to-Speech (TTS) Python API for real-time audio playback.</span>
                 </li>
               </ul>
             </div>
@@ -531,7 +602,8 @@
           </div>
 
           <div class="pt-3 border-t border-black/[0.08] dark:border-white/[0.08] flex flex-wrap items-center gap-2">
-            <a href="https://www.figma.com/proto/8AmWVPjTbXXuiJ4m4MnkkF/Braille-Reader?node-id=1%3A6&amp;scaling=scale-down&amp;page-id=0%3A1&amp;starting-point-node-id=1%3A3" target="_blank" rel="noopener"
+            <a href="https://www.figma.com/proto/8AmWVPjTbXXuiJ4m4MnkkF/Braille-Reader?node-id=1%3A6&amp;scaling=scale-down&amp;page-id=0%3A1&amp;starting-point-node-id=1%3A3"
+              target="_blank" rel="noopener"
               class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono font-medium bg-black/[0.04] dark:bg-white/[0.06] text-neutral-700 dark:text-neutral-300 hover:text-black dark:hover:text-white border border-black/[0.08] dark:border-white/[0.1] hover:border-black/[0.2] dark:hover:border-white/[0.25] transition-all">
               <svg class="w-3.5 h-3.5 stroke-current fill-none shrink-0" stroke-width="2" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -539,29 +611,32 @@
               </svg>
               <span>Figma Mockup</span>
             </a>
-            <a href="https://drive.google.com/drive/folders/19L5j-3ijWVqy0gWXfVhtv0VSc8AYtc5x" target="_blank" rel="noopener"
+            <a href="https://drive.google.com/drive/folders/19L5j-3ijWVqy0gWXfVhtv0VSc8AYtc5x" target="_blank"
+              rel="noopener"
               class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono font-medium bg-black/[0.04] dark:bg-white/[0.06] text-neutral-700 dark:text-neutral-300 hover:text-black dark:hover:text-white border border-black/[0.08] dark:border-white/[0.1] hover:border-black/[0.2] dark:hover:border-white/[0.25] transition-all">
               <svg class="w-3.5 h-3.5 stroke-current fill-none shrink-0" stroke-width="2" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round"
                   d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
               </svg>
-              <span>Android Mobile App</span>
+              <span>Android Mobile App code</span>
             </a>
-            <a href="https://drive.google.com/file/d/1riGhywHhOd36J2xp_-3n5XLoZQ7I_1us/view" target="_blank" rel="noopener"
+            <a href="https://drive.google.com/file/d/1riGhywHhOd36J2xp_-3n5XLoZQ7I_1us/view" target="_blank"
+              rel="noopener"
               class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono font-medium bg-black/[0.04] dark:bg-white/[0.06] text-neutral-700 dark:text-neutral-300 hover:text-black dark:hover:text-white border border-black/[0.08] dark:border-white/[0.1] hover:border-black/[0.2] dark:hover:border-white/[0.25] transition-all">
               <svg class="w-3.5 h-3.5 stroke-current fill-none shrink-0" stroke-width="2" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round"
                   d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
               </svg>
-              <span>TTS</span>
+              <span>Text-to-Speech code</span>
             </a>
-            <a href="https://drive.google.com/file/d/1MQKOy7IBOXzhpbkVZjmqNGjx9jn-nSma/view" target="_blank" rel="noopener"
+            <a href="https://drive.google.com/file/d/1MQKOy7IBOXzhpbkVZjmqNGjx9jn-nSma/view" target="_blank"
+              rel="noopener"
               class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono font-medium bg-black/[0.04] dark:bg-white/[0.06] text-neutral-700 dark:text-neutral-300 hover:text-black dark:hover:text-white border border-black/[0.08] dark:border-white/[0.1] hover:border-black/[0.2] dark:hover:border-white/[0.25] transition-all">
               <svg class="w-3.5 h-3.5 stroke-current fill-none shrink-0" stroke-width="2" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round"
                   d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
               </svg>
-              <span>CNN Model</span>
+              <span>CNN Model code</span>
             </a>
           </div>
         </div>
@@ -571,7 +646,8 @@
 
     <!-- ==================== SECTION 2: PAPERS ==================== -->
     <section id="papers" class="w-full max-w-5xl px-4 mb-16 scroll-mt-28">
-      <div class="flex flex-wrap items-center justify-between gap-4 mb-6 pb-3 border-b border-black/[0.08] dark:border-white/[0.08]">
+      <div
+        class="flex flex-wrap items-center justify-between gap-4 mb-6 pb-3 border-b border-black/[0.08] dark:border-white/[0.08]">
         <h2 class="text-2xl sm:text-3xl font-extrabold text-neutral-900 dark:text-white tracking-tight">
           Papers
         </h2>
@@ -592,12 +668,14 @@
         <div class="flex flex-col gap-5">
 
           <!-- 1. Privacy Impact Assessment -->
-          <div class="portfolio-card bg-[#161619] border border-white/[0.08] p-5 sm:p-6 rounded-2xl transition-all duration-300 hover:border-white/[0.18] shadow-[0_12px_32px_-10px_rgba(0,0,0,0.5)] flex flex-col gap-4">
+          <div
+            class="portfolio-card bg-[#161619] border border-white/[0.08] p-5 sm:p-6 rounded-2xl transition-all duration-300 hover:border-white/[0.18] shadow-[0_12px_32px_-10px_rgba(0,0,0,0.5)] flex flex-col gap-4">
             <h2 class="text-base sm:text-lg font-bold text-neutral-900 dark:text-white tracking-tight leading-snug">
               Privacy Impact Assessment (PIA)
             </h2>
             <div class="pt-3 border-t border-black/[0.08] dark:border-white/[0.08] flex items-center gap-2">
-              <a href="../projectfiles/privacy_impact_assessment_cs4726.enc" onclick="return openEncryptedFile(this.href, 'Privacy Impact Assessment', event)"
+              <a href="../projectfiles/privacy_impact_assessment_cs4726.enc"
+                onclick="return openEncryptedFile(this.href, 'Privacy Impact Assessment', event)"
                 class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono font-medium bg-black/[0.04] dark:bg-white/[0.06] text-neutral-700 dark:text-neutral-300 hover:text-black dark:hover:text-white border border-black/[0.08] dark:border-white/[0.1] hover:border-black/[0.2] dark:hover:border-white/[0.25] transition-all cursor-pointer">
                 <svg class="w-3.5 h-3.5 stroke-current fill-none shrink-0" stroke-width="2" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round"
@@ -609,12 +687,14 @@
           </div>
 
           <!-- 3. Perspectives on State Data Breach Laws -->
-          <div class="portfolio-card bg-[#161619] border border-white/[0.08] p-5 sm:p-6 rounded-2xl transition-all duration-300 hover:border-white/[0.18] shadow-[0_12px_32px_-10px_rgba(0,0,0,0.5)] flex flex-col gap-4">
+          <div
+            class="portfolio-card bg-[#161619] border border-white/[0.08] p-5 sm:p-6 rounded-2xl transition-all duration-300 hover:border-white/[0.18] shadow-[0_12px_32px_-10px_rgba(0,0,0,0.5)] flex flex-col gap-4">
             <h2 class="text-base sm:text-lg font-bold text-neutral-900 dark:text-white tracking-tight leading-snug">
               Perspectives on State Data Breach Laws
             </h2>
             <div class="pt-3 border-t border-black/[0.08] dark:border-white/[0.08] flex items-center gap-2">
-              <a href="../projectfiles/data_breach_laws_analysis.enc" onclick="return openEncryptedFile(this.href, 'State Data Breach Laws Analysis', event)"
+              <a href="../projectfiles/data_breach_laws_analysis.enc"
+                onclick="return openEncryptedFile(this.href, 'State Data Breach Laws Analysis', event)"
                 class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono font-medium bg-black/[0.04] dark:bg-white/[0.06] text-neutral-700 dark:text-neutral-300 hover:text-black dark:hover:text-white border border-black/[0.08] dark:border-white/[0.1] hover:border-black/[0.2] dark:hover:border-white/[0.25] transition-all cursor-pointer">
                 <svg class="w-3.5 h-3.5 stroke-current fill-none shrink-0" stroke-width="2" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round"
@@ -626,12 +706,14 @@
           </div>
 
           <!-- 5. Policy on Cyberwar in Aerospace Critical Infrastructure -->
-          <div class="portfolio-card bg-[#161619] border border-white/[0.08] p-5 sm:p-6 rounded-2xl transition-all duration-300 hover:border-white/[0.18] shadow-[0_12px_32px_-10px_rgba(0,0,0,0.5)] flex flex-col gap-4">
+          <div
+            class="portfolio-card bg-[#161619] border border-white/[0.08] p-5 sm:p-6 rounded-2xl transition-all duration-300 hover:border-white/[0.18] shadow-[0_12px_32px_-10px_rgba(0,0,0,0.5)] flex flex-col gap-4">
             <h2 class="text-base sm:text-lg font-bold text-neutral-900 dark:text-white tracking-tight leading-snug">
               Policy on Cyberwar in Aerospace Critical Infrastructure
             </h2>
             <div class="pt-3 border-t border-black/[0.08] dark:border-white/[0.08] flex items-center gap-2">
-              <a href="../projectfiles/cyberwar_aerospace_policy.enc" onclick="return openEncryptedFile(this.href, 'Cyberwar Aerospace Policy', event)"
+              <a href="../projectfiles/cyberwar_aerospace_policy.enc"
+                onclick="return openEncryptedFile(this.href, 'Cyberwar Aerospace Policy', event)"
                 class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono font-medium bg-black/[0.04] dark:bg-white/[0.06] text-neutral-700 dark:text-neutral-300 hover:text-black dark:hover:text-white border border-black/[0.08] dark:border-white/[0.1] hover:border-black/[0.2] dark:hover:border-white/[0.25] transition-all cursor-pointer">
                 <svg class="w-3.5 h-3.5 stroke-current fill-none shrink-0" stroke-width="2" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round"
@@ -643,12 +725,14 @@
           </div>
 
           <!-- 7. Technology Acquisition Strategy Paper -->
-          <div class="portfolio-card bg-[#161619] border border-white/[0.08] p-5 sm:p-6 rounded-2xl transition-all duration-300 hover:border-white/[0.18] shadow-[0_12px_32px_-10px_rgba(0,0,0,0.5)] flex flex-col gap-4">
+          <div
+            class="portfolio-card bg-[#161619] border border-white/[0.08] p-5 sm:p-6 rounded-2xl transition-all duration-300 hover:border-white/[0.18] shadow-[0_12px_32px_-10px_rgba(0,0,0,0.5)] flex flex-col gap-4">
             <h2 class="text-base sm:text-lg font-bold text-neutral-900 dark:text-white tracking-tight leading-snug">
               Technology Acquisition Strategy Paper
             </h2>
             <div class="pt-3 border-t border-black/[0.08] dark:border-white/[0.08] flex items-center gap-2">
-              <a href="../projectfiles/acquisition_paper_cs4010.enc" onclick="return openEncryptedFile(this.href, 'Technology Acquisition Strategy Paper', event)"
+              <a href="../projectfiles/acquisition_paper_cs4010.enc"
+                onclick="return openEncryptedFile(this.href, 'Technology Acquisition Strategy Paper', event)"
                 class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono font-medium bg-black/[0.04] dark:bg-white/[0.06] text-neutral-700 dark:text-neutral-300 hover:text-black dark:hover:text-white border border-black/[0.08] dark:border-white/[0.1] hover:border-black/[0.2] dark:hover:border-white/[0.25] transition-all cursor-pointer">
                 <svg class="w-3.5 h-3.5 stroke-current fill-none shrink-0" stroke-width="2" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round"
@@ -665,12 +749,14 @@
         <div class="flex flex-col gap-5">
 
           <!-- 2. Health Information Privacy Reform Act -->
-          <div class="portfolio-card bg-[#161619] border border-white/[0.08] p-5 sm:p-6 rounded-2xl transition-all duration-300 hover:border-white/[0.18] shadow-[0_12px_32px_-10px_rgba(0,0,0,0.5)] flex flex-col gap-4">
+          <div
+            class="portfolio-card bg-[#161619] border border-white/[0.08] p-5 sm:p-6 rounded-2xl transition-all duration-300 hover:border-white/[0.18] shadow-[0_12px_32px_-10px_rgba(0,0,0,0.5)] flex flex-col gap-4">
             <h2 class="text-base sm:text-lg font-bold text-neutral-900 dark:text-white tracking-tight leading-snug">
               Health Information Privacy Reform Act (HIPRA)
             </h2>
             <div class="pt-3 border-t border-black/[0.08] dark:border-white/[0.08] flex items-center gap-2">
-              <a href="../projectfiles/health_privacy_reform_hipra.enc" onclick="return openEncryptedFile(this.href, 'Health Information Privacy Reform Act', event)"
+              <a href="../projectfiles/health_privacy_reform_hipra.enc"
+                onclick="return openEncryptedFile(this.href, 'Health Information Privacy Reform Act', event)"
                 class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono font-medium bg-black/[0.04] dark:bg-white/[0.06] text-neutral-700 dark:text-neutral-300 hover:text-black dark:hover:text-white border border-black/[0.08] dark:border-white/[0.1] hover:border-black/[0.2] dark:hover:border-white/[0.25] transition-all cursor-pointer">
                 <svg class="w-3.5 h-3.5 stroke-current fill-none shrink-0" stroke-width="2" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round"
@@ -682,12 +768,14 @@
           </div>
 
           <!-- 4. Georgia Tech Data Governance & Privacy Assessment -->
-          <div class="portfolio-card bg-[#161619] border border-white/[0.08] p-5 sm:p-6 rounded-2xl transition-all duration-300 hover:border-white/[0.18] shadow-[0_12px_32px_-10px_rgba(0,0,0,0.5)] flex flex-col gap-4">
+          <div
+            class="portfolio-card bg-[#161619] border border-white/[0.08] p-5 sm:p-6 rounded-2xl transition-all duration-300 hover:border-white/[0.18] shadow-[0_12px_32px_-10px_rgba(0,0,0,0.5)] flex flex-col gap-4">
             <h2 class="text-base sm:text-lg font-bold text-neutral-900 dark:text-white tracking-tight leading-snug">
               Georgia Tech Data Governance &amp; Privacy Review
             </h2>
             <div class="pt-3 border-t border-black/[0.08] dark:border-white/[0.08] flex flex-wrap items-center gap-2">
-              <a href="../projectfiles/gt_data_governance_report.enc" onclick="return openEncryptedFile(this.href, 'Georgia Tech Data Governance Report', event)"
+              <a href="../projectfiles/gt_data_governance_report.enc"
+                onclick="return openEncryptedFile(this.href, 'Georgia Tech Data Governance Report', event)"
                 class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono font-medium bg-black/[0.04] dark:bg-white/[0.06] text-neutral-700 dark:text-neutral-300 hover:text-black dark:hover:text-white border border-black/[0.08] dark:border-white/[0.1] hover:border-black/[0.2] dark:hover:border-white/[0.25] transition-all cursor-pointer">
                 <svg class="w-3.5 h-3.5 stroke-current fill-none shrink-0" stroke-width="2" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round"
@@ -695,7 +783,8 @@
                 </svg>
                 <span>Report</span>
               </a>
-              <a href="../projectfiles/gt_data_governance_memo.enc" onclick="return openEncryptedFile(this.href, 'Georgia Tech Data Governance Memo', event)"
+              <a href="../projectfiles/gt_data_governance_memo.enc"
+                onclick="return openEncryptedFile(this.href, 'Georgia Tech Data Governance Memo', event)"
                 class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono font-medium bg-black/[0.04] dark:bg-white/[0.06] text-neutral-700 dark:text-neutral-300 hover:text-black dark:hover:text-white border border-black/[0.08] dark:border-white/[0.1] hover:border-black/[0.2] dark:hover:border-white/[0.25] transition-all cursor-pointer">
                 <svg class="w-3.5 h-3.5 stroke-current fill-none shrink-0" stroke-width="2" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round"
@@ -703,7 +792,8 @@
                 </svg>
                 <span>Memo</span>
               </a>
-              <a href="https://docs.google.com/presentation/d/1LiLWF6Oyh6E5ENOW3ZPjTuiZjAoB98kp2OeVS6kQkXg/edit?usp=sharing" target="_blank" rel="noopener"
+              <a href="https://docs.google.com/presentation/d/1LiLWF6Oyh6E5ENOW3ZPjTuiZjAoB98kp2OeVS6kQkXg/edit?usp=sharing"
+                target="_blank" rel="noopener"
                 class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono font-medium bg-black/[0.04] dark:bg-white/[0.06] text-neutral-700 dark:text-neutral-300 hover:text-black dark:hover:text-white border border-black/[0.08] dark:border-white/[0.1] hover:border-black/[0.2] dark:hover:border-white/[0.25] transition-all">
                 <svg class="w-3.5 h-3.5 stroke-current fill-none shrink-0" stroke-width="2" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round"
@@ -715,12 +805,14 @@
           </div>
 
           <!-- 6. Advancing Incident Response with AI at Cloudflare -->
-          <div class="portfolio-card bg-[#161619] border border-white/[0.08] p-5 sm:p-6 rounded-2xl transition-all duration-300 hover:border-white/[0.18] shadow-[0_12px_32px_-10px_rgba(0,0,0,0.5)] flex flex-col gap-4">
+          <div
+            class="portfolio-card bg-[#161619] border border-white/[0.08] p-5 sm:p-6 rounded-2xl transition-all duration-300 hover:border-white/[0.18] shadow-[0_12px_32px_-10px_rgba(0,0,0,0.5)] flex flex-col gap-4">
             <h2 class="text-base sm:text-lg font-bold text-neutral-900 dark:text-white tracking-tight leading-snug">
               Advancing Incident Response with AI at Cloudflare
             </h2>
             <div class="pt-3 border-t border-black/[0.08] dark:border-white/[0.08] flex items-center gap-2">
-              <a href="../projectfiles/incident_response_ai_cloudflare.enc" onclick="return openEncryptedFile(this.href, 'Cloudflare AI Incident Response', event)"
+              <a href="../projectfiles/incident_response_ai_cloudflare.enc"
+                onclick="return openEncryptedFile(this.href, 'Cloudflare AI Incident Response', event)"
                 class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono font-medium bg-black/[0.04] dark:bg-white/[0.06] text-neutral-700 dark:text-neutral-300 hover:text-black dark:hover:text-white border border-black/[0.08] dark:border-white/[0.1] hover:border-black/[0.2] dark:hover:border-white/[0.25] transition-all cursor-pointer">
                 <svg class="w-3.5 h-3.5 stroke-current fill-none shrink-0" stroke-width="2" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round"
@@ -732,12 +824,14 @@
           </div>
 
           <!-- 8. Code Analysis & Debugging Features -->
-          <div class="portfolio-card bg-[#161619] border border-white/[0.08] p-5 sm:p-6 rounded-2xl transition-all duration-300 hover:border-white/[0.18] shadow-[0_12px_32px_-10px_rgba(0,0,0,0.5)] flex flex-col gap-4">
+          <div
+            class="portfolio-card bg-[#161619] border border-white/[0.08] p-5 sm:p-6 rounded-2xl transition-all duration-300 hover:border-white/[0.18] shadow-[0_12px_32px_-10px_rgba(0,0,0,0.5)] flex flex-col gap-4">
             <h2 class="text-base sm:text-lg font-bold text-neutral-900 dark:text-white tracking-tight leading-snug">
               A Comparison of Debugging Features &amp; Code Analysis
             </h2>
             <div class="pt-3 border-t border-black/[0.08] dark:border-white/[0.08] flex items-center gap-2">
-              <a href="../projectfiles/code_analysis_debugging_features.enc" onclick="return openEncryptedFile(this.href, 'Code Analysis & Debugging Features', event)"
+              <a href="../projectfiles/code_analysis_debugging_features.enc"
+                onclick="return openEncryptedFile(this.href, 'Code Analysis & Debugging Features', event)"
                 class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono font-medium bg-black/[0.04] dark:bg-white/[0.06] text-neutral-700 dark:text-neutral-300 hover:text-black dark:hover:text-white border border-black/[0.08] dark:border-white/[0.1] hover:border-black/[0.2] dark:hover:border-white/[0.25] transition-all cursor-pointer">
                 <svg class="w-3.5 h-3.5 stroke-current fill-none shrink-0" stroke-width="2" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round"
@@ -768,18 +862,21 @@
       </button>
 
       <!-- lock badge + document title -->
-      <div class="inline-flex items-center justify-center w-10 h-10 rounded-2xl bg-black/[0.04] dark:bg-white/[0.06] border border-black/[0.08] dark:border-white/[0.1] text-neutral-700 dark:text-neutral-200 mb-3">
+      <div
+        class="inline-flex items-center justify-center w-10 h-10 rounded-2xl bg-black/[0.04] dark:bg-white/[0.06] border border-black/[0.08] dark:border-white/[0.1] text-neutral-700 dark:text-neutral-200 mb-3">
         <svg class="w-4 h-4 stroke-current fill-none" stroke-width="2" viewBox="0 0 24 24">
           <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
           <path d="M7 11V7a5 5 0 0 1 10 0v4" />
         </svg>
       </div>
-      <h2 id="pdf-unlock-doc-title" class="text-lg sm:text-xl font-bold text-neutral-900 dark:text-white tracking-tight mb-2 px-6">
+      <h2 id="pdf-unlock-doc-title"
+        class="text-lg sm:text-xl font-bold text-neutral-900 dark:text-white tracking-tight mb-2 px-6">
         Protected PDF
       </h2>
 
       <p class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed mb-6">
-        This PDF is password-protected to comply with the Georgia Institute of Technology Honor Code, as it contains academic coursework submissions.
+        This PDF is password-protected to comply with the Georgia Institute of Technology Honor Code, as it contains
+        academic coursework submissions.
         <span class="block mt-2 text-[11px] sm:text-xs text-neutral-500 dark:text-neutral-400/80">
           If you are accessing this from my resume, the password is provided directly next to the link.
         </span>
@@ -854,18 +951,21 @@
         </svg>
       </button>
 
-      <div class="inline-flex items-center justify-center w-10 h-10 rounded-2xl bg-black/[0.04] dark:bg-white/[0.06] border border-black/[0.08] dark:border-white/[0.1] text-neutral-700 dark:text-neutral-200 mb-3">
+      <div
+        class="inline-flex items-center justify-center w-10 h-10 rounded-2xl bg-black/[0.04] dark:bg-white/[0.06] border border-black/[0.08] dark:border-white/[0.1] text-neutral-700 dark:text-neutral-200 mb-3">
         <svg class="w-4 h-4 stroke-current fill-none" stroke-width="2" viewBox="0 0 24 24">
           <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
           <path d="M7 11V7a5 5 0 0 1 10 0v4" />
         </svg>
       </div>
-      <h2 id="gt-access-doc-title" class="text-lg sm:text-xl font-bold text-neutral-900 dark:text-white tracking-tight mb-2 px-6">
+      <h2 id="gt-access-doc-title"
+        class="text-lg sm:text-xl font-bold text-neutral-900 dark:text-white tracking-tight mb-2 px-6">
         Georgia Tech Restricted Link
       </h2>
 
       <p class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed mb-6">
-        This link requires Georgia Tech authorization. Please reach out via my Contact page and I will grant access to your <span class="font-mono text-neutral-800 dark:text-neutral-200">@gatech.edu</span> account specifically.
+        This link requires Georgia Tech authorization. Please reach out via my Contact page and I will grant access to
+        your <span class="font-mono text-neutral-800 dark:text-neutral-200">@gatech.edu</span> account specifically.
       </p>
 
       <div class="flex flex-wrap items-center justify-center gap-2.5">
@@ -905,9 +1005,9 @@
       </div>
 
       <!-- slide stage -->
-      <div id="gallery-lightbox-stage" class="relative w-full rounded-2xl overflow-hidden bg-white shadow-2xl border border-white/20 flex items-center justify-center max-h-[80vh]">
-        <img id="gallery-lightbox-img" src="../projectimages/aquatic-ecology/slide-01.jpg"
-          alt="Presentation slide"
+      <div id="gallery-lightbox-stage"
+        class="relative w-full rounded-2xl overflow-hidden bg-white shadow-2xl border border-white/20 flex items-center justify-center max-h-[80vh]">
+        <img id="gallery-lightbox-img" src="../projectimages/aquatic-ecology/slide-01.jpg" alt="Presentation slide"
           class="max-h-[80vh] w-auto max-w-full object-contain select-none" />
 
         <button id="lightbox-prev-btn" type="button" onclick="stepActiveLightbox(-1)"
@@ -930,7 +1030,8 @@
 
   <!-- footer -->
   <div class="w-full max-w-5xl mt-[3em] mb-0 px-4">
-    <div class="w-full text-center py-6 border-t border-black/[0.08] dark:border-white/[0.08] text-xs font-mono text-neutral-500 dark:text-neutral-400">
+    <div
+      class="w-full text-center py-6 border-t border-black/[0.08] dark:border-white/[0.08] text-xs font-mono text-neutral-500 dark:text-neutral-400">
       <p>
         Made with 💌 by Aesha Shah
       </p>
@@ -953,7 +1054,7 @@
       let password = '';
       try {
         password = sessionStorage.getItem(PWD_SESSION_KEY) || '';
-      } catch (e) {}
+      } catch (e) { }
       const unlocked = Boolean(password);
 
       document.querySelectorAll('.pdf-session-bar').forEach(bar => {
@@ -967,8 +1068,13 @@
       });
 
       if (unlocked) {
+        unlockCs7641Media(password);
         unlockWandersyncMedia(password);
       } else {
+        const csEl = document.getElementById('cs7641-unlocked-media');
+        if (csEl) {
+          csEl.classList.add('hidden');
+        }
         const wsEl = document.getElementById('wandersync-unlocked-media');
         if (wsEl) {
           wsEl.classList.add('hidden');
@@ -1059,7 +1165,7 @@
       }
 
       // Pre-fetch encrypted bytes while user types password
-      fetchEncryptedBytes(url).catch(() => {});
+      fetchEncryptedBytes(url).catch(() => { });
 
       overlay.classList.add('is-open');
       setTimeout(() => {
@@ -1154,7 +1260,7 @@
 
         try {
           sessionStorage.setItem(PWD_SESSION_KEY, password);
-        } catch (storageErr) {}
+        } catch (storageErr) { }
         syncLockUI();
 
         const win = window.open(blobUrl, '_blank');
@@ -1202,7 +1308,7 @@
       let password = null;
       try {
         password = sessionStorage.getItem(PWD_SESSION_KEY);
-      } catch (e) {}
+      } catch (e) { }
 
       if (!password) {
         openPdfUnlockModal(url, displayName);
@@ -1263,7 +1369,7 @@
             </html>
           `);
           targetWindow.document.close();
-        } catch (e) {}
+        } catch (e) { }
       }
 
       try {
@@ -1280,9 +1386,9 @@
         }
       } catch (err) {
         if (targetWindow) {
-          try { targetWindow.close(); } catch (e) {}
+          try { targetWindow.close(); } catch (e) { }
         }
-        try { sessionStorage.removeItem(PWD_SESSION_KEY); } catch (e) {}
+        try { sessionStorage.removeItem(PWD_SESSION_KEY); } catch (e) { }
         syncLockUI();
         openPdfUnlockModal(url, displayName);
       }
@@ -1367,6 +1473,26 @@
     let brailleIndex = 0;
     let lightboxMode = 'aquatic';
 
+    const CS7641_SLIDES = [
+      { encUrl: '../projectfiles/cs7641_slide_01.enc', src: '', title: 'CS 7641 Breast Cancer Detection Project' },
+      { encUrl: '../projectfiles/cs7641_slide_02.enc', src: '', title: 'Introduction' },
+      { encUrl: '../projectfiles/cs7641_slide_03.enc', src: '', title: 'Literature Review' },
+      { encUrl: '../projectfiles/cs7641_slide_04.enc', src: '', title: 'Problem Definition' },
+      { encUrl: '../projectfiles/cs7641_slide_05.enc', src: '', title: 'Data Preprocessing' },
+      { encUrl: '../projectfiles/cs7641_slide_06.enc', src: '', title: 'Algorithms Implemented' },
+      { encUrl: '../projectfiles/cs7641_slide_07.enc', src: '', title: 'K-Means Clusters Results & Evaluation (k = 2)' },
+      { encUrl: '../projectfiles/cs7641_slide_08.enc', src: '', title: 'K-Means Clusters Results & Evaluation (k = 3)' },
+      { encUrl: '../projectfiles/cs7641_slide_09.enc', src: '', title: 'SVM Results & Evaluation (ROC-AUC & Confusion Matrix)' },
+      { encUrl: '../projectfiles/cs7641_slide_10.enc', src: '', title: 'SVM Results & Evaluation (Repeated K-Fold)' },
+      { encUrl: '../projectfiles/cs7641_slide_11.enc', src: '', title: 'SVM Results & Evaluation (Stratified K-Fold)' },
+      { encUrl: '../projectfiles/cs7641_slide_12.enc', src: '', title: 'XGBoost Results & Evaluation' },
+      { encUrl: '../projectfiles/cs7641_slide_13.enc', src: '', title: 'Model Comparison' },
+      { encUrl: '../projectfiles/cs7641_slide_14.enc', src: '', title: 'Discussion' },
+      { encUrl: '../projectfiles/cs7641_slide_15.enc', src: '', title: 'Impact for Healthcare & Ethical Considerations' }
+    ];
+    let cs7641Index = 0;
+    let cs7641MediaState = 'idle'; // 'idle' | 'loading' | 'ready'
+
     const WANDERSYNC_SLIDES = [
       { encUrl: '../projectfiles/wandersync_uml_01.enc', src: '', title: 'Use Case Diagram', darkBg: false },
       { encUrl: '../projectfiles/wandersync_uml_02.enc', src: '', title: 'Domain Model', darkBg: true },
@@ -1397,6 +1523,96 @@
       window.decryptedBlobCache.set(encUrl, blobUrl);
       return blobUrl;
     }
+
+    async function unlockCs7641Media(password) {
+      const csEl = document.getElementById('cs7641-unlocked-media');
+      if (!csEl) return;
+      if (cs7641MediaState === 'ready') {
+        csEl.classList.remove('hidden');
+        return;
+      }
+      if (cs7641MediaState === 'loading') return;
+      cs7641MediaState = 'loading';
+
+      try {
+        const slideUrls = await Promise.all(
+          CS7641_SLIDES.map(s => decryptAssetBlobUrl(s.encUrl, 'image/jpeg', password))
+        );
+        slideUrls.forEach((url, i) => {
+          CS7641_SLIDES[i].src = url;
+        });
+
+        renderCs7641Gallery();
+        csEl.classList.remove('hidden');
+        cs7641MediaState = 'ready';
+      } catch (e) {
+        cs7641MediaState = 'idle';
+      }
+    }
+
+    function renderCs7641Gallery(scrollThumbs = false) {
+      const slide = CS7641_SLIDES[cs7641Index];
+      if (!slide || !slide.src) return;
+      const numStr = String(cs7641Index + 1).padStart(2, '0') + ' / ' + String(CS7641_SLIDES.length).padStart(2, '0');
+
+      const mainImg = document.getElementById('cs7641-gallery-main');
+      const counter = document.getElementById('cs7641-gallery-counter');
+      const lbImg = document.getElementById('gallery-lightbox-img');
+      const lbCap = document.getElementById('gallery-lightbox-caption');
+
+      if (mainImg) {
+        mainImg.src = slide.src;
+        mainImg.alt = 'Slide ' + (cs7641Index + 1) + ' — ' + slide.title;
+      }
+      if (counter) counter.textContent = numStr;
+      if (lightboxMode === 'cs7641') {
+        setLightboxStageBg('white');
+        if (lbImg) {
+          lbImg.src = slide.src;
+          lbImg.alt = 'Slide ' + (cs7641Index + 1) + ' — ' + slide.title;
+        }
+        if (lbCap) lbCap.textContent = numStr + ' — ' + slide.title;
+      }
+
+      const thumbsEl = document.getElementById('cs7641-gallery-thumbs');
+      if (thumbsEl) {
+        if (!thumbsEl.children.length) {
+          thumbsEl.innerHTML = CS7641_SLIDES.map((s, idx) => `
+            <button type="button" onclick="setCs7641Slide(${idx})" data-cs7641-idx="${idx}"
+              class="w-16 h-9 shrink-0 rounded-md overflow-hidden bg-white border-2 transition-all cursor-pointer p-0"
+              aria-label="Go to slide ${idx + 1}: ${s.title}">
+              <img src="${s.src}" alt="" class="w-full h-full object-cover" />
+            </button>
+          `).join('');
+        }
+        thumbsEl.querySelectorAll('[data-cs7641-idx]').forEach(btn => {
+          const idx = Number(btn.getAttribute('data-cs7641-idx'));
+          if (idx === cs7641Index) {
+            btn.className = 'w-16 h-9 shrink-0 rounded-md overflow-hidden bg-white border-2 border-neutral-900 dark:border-white opacity-100 transition-all cursor-pointer p-0';
+          } else {
+            btn.className = 'w-16 h-9 shrink-0 rounded-md overflow-hidden bg-white border border-black/15 dark:border-white/15 opacity-55 hover:opacity-90 transition-all cursor-pointer p-0';
+          }
+        });
+        if (scrollThumbs === true) {
+          const activeThumb = thumbsEl.querySelector(`[data-cs7641-idx="${cs7641Index}"]`);
+          if (activeThumb) {
+            const targetLeft = activeThumb.offsetLeft - (thumbsEl.clientWidth / 2) + (activeThumb.clientWidth / 2);
+            thumbsEl.scrollTo({ left: Math.max(0, targetLeft), behavior: 'smooth' });
+          }
+        }
+      }
+    }
+
+    function setCs7641Slide(idx) {
+      cs7641Index = (idx + CS7641_SLIDES.length) % CS7641_SLIDES.length;
+      renderCs7641Gallery(true);
+    }
+    window.setCs7641Slide = setCs7641Slide;
+
+    function stepCs7641Slide(delta) {
+      setCs7641Slide(cs7641Index + delta);
+    }
+    window.stepCs7641Slide = stepCs7641Slide;
 
     async function unlockWandersyncMedia(password) {
       const wsEl = document.getElementById('wandersync-unlocked-media');
@@ -1430,7 +1646,7 @@
               vid.src = videoBlobUrl;
             }
           })
-          .catch(() => {});
+          .catch(() => { });
       } catch (e) {
         wandersyncMediaState = 'idle';
       }
@@ -1635,8 +1851,26 @@
       if (lightboxMode === 'aquatic') stepAquaticSlide(delta);
       else if (lightboxMode === 'braille') stepBrailleSlide(delta);
       else if (lightboxMode === 'wandersync') stepWandersyncSlide(delta);
+      else if (lightboxMode === 'cs7641') stepCs7641Slide(delta);
     }
     window.stepActiveLightbox = stepActiveLightbox;
+
+    function openCs7641Lightbox() {
+      if (cs7641MediaState !== 'ready') return;
+      lightboxMode = 'cs7641';
+      setLightboxStageBg('white');
+      const overlay = document.getElementById('gallery-lightbox-overlay');
+      const prevBtn = document.getElementById('lightbox-prev-btn');
+      const nextBtn = document.getElementById('lightbox-next-btn');
+      if (prevBtn) prevBtn.classList.remove('hidden');
+      if (nextBtn) nextBtn.classList.remove('hidden');
+      if (overlay) {
+        renderCs7641Gallery();
+        overlay.classList.add('is-open');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+    window.openCs7641Lightbox = openCs7641Lightbox;
 
     function openGalleryLightbox() {
       lightboxMode = 'aquatic';
@@ -1728,8 +1962,8 @@
       const overlay = document.getElementById('gallery-lightbox-overlay');
       if (!overlay || !overlay.classList.contains('is-open')) return;
       if (e.key === 'Escape') closeGalleryLightbox();
-      else if ((lightboxMode === 'aquatic' || lightboxMode === 'braille' || lightboxMode === 'wandersync') && e.key === 'ArrowLeft') stepActiveLightbox(-1);
-      else if ((lightboxMode === 'aquatic' || lightboxMode === 'braille' || lightboxMode === 'wandersync') && e.key === 'ArrowRight') stepActiveLightbox(1);
+      else if ((lightboxMode === 'aquatic' || lightboxMode === 'braille' || lightboxMode === 'wandersync' || lightboxMode === 'cs7641') && e.key === 'ArrowLeft') stepActiveLightbox(-1);
+      else if ((lightboxMode === 'aquatic' || lightboxMode === 'braille' || lightboxMode === 'wandersync' || lightboxMode === 'cs7641') && e.key === 'ArrowRight') stepActiveLightbox(1);
     });
 
     window.addEventListener('DOMContentLoaded', () => {
