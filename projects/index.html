@@ -489,7 +489,115 @@
           </div>
         </div>
 
-        <!-- 5. Protecting Critical Aquatic Ecology using Deep Learning -->
+        <!-- 5. MASC AI: Mosquito Data Classification & Mapping (NASA SEES) -->
+        <div id="masc-ai"
+          class="portfolio-card scroll-mt-28 bg-[#161619] border border-white/[0.08] p-5 sm:p-6 rounded-2xl transition-all duration-300 hover:border-white/[0.18] shadow-[0_12px_32px_-10px_rgba(0,0,0,0.5)] flex flex-col gap-5 cursor-default">
+          <div class="space-y-3">
+            <div>
+              <h2 class="text-lg sm:text-xl font-bold text-neutral-900 dark:text-white tracking-tight leading-snug">
+                MASC AI: A Novel Method for Effective Mosquito Data Classification and Mapping
+              </h2>
+              <div class="text-xs font-mono text-neutral-500 dark:text-neutral-400 mt-1">
+                NASA STEM Enhancement in Earth Science (SEES) &mdash; UT Austin Center for Space Research
+              </div>
+            </div>
+
+            <div class="flex flex-wrap items-center gap-2">
+              <a href="https://studio.m-anage.com/agu/fm22/meetingapp.cgi/Paper/1081255" target="_blank" rel="noopener"
+                class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono font-medium bg-black/[0.04] dark:bg-white/[0.06] text-neutral-700 dark:text-neutral-300 hover:text-black dark:hover:text-white border border-black/[0.08] dark:border-white/[0.1] hover:border-black/[0.2] dark:hover:border-white/[0.25] transition-all">
+                <svg class="w-3.5 h-3.5 stroke-current fill-none shrink-0" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+                <span>AGU Submission</span>
+              </a>
+              <a href="../papers/MASC_AI_GLOBE.pdf" target="_blank" rel="noopener"
+                class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono font-medium bg-black/[0.04] dark:bg-white/[0.06] text-neutral-700 dark:text-neutral-300 hover:text-black dark:hover:text-white border border-black/[0.08] dark:border-white/[0.1] hover:border-black/[0.2] dark:hover:border-white/[0.25] transition-all">
+                <svg class="w-3.5 h-3.5 stroke-current fill-none shrink-0" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <span>GLOBE Submission</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+
+            <!-- Left: 12-slide Presentation Gallery -->
+            <div class="space-y-2">
+              <div class="text-[11px] font-mono uppercase tracking-wider text-neutral-500 dark:text-neutral-400">
+                Presentation Slides
+              </div>
+              <div
+                class="relative group rounded-xl overflow-hidden border border-black/[0.1] dark:border-white/[0.12] bg-[#79cbf5] aspect-video select-none">
+                <img id="nasa-gallery-main" src="../projectimages/nasa-masc-ai/slide-01.jpg"
+                  alt="Slide 1 — MASC AI: Mosquito Data Classification and Mapping" onclick="openNasaLightbox()"
+                  class="w-full h-full object-contain cursor-zoom-in transition-opacity duration-150" />
+
+                <!-- slide counter badge -->
+                <span id="nasa-gallery-counter"
+                  class="gallery-badge absolute bottom-2.5 left-2.5 px-2 py-0.5 rounded-md text-[11px] font-mono font-medium pointer-events-none">
+                  01 / 12
+                </span>
+
+                <!-- fullscreen expand button -->
+                <button type="button" onclick="openNasaLightbox()"
+                  class="gallery-ctrl absolute top-2.5 right-2.5 w-7 h-7 rounded-lg inline-flex items-center justify-center transition-all cursor-pointer"
+                  aria-label="Expand MASC AI slide gallery">
+                  <svg class="w-3.5 h-3.5 fill-none" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                  </svg>
+                </button>
+
+                <!-- prev / next buttons -->
+                <button type="button" onclick="stepNasaSlide(-1)"
+                  class="gallery-ctrl absolute left-2.5 top-1/2 -translate-y-1/2 w-8 h-8 rounded-lg inline-flex items-center justify-center transition-all cursor-pointer"
+                  aria-label="Previous slide">
+                  <svg class="w-4 h-4 fill-none" stroke-width="2.2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                  </svg>
+                </button>
+                <button type="button" onclick="stepNasaSlide(1)"
+                  class="gallery-ctrl absolute right-2.5 top-1/2 -translate-y-1/2 w-8 h-8 rounded-lg inline-flex items-center justify-center transition-all cursor-pointer"
+                  aria-label="Next slide">
+                  <svg class="w-4 h-4 fill-none" stroke-width="2.2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                  </svg>
+                </button>
+              </div>
+
+              <!-- scrollable thumbnail filmstrip -->
+              <div id="nasa-gallery-thumbs" class="gallery-thumbs flex items-center gap-1.5 overflow-x-auto pb-1">
+              </div>
+            </div>
+
+            <!-- Right: Project Overview -->
+            <div class="md:pt-6">
+              <ul class="space-y-3 text-[0.84rem] text-neutral-300 font-normal leading-relaxed list-none pl-0">
+                <li class="flex items-start gap-2.5">
+                  <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">&mdash;</span>
+                  <span class="text-neutral-200">Developed MASC AI (Mosquito lArvae Siphon Classification AI), a
+                    supervised logistic regression model in Python (NumPy, OpenCV, scikit-image) trained on 3,275
+                    verified GLOBE Observer citizen-science larva images across five continents to automate
+                    <em>Anopheles</em> malaria-vector identification&mdash;where over 90% of unverified crowdsourced
+                    labels were inaccurate or missing&mdash;achieving 88.24% training and 86.11% test accuracy.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <span class="text-neutral-500 select-none mt-0.5 leading-none shrink-0">&mdash;</span>
+                  <span class="text-neutral-200">Engineered a geospatial mapping pipeline in Python (Pandas, gmplot)
+                    alongside NASA Earth observation tools (GLOBE ADAT, Collect Earth Online, AppEARS, NASA Worldview,
+                    Google Earth Engine, ArcGIS Online) to plot global and regional <em>Anopheles</em>, <em>Aedes</em>,
+                    and <em>Culex</em> vector distributions and inform public health policy; presented as first author
+                    at the AGU Fall Meeting 2022.</span>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 6. Protecting Critical Aquatic Ecology using Deep Learning -->
         <div
           class="portfolio-card bg-[#161619] border border-white/[0.08] p-5 sm:p-6 rounded-2xl transition-all duration-300 hover:border-white/[0.18] shadow-[0_12px_32px_-10px_rgba(0,0,0,0.5)] flex flex-col gap-5 cursor-default">
           <div class="space-y-3">
@@ -1481,6 +1589,22 @@
       { src: '../projectimages/braille-buzz/slide-10.jpg', title: 'Android App Java Code' }
     ];
     let brailleIndex = 0;
+
+    const NASA_SLIDES = [
+      { src: '../projectimages/nasa-masc-ai/slide-01.jpg', title: 'MASC AI — Title Slide' },
+      { src: '../projectimages/nasa-masc-ai/slide-02.jpg', title: 'Abstract' },
+      { src: '../projectimages/nasa-masc-ai/slide-03.jpg', title: 'The Problem — GLOBE Mosquito Habitat Mapper' },
+      { src: '../projectimages/nasa-masc-ai/slide-04.jpg', title: 'Purpose & Goal — Siphon Classification' },
+      { src: '../projectimages/nasa-masc-ai/slide-05.jpg', title: 'Research Questions' },
+      { src: '../projectimages/nasa-masc-ai/slide-06.jpg', title: 'Research Design & Dataset' },
+      { src: '../projectimages/nasa-masc-ai/slide-07.jpg', title: 'Model — Data Input & Sigmoid Activation' },
+      { src: '../projectimages/nasa-masc-ai/slide-08.jpg', title: 'Model — Cost Function & Gradient Descent' },
+      { src: '../projectimages/nasa-masc-ai/slide-09.jpg', title: 'Geographical Mapping Pipeline' },
+      { src: '../projectimages/nasa-masc-ai/slide-10.jpg', title: 'Results — Accuracy & Global Distribution' },
+      { src: '../projectimages/nasa-masc-ai/slide-11.jpg', title: 'Results — Regional Distribution Maps' },
+      { src: '../projectimages/nasa-masc-ai/slide-12.jpg', title: 'Acknowledgements' }
+    ];
+    let nasaIndex = 0;
     let lightboxMode = 'aquatic';
 
     const CS7641_SLIDES = [
@@ -1516,9 +1640,10 @@
     function setLightboxStageBg(mode) {
       const stage = document.getElementById('gallery-lightbox-stage');
       if (!stage) return;
-      stage.classList.remove('bg-[#041533]', 'bg-[#0b0b0e]', 'bg-white');
+      stage.classList.remove('bg-[#041533]', 'bg-[#0b0b0e]', 'bg-[#79cbf5]', 'bg-white');
       if (mode === 'navy') stage.classList.add('bg-[#041533]');
       else if (mode === 'dark') stage.classList.add('bg-[#0b0b0e]');
+      else if (mode === 'sky') stage.classList.add('bg-[#79cbf5]');
       else stage.classList.add('bg-white');
     }
 
@@ -1876,13 +2001,92 @@
     }
     window.stepBrailleSlide = stepBrailleSlide;
 
+    function renderNasaGallery(scrollThumbs = false) {
+      const slide = NASA_SLIDES[nasaIndex];
+      const numStr = String(nasaIndex + 1).padStart(2, '0') + ' / ' + String(NASA_SLIDES.length).padStart(2, '0');
+
+      const mainImg = document.getElementById('nasa-gallery-main');
+      const counter = document.getElementById('nasa-gallery-counter');
+      const lbImg = document.getElementById('gallery-lightbox-img');
+      const lbCap = document.getElementById('gallery-lightbox-caption');
+
+      if (mainImg) {
+        mainImg.src = slide.src;
+        mainImg.alt = 'Slide ' + (nasaIndex + 1) + ' — ' + slide.title;
+      }
+      if (counter) counter.textContent = numStr;
+      if (lightboxMode === 'nasa') {
+        if (lbImg) {
+          lbImg.src = slide.src;
+          lbImg.alt = 'Slide ' + (nasaIndex + 1) + ' — ' + slide.title;
+        }
+        if (lbCap) lbCap.textContent = numStr + ' — ' + slide.title;
+      }
+
+      const thumbsEl = document.getElementById('nasa-gallery-thumbs');
+      if (thumbsEl) {
+        if (!thumbsEl.children.length) {
+          thumbsEl.innerHTML = NASA_SLIDES.map((s, idx) => `
+            <button type="button" onclick="setNasaSlide(${idx})" data-nasa-idx="${idx}"
+              class="w-16 h-9 shrink-0 rounded-md overflow-hidden bg-[#79cbf5] border-2 transition-all cursor-pointer p-0"
+              aria-label="Go to slide ${idx + 1}: ${s.title}">
+              <img src="${s.src}" alt="" loading="lazy" class="w-full h-full object-cover" />
+            </button>
+          `).join('');
+        }
+        thumbsEl.querySelectorAll('[data-nasa-idx]').forEach(btn => {
+          const idx = Number(btn.getAttribute('data-nasa-idx'));
+          if (idx === nasaIndex) {
+            btn.className = 'w-16 h-9 shrink-0 rounded-md overflow-hidden bg-[#79cbf5] border-2 border-neutral-900 dark:border-white opacity-100 transition-all cursor-pointer p-0';
+          } else {
+            btn.className = 'w-16 h-9 shrink-0 rounded-md overflow-hidden bg-[#79cbf5] border border-black/15 dark:border-white/15 opacity-55 hover:opacity-90 transition-all cursor-pointer p-0';
+          }
+        });
+        if (scrollThumbs === true) {
+          const activeThumb = thumbsEl.querySelector(`[data-nasa-idx="${nasaIndex}"]`);
+          if (activeThumb) {
+            const targetLeft = activeThumb.offsetLeft - (thumbsEl.clientWidth / 2) + (activeThumb.clientWidth / 2);
+            thumbsEl.scrollTo({ left: Math.max(0, targetLeft), behavior: 'smooth' });
+          }
+        }
+      }
+    }
+
+    function setNasaSlide(idx) {
+      nasaIndex = (idx + NASA_SLIDES.length) % NASA_SLIDES.length;
+      renderNasaGallery(true);
+    }
+    window.setNasaSlide = setNasaSlide;
+
+    function stepNasaSlide(delta) {
+      setNasaSlide(nasaIndex + delta);
+    }
+    window.stepNasaSlide = stepNasaSlide;
+
     function stepActiveLightbox(delta) {
       if (lightboxMode === 'aquatic') stepAquaticSlide(delta);
       else if (lightboxMode === 'braille') stepBrailleSlide(delta);
+      else if (lightboxMode === 'nasa') stepNasaSlide(delta);
       else if (lightboxMode === 'wandersync') stepWandersyncSlide(delta);
       else if (lightboxMode === 'cs7641') stepCs7641Slide(delta);
     }
     window.stepActiveLightbox = stepActiveLightbox;
+
+    function openNasaLightbox() {
+      lightboxMode = 'nasa';
+      setLightboxStageBg('sky');
+      const overlay = document.getElementById('gallery-lightbox-overlay');
+      const prevBtn = document.getElementById('lightbox-prev-btn');
+      const nextBtn = document.getElementById('lightbox-next-btn');
+      if (prevBtn) prevBtn.classList.remove('hidden');
+      if (nextBtn) nextBtn.classList.remove('hidden');
+      if (overlay) {
+        renderNasaGallery();
+        overlay.classList.add('is-open');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+    window.openNasaLightbox = openNasaLightbox;
 
     function openCs7641Lightbox() {
       if (cs7641MediaState !== 'ready') return;
@@ -1991,17 +2195,19 @@
       const overlay = document.getElementById('gallery-lightbox-overlay');
       if (!overlay || !overlay.classList.contains('is-open')) return;
       if (e.key === 'Escape') closeGalleryLightbox();
-      else if ((lightboxMode === 'aquatic' || lightboxMode === 'braille' || lightboxMode === 'wandersync' || lightboxMode === 'cs7641') && e.key === 'ArrowLeft') stepActiveLightbox(-1);
-      else if ((lightboxMode === 'aquatic' || lightboxMode === 'braille' || lightboxMode === 'wandersync' || lightboxMode === 'cs7641') && e.key === 'ArrowRight') stepActiveLightbox(1);
+      else if ((lightboxMode === 'aquatic' || lightboxMode === 'braille' || lightboxMode === 'nasa' || lightboxMode === 'wandersync' || lightboxMode === 'cs7641') && e.key === 'ArrowLeft') stepActiveLightbox(-1);
+      else if ((lightboxMode === 'aquatic' || lightboxMode === 'braille' || lightboxMode === 'nasa' || lightboxMode === 'wandersync' || lightboxMode === 'cs7641') && e.key === 'ArrowRight') stepActiveLightbox(1);
     });
 
     window.addEventListener('DOMContentLoaded', () => {
       renderAquaticGallery();
       renderBrailleGallery();
+      renderNasaGallery();
       syncLockUI();
     });
     renderAquaticGallery();
     renderBrailleGallery();
+    renderNasaGallery();
     syncLockUI();
   </script>
 </body>
