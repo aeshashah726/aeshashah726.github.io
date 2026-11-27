@@ -1221,9 +1221,76 @@ html[data-theme="one"] .side-nav-item.is-active {
   visibility: visible;
 }
 
+/* floating glass quick-unlock overlay bar on Projects & Papers */
+.quick-unlock-glass {
+  background: rgba(20, 20, 25, 0.78);
+  backdrop-filter: blur(22px) saturate(160%);
+  -webkit-backdrop-filter: blur(22px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 20px 48px -12px rgba(0, 0, 0, 0.75), 0 0 0 1px rgba(255, 255, 255, 0.05);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
 
+html.light .quick-unlock-glass,
+html[data-theme="one"] .quick-unlock-glass {
+  background: rgba(255, 255, 255, 0.84);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.04);
+}
 
+#quick-password-input {
+  font-size: max(1rem, 0.8125rem);
+}
 
+@media (min-width: 640px) and (pointer: fine) {
+  #quick-password-input {
+    font-size: 0.8125rem;
+  }
+}
 
+html.dark #quick-password-input,
+html[data-theme="dark"] #quick-password-input {
+  background-color: rgba(255, 255, 255, 0.06) !important;
+  border-color: rgba(255, 255, 255, 0.14) !important;
+  color: #ffffff !important;
+}
+
+html.light #quick-password-input,
+html[data-theme="one"] #quick-password-input {
+  background-color: rgba(0, 0, 0, 0.04) !important;
+  border-color: rgba(0, 0, 0, 0.14) !important;
+  color: #111111 !important;
+}
+
+html.light #quick-unlock-submit,
+html[data-theme="one"] #quick-unlock-submit {
+  background-color: #18181b !important;
+  color: #ffffff !important;
+  border: 1px solid #18181b !important;
+}
+
+html.light #quick-unlock-submit:hover,
+html[data-theme="one"] #quick-unlock-submit:hover {
+  background-color: #27272a !important;
+  border-color: #27272a !important;
+}
+
+html.dark #quick-unlock-submit,
+html[data-theme="dark"] #quick-unlock-submit {
+  background-color: #ffffff !important;
+  color: #18181b !important;
+  border: 1px solid #ffffff !important;
+}
+
+html.dark #quick-unlock-submit:hover,
+html[data-theme="dark"] #quick-unlock-submit:hover {
+  background-color: #e4e4e7 !important;
+  border-color: #e4e4e7 !important;
+}
+
+#quick-unlock-bar :where(button, input):focus-visible {
+  outline: 2px solid #71717a;
+  outline-offset: 2px;
+}
 
 
